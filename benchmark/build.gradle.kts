@@ -17,13 +17,15 @@
 // Suppress needed until https://youtrack.jetbrains.com/issue/KTIJ-19369 is fixed
 @file:Suppress("DSL_SCOPE_VIOLATION")
 
+import java.lang.Compiler.enable
+
 plugins {
     alias(libs.plugins.agp.test)
     alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "dev.patrickgold.florisboard.benchmark"
+    namespace = "smartkeyboard.benchmark"
     compileSdk = 32
 
     compileOptions {

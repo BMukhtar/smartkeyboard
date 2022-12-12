@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package dev.patrickgold.florisboard.benchmark
+package smartkeyboard
 
 import androidx.benchmark.macro.BaselineProfileMode
 import androidx.benchmark.macro.CompilationMode
