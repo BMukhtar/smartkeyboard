@@ -2,6 +2,7 @@ package dev.patrickgold.florisboard.lib.kotlin
 
 import io.kotest.core.spec.style.FreeSpec
 import io.kotest.matchers.shouldBe
+import smartkeyboard.lib.kotlin.curlyFormat
 
 class StringsTest : FreeSpec({
     "Test String.curlyFormat (arg mapping)" - {

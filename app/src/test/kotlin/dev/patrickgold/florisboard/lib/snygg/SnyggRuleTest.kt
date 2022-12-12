@@ -11,6 +11,7 @@ import io.kotest.matchers.comparables.shouldBeLessThan
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.shouldBe
 import nl.jqno.equalsverifier.EqualsVerifier
+import smartkeyboard.lib.snygg.SnyggRule
 
 class SnyggRuleTest : FunSpec({
     val validTestPairs = listOf(

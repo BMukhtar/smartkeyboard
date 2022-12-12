@@ -5,6 +5,9 @@ import androidx.compose.ui.unit.sp
 import io.kotest.core.spec.style.FreeSpec
 import io.kotest.matchers.result.shouldBeFailureOfType
 import io.kotest.matchers.result.shouldBeSuccess
+import smartkeyboard.lib.snygg.value.SnyggDpSizeValue
+import smartkeyboard.lib.snygg.value.SnyggPercentageSizeValue
+import smartkeyboard.lib.snygg.value.SnyggSpSizeValue
 
 class SnyggSizeValueTest : FreeSpec({
     val validPairs = listOf(
