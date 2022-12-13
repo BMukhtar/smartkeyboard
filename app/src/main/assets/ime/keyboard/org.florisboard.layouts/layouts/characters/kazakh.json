@@ -1,5 +1,15 @@
 [
   [
+    { "$": "auto_text_key", "code":  1241, "label": "ә" },
+    { "$": "auto_text_key", "code":  1171, "label": "ғ" },
+    { "$": "auto_text_key", "code":  1179, "label": "қ" },
+    { "$": "auto_text_key", "code":  1187, "label": "ң" },
+    { "$": "auto_text_key", "code":  1201, "label": "ұ" },
+    { "$": "auto_text_key", "code":  1199, "label": "ү" },
+    { "$": "auto_text_key", "code":  1211, "label": "һ" },
+    { "$": "auto_text_key", "code":  1110, "label": "і" }
+  ],
+  [
     { "$": "auto_text_key", "code":  1081, "label": "й" },
     { "$": "auto_text_key", "code":  1094, "label": "ц" },
     { "$": "auto_text_key", "code":  1091, "label": "у" },
