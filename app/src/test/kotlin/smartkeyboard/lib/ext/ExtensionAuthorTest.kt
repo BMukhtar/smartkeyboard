@@ -1,4 +1,4 @@
-package dev.patrickgold.florisboard.lib.ext
+package smartkeyboard.lib.ext
 
 import io.kotest.core.spec.style.FreeSpec
 import io.kotest.matchers.shouldBe

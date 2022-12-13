@@ -1,4 +1,4 @@
-package dev.patrickgold.florisboard.lib.snygg
+package smartkeyboard.lib.snygg
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.data.forAll
