@@ -307,6 +307,12 @@
         "direction": "ltr"
       },
       {
+        "id": "kazakh",
+        "label": "Kazakh",
+        "authors": [ "mukhtar" ],
+        "direction": "ltr"
+      },
+      {
         "id": "sangaline",
         "label": "Sangaline",
         "authors": [ "jeremiah-miller", "sangaline" ],
