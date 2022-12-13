@@ -454,7 +454,7 @@ class KeyboardManager(context: Context) : InputKeyEventReceiver {
 
     /**
      * Handles a [KeyCode.LANGUAGE_SWITCH] event. Also handles if the language switch should cycle
-     * FlorisBoard internal or system-wide.
+     * SmartKeyboard internal or system-wide.
      */
     private fun handleLanguageSwitch() {
         when (prefs.keyboard.utilityKeyAction.get()) {

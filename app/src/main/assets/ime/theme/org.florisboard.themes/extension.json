@@ -3,7 +3,7 @@
   "meta": {
     "id": "org.florisboard.themes",
     "version": "0.1.0",
-    "title": "FlorisBoard default themes",
+    "title": "SmartKeyboard default themes",
     "description": "Default themes (both day and night) for the keyboard UI",
     "maintainers": [ "patrickgold <patrick@patrickgold.dev>" ],
     "license": "apache-2.0"

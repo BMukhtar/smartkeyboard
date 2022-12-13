@@ -59,16 +59,16 @@ fun HomeScreen() = FlorisScreen {
     content {
         val isCollapsed by prefs.internal.homeIsBetaToolboxCollapsed.observeAsState()
 
-        val isFlorisBoardEnabled by InputMethodUtils.observeIsFlorisboardEnabled(foregroundOnly = true)
-        val isFlorisBoardSelected by InputMethodUtils.observeIsFlorisboardSelected(foregroundOnly = true)
-        if (!isFlorisBoardEnabled) {
+        val isSmartKeyboardEnabled by InputMethodUtils.observeIsFlorisboardEnabled(foregroundOnly = true)
+        val isSmartKeyboardSelected by InputMethodUtils.observeIsFlorisboardSelected(foregroundOnly = true)
+        if (!isSmartKeyboardEnabled) {
             FlorisErrorCard(
                 modifier = Modifier.padding(8.dp),
                 showIcon = false,
                 text = stringRes(R.string.settings__home__ime_not_enabled),
                 onClick = { InputMethodUtils.showImeEnablerActivity(context) },
             )
-        } else if (!isFlorisBoardSelected) {
+        } else if (!isSmartKeyboardSelected) {
             FlorisWarningCard(
                 modifier = Modifier.padding(8.dp),
                 showIcon = false,

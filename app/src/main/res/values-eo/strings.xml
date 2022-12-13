@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FlorisBoard</string>
+    <string name="app_name">SmartKeyboard</string>
     <string name="key__phone_pause" comment="Label for the Pause key in the telephone keyboard layout">Paŭzigi</string>
     <string name="key__phone_wait" comment="Label for the Wait key in the telephone keyboard layout">Atendi</string>
     <!-- One-handed strings -->
@@ -50,7 +50,7 @@
     <string name="pref__advanced__show_app_icon__label" comment="Label of Show app icon preference in Advanced">Montri aplikaĵo bildeto en aplikaĵolanĉilo</string>
     <!-- About UI strings -->
     <string name="about__title" comment="Title of About activity">Pri</string>
-    <string name="about__app_icon_content_description" comment="Content description of app icon in About">Aplikaĵo bildeto de FlorisBoard</string>
+    <string name="about__app_icon_content_description" comment="Content description of app icon in About">Aplikaĵo bildeto de SmartKeyboard</string>
     <string name="about__view_licenses" comment="Label of View licenses button in About">Malfermitkodaj permesiloj</string>
     <string name="about__view_privacy_policy" comment="Label of View privacy policy button in About">Privateca politiko</string>
     <string name="about__view_source_code" comment="Label of View source code button in About">Fontkodo</string>

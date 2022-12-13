@@ -27,7 +27,7 @@ import java.nio.charset.Charset
 
 /**
  * Public typealias for the Android AssetManager class, which provides a basic API to read files which are statically
- * shipped in the APK assets. The typealias is used to allow both the FlorisBoard and Android asset managers to coexist
+ * shipped in the APK assets. The typealias is used to allow both the SmartKeyboard and Android asset managers to coexist
  * without name clashes.
  */
 typealias AndroidAssetManager = android.content.res.AssetManager

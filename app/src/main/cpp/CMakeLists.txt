@@ -17,7 +17,7 @@ set_property(TARGET ICU::data PROPERTY IMPORTED_LOCATION "${JNI_LIBS}/libicudata
 add_library(ICU::uc STATIC IMPORTED)
 set_property(TARGET ICU::uc PROPERTY IMPORTED_LOCATION "${JNI_LIBS}/libicuuc.a")
 
-### FlorisBoard ###
+### SmartKeyboard ###
 add_subdirectory(utils)
 
 add_library(

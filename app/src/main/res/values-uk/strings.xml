@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FlorisBoard</string>
+    <string name="app_name">SmartKeyboard</string>
     <string name="key__phone_pause" comment="Label for the Pause key in the telephone keyboard layout">Пауза</string>
     <string name="key__phone_wait" comment="Label for the Wait key in the telephone keyboard layout">Зачекайте</string>
     <string name="key_popup__threedots_alt" comment="Content description for the three-dots icon in a key popup">Значок трикрапки. Якщо видно, означає, що при довшому натисканні можна використати більше літер.</string>
@@ -30,8 +30,8 @@
     <string name="settings__default" comment="General string which is used when a preference has the default value set">За замовчуванням</string>
     <string name="settings__system_default" comment="General string which is used when a preference has the system default value set">Системний за замовчуванням</string>
     <string name="settings__home__title" comment="Title of the Home screen">Ласкаво просимо до {app_name}</string>
-    <string name="settings__home__ime_not_enabled" comment="Error message shown in Home fragment when FlorisBoard is not enabled in the system">FlorisBoard не ввімкнено в системі, тому він не буде доступним як метод вводу в меню вибору методу вводу. Натисніть сюди, щоб виправити це.</string>
-    <string name="settings__home__ime_not_selected" comment="Warning message shown in Home fragment when FlorisBoard is not selected as the default keyboard">FlorisBoard не вибрано як стандартний метод вводу. Натисніть сюди, щоб виправити це.</string>
+    <string name="settings__home__ime_not_enabled" comment="Error message shown in Home fragment when SmartKeyboard is not enabled in the system">SmartKeyboard не ввімкнено в системі, тому він не буде доступним як метод вводу в меню вибору методу вводу. Натисніть сюди, щоб виправити це.</string>
+    <string name="settings__home__ime_not_selected" comment="Warning message shown in Home fragment when SmartKeyboard is not selected as the default keyboard">SmartKeyboard не вибрано як стандартний метод вводу. Натисніть сюди, щоб виправити це.</string>
     <string name="settings__localization__subtype_add_title" comment="Title of subtype dialog when adding a new subtype">Додати підтип</string>
     <string name="settings__localization__subtype_edit_title" comment="Title of subtype dialog when editing an existing subtype">Редагувати підтип</string>
     <string name="settings__localization__subtype_characters_layout" comment="Label for layout dropdown in subtype dialog">Символьні розкладки</string>
@@ -55,7 +55,7 @@
     <string name="pref__theme__any_theme__label" comment="Label of the theme selector preference">Вибрана тема</string>
     <string name="pref__theme__any_theme_adapt_to_app__label" comment="Label of the theme adapt to app preference">Адаптувати кольори під програму</string>
     <string name="pref__theme__any_theme_adapt_to_app__summary" comment="Summary of the theme adapt to app preference">Кольори теми адаптуються під поточну програму, якщо вибрана програма підтримує це.</string>
-    <string name="pref__theme__source_assets" comment="Label for the theme source field">Ресурси FlorisBoard</string>
+    <string name="pref__theme__source_assets" comment="Label for the theme source field">Ресурси SmartKeyboard</string>
     <string name="pref__theme__source_internal" comment="Label for the theme source field">Внутрішня пам\'ять</string>
     <string name="pref__theme__source_external" comment="Label for the theme source field">Зовнішнє джерело</string>
     <string name="settings__keyboard__title" comment="Title of Keyboard preferences screen">Клавіатура</string>
@@ -117,7 +117,7 @@
     <string name="pref__advanced__show_app_icon__label" comment="Label of Show app icon preference in Advanced">Показувати значок програми на робочому столі</string>
     <!-- About UI strings -->
     <string name="about__title" comment="Title of About activity">Про додаток</string>
-    <string name="about__app_icon_content_description" comment="Content description of app icon in About">Значок програми FlorisBoard</string>
+    <string name="about__app_icon_content_description" comment="Content description of app icon in About">Значок програми SmartKeyboard</string>
     <string name="about__view_licenses" comment="Label of View licenses button in About">Ліцензії відкритого ПЗ</string>
     <string name="about__view_privacy_policy" comment="Label of View privacy policy button in About">Політика конфіденційності</string>
     <string name="about__view_source_code" comment="Label of View source code button in About">Вихідний код</string>
@@ -128,14 +128,14 @@
     <string name="setup__footer__privacy_policy" comment="Privacy policy label for URL">Політика конфіденційності</string>
     <!-- Back up & Restore -->
     <!-- Crash Dialog strings -->
-    <string name="crash_dialog__title" comment="Title of crash dialog">Звіт про помилку FlorisBoard</string>
+    <string name="crash_dialog__title" comment="Title of crash dialog">Звіт про помилку SmartKeyboard</string>
     <string name="crash_dialog__copy_to_clipboard" comment="Label of Copy to clipboard button in crash dialog">Зкопіювати в системний буфер обміну</string>
     <string name="crash_dialog__copy_to_clipboard_success" comment="Label of Copy to clipboard success message in crash dialog">Зкопійовано в системний буфер обміну</string>
     <string name="crash_dialog__close" comment="Label of Close button in crash dialog">Закрити</string>
-    <string name="crash_notification_channel__title" comment="Title of crash notification channel">Звіти про помилки FlorisBoard</string>
-    <string name="crash_once_notification__title" comment="Title of the notification for a single crash">FlorisBoard перестав працювати…</string>
+    <string name="crash_notification_channel__title" comment="Title of crash notification channel">Звіти про помилки SmartKeyboard</string>
+    <string name="crash_once_notification__title" comment="Title of the notification for a single crash">SmartKeyboard перестав працювати…</string>
     <string name="crash_once_notification__body" comment="Body of the notification for a single crash">Натисність, щоб перегянути деталі про помилку</string>
-    <string name="crash_multiple_notification__title" comment="Title of the notification for consecutive crashes">Здається, FlorisBoard постійно перестає працювати…</string>
+    <string name="crash_multiple_notification__title" comment="Title of the notification for consecutive crashes">Здається, SmartKeyboard постійно перестає працювати…</string>
     <string name="crash_multiple_notification__body" comment="Body of the notification for consecutive crashes">Повернення до попередньої клавіатури, щоб зупинити нескінченний цикл збою. Натисніть, щоб переглянути деталі про помилку</string>
     <!-- Clipboard strings -->
     <string name="clipboard__header_title">Буфер обміну</string>

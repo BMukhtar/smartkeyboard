@@ -94,7 +94,7 @@ private fun rememberFlorisSystemUiController(): SystemUiController {
  * Changed:
  * - findWindow() method recognizes input method service classes as well
  * - Window insets controller is constructed directly, bypassing ViewCompat (as this ignores service classes as well)
- * - API checks use FlorisBoard's [AndroidVersion] utils
+ * - API checks use SmartKeyboard's [AndroidVersion] utils
  */
 private class FlorisSystemUiController(
     private val view: View,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FlorisBoard</string>
+    <string name="app_name">SmartKeyboard</string>
     <string name="key__phone_pause" comment="Label for the Pause key in the telephone keyboard layout">Pause</string>
     <string name="key__phone_wait" comment="Label for the Wait key in the telephone keyboard layout">Vent</string>
     <string name="key_popup__threedots_alt" comment="Content description for the three-dots icon in a key popup">Ikon med tre prikker. Hvis synlig, indikerer det at flere bokstaver kan brukes hvis de trykkes lenger.</string>
@@ -31,8 +31,8 @@
     <string name="settings__default" comment="General string which is used when a preference has the default value set">Standard</string>
     <string name="settings__system_default" comment="General string which is used when a preference has the system default value set">Systemstandard</string>
     <string name="settings__home__title" comment="Title of the Home screen">Velkommen til {app_name}</string>
-    <string name="settings__home__ime_not_enabled" comment="Error message shown in Home fragment when FlorisBoard is not enabled in the system">FlorisBoard er ikke aktivert i systemet og vil derfor ikke være tilgjengelig som inndatametode i inndatavelgeren. Klikk her for å løse dette problemet.</string>
-    <string name="settings__home__ime_not_selected" comment="Warning message shown in Home fragment when FlorisBoard is not selected as the default keyboard">FlorisBoard er ikke valgt som standard inndatametode. Klikk her for å løse dette problemet.</string>
+    <string name="settings__home__ime_not_enabled" comment="Error message shown in Home fragment when SmartKeyboard is not enabled in the system">SmartKeyboard er ikke aktivert i systemet og vil derfor ikke være tilgjengelig som inndatametode i inndatavelgeren. Klikk her for å løse dette problemet.</string>
+    <string name="settings__home__ime_not_selected" comment="Warning message shown in Home fragment when SmartKeyboard is not selected as the default keyboard">SmartKeyboard er ikke valgt som standard inndatametode. Klikk her for å løse dette problemet.</string>
     <string name="settings__localization__subtype_add_title" comment="Title of subtype dialog when adding a new subtype">Legg til undertype</string>
     <string name="settings__localization__subtype_edit_title" comment="Title of subtype dialog when editing an existing subtype">Rediger undertype</string>
     <string name="settings__localization__subtype_locale" comment="Label for locale dropdown in subtype dialog">Primærspråk</string>
@@ -61,7 +61,7 @@
     <string name="pref__theme__any_theme__label" comment="Label of the theme selector preference">Valgt tema</string>
     <string name="pref__theme__any_theme_adapt_to_app__label" comment="Label of the theme adapt to app preference">Tilpass farger til app</string>
     <string name="pref__theme__any_theme_adapt_to_app__summary" comment="Summary of the theme adapt to app preference">Temafarger tilpasser seg de i den gjeldende appen, hvis appen støtter det.</string>
-    <string name="pref__theme__source_assets" comment="Label for the theme source field">FlorisBoard App Ressurser</string>
+    <string name="pref__theme__source_assets" comment="Label for the theme source field">SmartKeyboard App Ressurser</string>
     <string name="pref__theme__source_internal" comment="Label for the theme source field">Intern Lagring</string>
     <string name="pref__theme__source_external" comment="Label for the theme source field">Ekstern Leverandør</string>
     <string name="settings__input_feedback__title" comment="Title of Input Feedback screen">Lyder &amp; Vibrasjon</string>
@@ -178,7 +178,7 @@
     <string name="pref__advanced__show_app_icon__summary_atleast_q" comment="Summary of Show app icon preference in Advanced for Android 10+">Alltid aktiver på Android 10+ på grunn av restriksjoner fra systemet</string>
     <!-- About UI strings -->
     <string name="about__title" comment="Title of About activity">Om</string>
-    <string name="about__app_icon_content_description" comment="Content description of app icon in About">FlorisBoard\'s app ikon</string>
+    <string name="about__app_icon_content_description" comment="Content description of app icon in About">SmartKeyboard\'s app ikon</string>
     <string name="about__view_licenses" comment="Label of View licenses button in About">Åpen kildekode-lisenser</string>
     <string name="about__view_privacy_policy" comment="Label of View privacy policy button in About">Persovernerklæring</string>
     <string name="about__view_source_code" comment="Label of View source code button in About">Kildekode</string>
@@ -193,7 +193,7 @@
     <string name="about__privacy_policy__title" comment="Preference title">Persovernerklæring</string>
     <string name="about__privacy_policy__summary" comment="Preference summary">Personvernærklæring for dette prosjektet</string>
     <string name="about__project_license__title" comment="Preference title">Prosjektlisens</string>
-    <string name="about__project_license__summary" comment="Preference summary">FlorisBoard er lisensiert under {license_name}</string>
+    <string name="about__project_license__summary" comment="Preference summary">SmartKeyboard er lisensiert under {license_name}</string>
     <string name="about__project_license__error_license_text_failed" comment="Error text for license text loading failure">Feil: Fikk ikke til å laste lisenstekst.\n-&gt; Årsak: {error_message}</string>
     <string name="about__project_license__error_reason_asset_manager_null" comment="Error text if asset manager is null">Referanse for aktivaforvalter er null</string>
     <string name="about__third_party_licenses__title" comment="Preference title">Tredjepartslisenser</string>
@@ -214,18 +214,18 @@
     <string name="setup__finish_up__finish_btn">Begynn å Tilpasse</string>
     <!-- Back up & Restore -->
     <!-- Crash Dialog strings -->
-    <string name="crash_dialog__title" comment="Title of crash dialog">FlorisBoard feilmeldingsrapporter</string>
-    <string name="crash_dialog__description" comment="Description of crash dialog">Beklager ulempen, men FlorisBoard har krasjet på grunn av en uventet feil.</string>
-    <string name="crash_dialog__report_instructions" comment="Issue tracker report instructions for the crash dialog. The %s placeholder is the name of the crash report template and always in English/LTR.">Hvis du ønsker å rapportere denne feilen, sjekk først at krasjen ikke allerede er rapportert i sakssystemet GitHub.\nHvis den ikke er det, kopier den genererte krasjloggen og åpne en ny sak. Bruk \"%s\"-malen og fyll ut beskrivelsen, trinnene for å reprodusere, og lim inn den genererte krasjloggen på slutten. Dette er med på å gjøre FlorisBoard bedre og mer stabilt for alle. Takk skal du ha!</string>
+    <string name="crash_dialog__title" comment="Title of crash dialog">SmartKeyboard feilmeldingsrapporter</string>
+    <string name="crash_dialog__description" comment="Description of crash dialog">Beklager ulempen, men SmartKeyboard har krasjet på grunn av en uventet feil.</string>
+    <string name="crash_dialog__report_instructions" comment="Issue tracker report instructions for the crash dialog. The %s placeholder is the name of the crash report template and always in English/LTR.">Hvis du ønsker å rapportere denne feilen, sjekk først at krasjen ikke allerede er rapportert i sakssystemet GitHub.\nHvis den ikke er det, kopier den genererte krasjloggen og åpne en ny sak. Bruk \"%s\"-malen og fyll ut beskrivelsen, trinnene for å reprodusere, og lim inn den genererte krasjloggen på slutten. Dette er med på å gjøre SmartKeyboard bedre og mer stabilt for alle. Takk skal du ha!</string>
     <string name="crash_dialog__copy_to_clipboard" comment="Label of Copy to clipboard button in crash dialog">Kopier til systemutklippstavlen</string>
     <string name="crash_dialog__copy_to_clipboard_success" comment="Label of Copy to clipboard success message in crash dialog">Kopiert til systemutklippstavlen</string>
     <string name="crash_dialog__copy_to_clipboard_failure" comment="Label of Copy to clipboard failure message in crash dialog">Kan ikke kopiere til systemutklippstavlen: Utklippstavlebehandler ikke funnet</string>
     <string name="crash_dialog__open_issue_tracker" comment="Label of Open issue tracker button in crash dialog">Åpne sakssystem (github.com)</string>
     <string name="crash_dialog__close" comment="Label of Close button in crash dialog">Lukk</string>
-    <string name="crash_notification_channel__title" comment="Title of crash notification channel">FlorisBoard feilmeldingsrapporter</string>
-    <string name="crash_once_notification__title" comment="Title of the notification for a single crash">FlorisBoard har sluttet å fungere…</string>
+    <string name="crash_notification_channel__title" comment="Title of crash notification channel">SmartKeyboard feilmeldingsrapporter</string>
+    <string name="crash_once_notification__title" comment="Title of the notification for a single crash">SmartKeyboard har sluttet å fungere…</string>
     <string name="crash_once_notification__body" comment="Body of the notification for a single crash">Klikk for å se feilmeldingsdetaljer</string>
-    <string name="crash_multiple_notification__title" comment="Title of the notification for consecutive crashes">FlorisBoard virker å stoppe å fungere gjentatte ganger…</string>
+    <string name="crash_multiple_notification__title" comment="Title of the notification for consecutive crashes">SmartKeyboard virker å stoppe å fungere gjentatte ganger…</string>
     <string name="crash_multiple_notification__body" comment="Body of the notification for consecutive crashes">Faller tilbake til forrige tastatur for å stoppe uendelig krasjloop. Klikk for å vise feilmeldingsdetaljer</string>
     <!-- Clipboard strings -->
     <string name="clipboard__header_title">Utklippstavle</string>

@@ -28,8 +28,8 @@
     <string name="settings__default" comment="General string which is used when a preference has the default value set">Standard</string>
     <string name="settings__system_default" comment="General string which is used when a preference has the system default value set">Systemstandard</string>
     <string name="settings__home__title" comment="Title of the Home screen">Välkommen till {app_name}</string>
-    <string name="settings__home__ime_not_enabled" comment="Error message shown in Home fragment when FlorisBoard is not enabled in the system">FlorisBoard är inte aktiverad och kommer därför inte vara tillgänglig som inmatningsmetod i inmatningsväljaren. Tryck här för att lösa problemet.</string>
-    <string name="settings__home__ime_not_selected" comment="Warning message shown in Home fragment when FlorisBoard is not selected as the default keyboard">FlorisBoard är inte vald som standard inmatningsmetod. Tryck här för att lösa problemet.</string>
+    <string name="settings__home__ime_not_enabled" comment="Error message shown in Home fragment when SmartKeyboard is not enabled in the system">SmartKeyboard är inte aktiverad och kommer därför inte vara tillgänglig som inmatningsmetod i inmatningsväljaren. Tryck här för att lösa problemet.</string>
+    <string name="settings__home__ime_not_selected" comment="Warning message shown in Home fragment when SmartKeyboard is not selected as the default keyboard">SmartKeyboard är inte vald som standard inmatningsmetod. Tryck här för att lösa problemet.</string>
     <string name="settings__localization__subtype_add_title" comment="Title of subtype dialog when adding a new subtype">Lägg till undertyp</string>
     <string name="settings__localization__subtype_edit_title" comment="Title of subtype dialog when editing an existing subtype">Redigera undertyp</string>
     <string name="settings__localization__subtype_no_subtypes_configured_warning" comment="Warning message that no subtype has been defined">Det verkar som du inte har konfigurerat några undertyper. Undertyp Engelska/QWERTY kommer då användas!</string>
@@ -43,7 +43,7 @@
     <string name="pref__theme__any_theme__label" comment="Label of the theme selector preference">Valt tema</string>
     <string name="pref__theme__any_theme_adapt_to_app__label" comment="Label of the theme adapt to app preference">Anpassa färger till appen</string>
     <string name="pref__theme__any_theme_adapt_to_app__summary" comment="Summary of the theme adapt to app preference">Temafärger anpassas till de i den aktuella appen, om denna stödjer detta.</string>
-    <string name="pref__theme__source_assets" comment="Label for the theme source field">FlorisBoard app-tillgångar</string>
+    <string name="pref__theme__source_assets" comment="Label for the theme source field">SmartKeyboard app-tillgångar</string>
     <string name="pref__theme__source_internal" comment="Label for the theme source field">Intern lagring</string>
     <string name="pref__theme__source_external" comment="Label for the theme source field">Extern leverantör</string>
     <string name="settings__keyboard__title" comment="Title of Keyboard preferences screen">Tangentbord</string>
@@ -74,7 +74,7 @@
     <string name="pref__advanced__show_app_icon__label" comment="Label of Show app icon preference in Advanced">Visa appikonen i startprogrammet</string>
     <!-- About UI strings -->
     <string name="about__title" comment="Title of About activity">Om</string>
-    <string name="about__app_icon_content_description" comment="Content description of app icon in About">FlorisBoard appikon</string>
+    <string name="about__app_icon_content_description" comment="Content description of app icon in About">SmartKeyboard appikon</string>
     <string name="about__view_licenses" comment="Label of View licenses button in About">Licenser för öppen källkod</string>
     <string name="about__view_privacy_policy" comment="Label of View privacy policy button in About">Sekretesspolicy</string>
     <string name="about__view_source_code" comment="Label of View source code button in About">Källkod</string>

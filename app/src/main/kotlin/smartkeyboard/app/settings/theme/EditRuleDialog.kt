@@ -352,8 +352,8 @@ private fun EditCodeValueDialog(
     var errorId by rememberSaveable(codeValue) { mutableStateOf(NATIVE_NULLPTR.toInt()) }
 
     val focusRequester = remember { FocusRequester() }
-    val isFlorisBoardEnabled by InputMethodUtils.observeIsFlorisboardEnabled(foregroundOnly = true)
-    val isFlorisBoardSelected by InputMethodUtils.observeIsFlorisboardSelected(foregroundOnly = true)
+    val isSmartKeyboardEnabled by InputMethodUtils.observeIsFlorisboardEnabled(foregroundOnly = true)
+    val isSmartKeyboardSelected by InputMethodUtils.observeIsFlorisboardSelected(foregroundOnly = true)
 
     var isRecordingKey by remember { mutableStateOf(false) }
     var lastRecordingToast by remember { mutableStateOf<Toast?>(null) }
@@ -375,7 +375,7 @@ private fun EditCodeValueDialog(
             isRecordingKey = false
             return
         }
-        if (!isFlorisBoardEnabled || !isFlorisBoardSelected) {
+        if (!isSmartKeyboardEnabled || !isSmartKeyboardSelected) {
             lastRecordingToast?.cancel()
             lastRecordingToast = context.showShortToast(
                 R.string.settings__theme_editor__code_recording_requires_default_ime_floris,

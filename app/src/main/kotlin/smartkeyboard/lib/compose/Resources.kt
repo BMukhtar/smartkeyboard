@@ -35,7 +35,7 @@ private val LocalResourcesContext = staticCompositionLocalOf<Context> {
 }
 
 private val LocalAppNameString = staticCompositionLocalOf {
-    "FlorisBoard"
+    "SmartKeyboard"
 }
 
 @Composable

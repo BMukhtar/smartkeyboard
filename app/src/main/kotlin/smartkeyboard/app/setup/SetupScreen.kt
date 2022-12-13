@@ -67,22 +67,22 @@ fun SetupScreen() = FlorisScreen {
     val navController = LocalNavController.current
     val context = LocalContext.current
 
-    val isFlorisBoardEnabled by InputMethodUtils.observeIsFlorisboardEnabled(foregroundOnly = true)
-    val isFlorisBoardSelected by InputMethodUtils.observeIsFlorisboardSelected(foregroundOnly = true)
+    val isSmartKeyboardEnabled by InputMethodUtils.observeIsFlorisboardEnabled(foregroundOnly = true)
+    val isSmartKeyboardSelected by InputMethodUtils.observeIsFlorisboardSelected(foregroundOnly = true)
     val stepState = rememberSaveable(saver = FlorisStepState.Saver) {
         val initStep = when {
-            !isFlorisBoardEnabled -> Step.EnableIme
-            !isFlorisBoardSelected -> Step.SelectIme
+            !isSmartKeyboardEnabled -> Step.EnableIme
+            !isSmartKeyboardSelected -> Step.SelectIme
             else -> Step.FinishUp
         }
         FlorisStepState.new(init = initStep)
     }
 
     content {
-        LaunchedEffect(isFlorisBoardEnabled, isFlorisBoardSelected) {
+        LaunchedEffect(isSmartKeyboardEnabled, isSmartKeyboardSelected) {
             stepState.setCurrentAuto(when {
-                !isFlorisBoardEnabled -> Step.EnableIme
-                !isFlorisBoardSelected -> Step.SelectIme
+                !isSmartKeyboardEnabled -> Step.EnableIme
+                !isSmartKeyboardSelected -> Step.SelectIme
                 else -> Step.FinishUp
             })
         }
@@ -99,8 +99,8 @@ fun SetupScreen() = FlorisScreen {
                 val isEnabled = InputMethodUtils.parseIsFlorisboardEnabled(context, imeIds)
                 if (stepState.getCurrentAuto().value == Step.EnableIme &&
                     stepState.getCurrentManual().value == -1 &&
-                    !isFlorisBoardEnabled &&
-                    !isFlorisBoardSelected &&
+                    !isSmartKeyboardEnabled &&
+                    !isSmartKeyboardSelected &&
                     isEnabled
                 ) {
                     context.launchActivity(FlorisAppActivity::class) {

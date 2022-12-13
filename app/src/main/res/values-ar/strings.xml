@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FlorisBoard</string>
+    <string name="app_name">SmartKeyboard</string>
     <string name="key__phone_pause" comment="Label for the Pause key in the telephone keyboard layout">إيقاف مؤقت</string>
     <string name="key__phone_wait" comment="Label for the Wait key in the telephone keyboard layout">انتظر</string>
     <string name="key_popup__threedots_alt" comment="Content description for the three-dots icon in a key popup">أيقونة ثلاث نقاط. إذا كانت ظاهرة ، تشير إلى أنه يمكن استخدام المزيد من الأحرف إذا تم الضغط عليها لفترة أطول.</string>
@@ -87,8 +87,8 @@
     <string name="settings__default" comment="General string which is used when a preference has the default value set">الإفتراضي</string>
     <string name="settings__system_default" comment="General string which is used when a preference has the system default value set">الإعداد الافتراضي</string>
     <string name="settings__home__title" comment="Title of the Home screen">مرحبا بكم في {app_name}</string>
-    <string name="settings__home__ime_not_enabled" comment="Error message shown in Home fragment when FlorisBoard is not enabled in the system">لم يتم تمكين FlorisBoard في النظام وبالتالي لن يكون متاحًا كطريقة إدخال في منتقي الإدخال. انقر هنا لحل هذه المشكلة.</string>
-    <string name="settings__home__ime_not_selected" comment="Warning message shown in Home fragment when FlorisBoard is not selected as the default keyboard">لم يتم تعيين FlorisBoard كطريقة الإدخال الافتراضية. انقر هنا لحل هذه المشكلة.</string>
+    <string name="settings__home__ime_not_enabled" comment="Error message shown in Home fragment when SmartKeyboard is not enabled in the system">لم يتم تمكين SmartKeyboard في النظام وبالتالي لن يكون متاحًا كطريقة إدخال في منتقي الإدخال. انقر هنا لحل هذه المشكلة.</string>
+    <string name="settings__home__ime_not_selected" comment="Warning message shown in Home fragment when SmartKeyboard is not selected as the default keyboard">لم يتم تعيين SmartKeyboard كطريقة الإدخال الافتراضية. انقر هنا لحل هذه المشكلة.</string>
     <string name="settings__localization__title" comment="Title of languages and Layout screen">اللغات و التخطيطات</string>
     <string name="settings__localization__display_language_names_in__label" comment="Label of Display language names in preference">عرض أسم اللغة المفعلة</string>
     <string name="settings__localization__group_subtypes__label" comment="Label of subtypes group">أنواع الإدخال الفرعية</string>
@@ -129,7 +129,7 @@
     <string name="pref__theme__any_theme__label" comment="Label of the theme selector preference">النسق المحدد</string>
     <string name="pref__theme__any_theme_adapt_to_app__label" comment="Label of the theme adapt to app preference">تكييف الألوان مع التطبيق</string>
     <string name="pref__theme__any_theme_adapt_to_app__summary" comment="Summary of the theme adapt to app preference">تتكيف ألوان الثيم مع تلك الموجودة في التطبيق الحالي ، إذا كان التطبيق المستهدف يدعم ذلك.</string>
-    <string name="pref__theme__source_assets" comment="Label for the theme source field">أصول تطبيق FlorisBoard</string>
+    <string name="pref__theme__source_assets" comment="Label for the theme source field">أصول تطبيق SmartKeyboard</string>
     <string name="pref__theme__source_internal" comment="Label for the theme source field">الذاكرة الداخلية</string>
     <string name="pref__theme__source_external" comment="Label for the theme source field">مزود خارجي</string>
     <string name="settings__theme_manager__title_day" comment="Title of the theme manager screen for day theme selection">اختيار النمط الصباحي</string>
@@ -413,7 +413,7 @@
     <string name="pref__advanced__incognito_mode__label" comment="Label of Incognito mode preference in Advanced">الوضع المخفي</string>
     <!-- About UI strings -->
     <string name="about__title" comment="Title of About activity">حول التطبيق</string>
-    <string name="about__app_icon_content_description" comment="Content description of app icon in About">أيقونة التطبيق FlorisBoard</string>
+    <string name="about__app_icon_content_description" comment="Content description of app icon in About">أيقونة التطبيق SmartKeyboard</string>
     <string name="about__view_licenses" comment="Label of View licenses button in About">تراخيص البرامج مفتوحة المصدر</string>
     <string name="about__view_privacy_policy" comment="Label of View privacy policy button in About">سياسة الخصوصية</string>
     <string name="about__view_source_code" comment="Label of View source code button in About">مصدر التعليمات البرمجية</string>
@@ -476,18 +476,18 @@
     <string name="backup_and_restore__restore__success">تمت استعادة البيانات بنجاح!</string>
     <string name="backup_and_restore__restore__failure">فشل في استرداد البيانات: {error_message}</string>
     <!-- Crash Dialog strings -->
-    <string name="crash_dialog__title" comment="Title of crash dialog">تقرير حول خطأ في FlorisBoard</string>
-    <string name="crash_dialog__description" comment="Description of crash dialog">نأسف للإزعاج ، ولكن FlorisBoard تعطل بسبب خطأ غير متوقع.</string>
-    <string name="crash_dialog__report_instructions" comment="Issue tracker report instructions for the crash dialog. The %s placeholder is the name of the crash report template and always in English/LTR.">إذا كنت ترغب في الإبلاغ عن هذا الخطأ ، فتحقق أولاً من أداة تعقب المشكلات على GitHub إذا لم يتم الإبلاغ عن العطل بالفعل. \n إذا لم يتم الإبلاغ عن هذا الخطأ ، فقم بنسخ سجل التعطل الذي تم إنشاؤه وافتح مشكلة جديدة. استخدم القالب واملأ الوصف وخطوات إعادة إنتاج ولصق سجل العطل الذي تم إنشاؤه في النهاية. هذا يساعد\"%s\" في جعل FlorisBoard أفضل وأكثر استقرارًا للجميع. شكرا لك!</string>
+    <string name="crash_dialog__title" comment="Title of crash dialog">تقرير حول خطأ في SmartKeyboard</string>
+    <string name="crash_dialog__description" comment="Description of crash dialog">نأسف للإزعاج ، ولكن SmartKeyboard تعطل بسبب خطأ غير متوقع.</string>
+    <string name="crash_dialog__report_instructions" comment="Issue tracker report instructions for the crash dialog. The %s placeholder is the name of the crash report template and always in English/LTR.">إذا كنت ترغب في الإبلاغ عن هذا الخطأ ، فتحقق أولاً من أداة تعقب المشكلات على GitHub إذا لم يتم الإبلاغ عن العطل بالفعل. \n إذا لم يتم الإبلاغ عن هذا الخطأ ، فقم بنسخ سجل التعطل الذي تم إنشاؤه وافتح مشكلة جديدة. استخدم القالب واملأ الوصف وخطوات إعادة إنتاج ولصق سجل العطل الذي تم إنشاؤه في النهاية. هذا يساعد\"%s\" في جعل SmartKeyboard أفضل وأكثر استقرارًا للجميع. شكرا لك!</string>
     <string name="crash_dialog__copy_to_clipboard" comment="Label of Copy to clipboard button in crash dialog">نسخ الى حافظة النظام</string>
     <string name="crash_dialog__copy_to_clipboard_success" comment="Label of Copy to clipboard success message in crash dialog">تم النسخ الى حافظة النظام</string>
     <string name="crash_dialog__copy_to_clipboard_failure" comment="Label of Copy to clipboard failure message in crash dialog">لا يمكن النسخ إلى حافظة النظام: لم يتم العثور على جلسة مدير الحافظة</string>
     <string name="crash_dialog__open_issue_tracker" comment="Label of Open issue tracker button in crash dialog">فتح نموذج تقرير الخطأ (github.com)</string>
     <string name="crash_dialog__close" comment="Label of Close button in crash dialog">إغلاق</string>
-    <string name="crash_notification_channel__title" comment="Title of crash notification channel">تقارير حول خطأ في FlorisBoard</string>
-    <string name="crash_once_notification__title" comment="Title of the notification for a single crash">توقف FlorisBoard عن العمل…</string>
+    <string name="crash_notification_channel__title" comment="Title of crash notification channel">تقارير حول خطأ في SmartKeyboard</string>
+    <string name="crash_once_notification__title" comment="Title of the notification for a single crash">توقف SmartKeyboard عن العمل…</string>
     <string name="crash_once_notification__body" comment="Body of the notification for a single crash">انقر لعرض تفاصيل الخطأ</string>
-    <string name="crash_multiple_notification__title" comment="Title of the notification for consecutive crashes">يبدو أن FlorisBoard يوقف عن العمل بشكل متكرر…</string>
+    <string name="crash_multiple_notification__title" comment="Title of the notification for consecutive crashes">يبدو أن SmartKeyboard يوقف عن العمل بشكل متكرر…</string>
     <string name="crash_multiple_notification__body" comment="Body of the notification for consecutive crashes">تم العودة إلى لوحة المفاتيح السابقة لإيقاف التعطل المتكرر الغير منتهي. انقر لعرض تفاصيل الخطأ</string>
     <!-- Clipboard strings -->
     <string name="clipboard__header_title">الحافظة</string>
@@ -598,7 +598,7 @@
     <string name="ext__export__failure">فشل في تصدير ألإضافة: {error_message}</string>
     <string name="ext__import__success">تمّ استيراد الاضافة بنجاح!</string>
     <string name="ext__import__failure">فشل في استيراد الاضافة: {error_message}</string>
-    <string name="ext__import__ext_any" comment="Title of Importer screen for import of any supported FlorisBoard extension">إستيراد الملحقات</string>
+    <string name="ext__import__ext_any" comment="Title of Importer screen for import of any supported SmartKeyboard extension">إستيراد الملحقات</string>
     <string name="ext__import__ext_keyboard" comment="Title of Importer screen for keyboard extension import">استيراد ملحقات لوحة المفاتيح</string>
     <string name="ext__import__ext_theme" comment="Title of Importer screen for theme extension import">استيراد ملحقات الثيم</string>
     <string name="ext__import__file_skip" comment="Label when a file cannot be imported in the current context. The actual reason string is in a separate text view below this string.">الملف لايمكن استرداده. السبب:</string>

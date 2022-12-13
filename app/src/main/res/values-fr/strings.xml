@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FlorisBoard</string>
+    <string name="app_name">SmartKeyboard</string>
     <string name="key__phone_pause" comment="Label for the Pause key in the telephone keyboard layout">Pause</string>
     <string name="key__phone_wait" comment="Label for the Wait key in the telephone keyboard layout">Patienter</string>
     <string name="key_popup__threedots_alt" comment="Content description for the three-dots icon in a key popup">Icône trois points. Si visible, indique qu\'il est possible d\'utiliser plus de lettres si l\'on appuie plus longtemps.</string>
@@ -85,8 +85,8 @@
     <string name="settings__default" comment="General string which is used when a preference has the default value set">Par défaut</string>
     <string name="settings__system_default" comment="General string which is used when a preference has the system default value set">Valeur par défaut du système</string>
     <string name="settings__home__title" comment="Title of the Home screen">Bienvenue dans {app_name}</string>
-    <string name="settings__home__ime_not_enabled" comment="Error message shown in Home fragment when FlorisBoard is not enabled in the system">FlorisBoard n\'est pas activé dans le système et ne sera donc pas disponible comme méthode de saisie dans le sélectionneur de saisie. Cliquez ici pour résoudre ce problème.</string>
-    <string name="settings__home__ime_not_selected" comment="Warning message shown in Home fragment when FlorisBoard is not selected as the default keyboard">FlorisBoard n\'est pas sélectionné comme méthode de saisie par défaut. Cliquez ici pour résoudre ce problème.</string>
+    <string name="settings__home__ime_not_enabled" comment="Error message shown in Home fragment when SmartKeyboard is not enabled in the system">SmartKeyboard n\'est pas activé dans le système et ne sera donc pas disponible comme méthode de saisie dans le sélectionneur de saisie. Cliquez ici pour résoudre ce problème.</string>
+    <string name="settings__home__ime_not_selected" comment="Warning message shown in Home fragment when SmartKeyboard is not selected as the default keyboard">SmartKeyboard n\'est pas sélectionné comme méthode de saisie par défaut. Cliquez ici pour résoudre ce problème.</string>
     <string name="settings__localization__title" comment="Title of languages and Layout screen">Langues &amp; Dispositions</string>
     <string name="settings__localization__display_language_names_in__label" comment="Label of Display language names in preference">Afficher les noms de langue dans</string>
     <string name="settings__localization__group_subtypes__label" comment="Label of subtypes group">Dispositions</string>
@@ -127,7 +127,7 @@
     <string name="pref__theme__any_theme__label" comment="Label of the theme selector preference">Thème sélectionné</string>
     <string name="pref__theme__any_theme_adapt_to_app__label" comment="Label of the theme adapt to app preference">Adapter les couleurs à l\'application</string>
     <string name="pref__theme__any_theme_adapt_to_app__summary" comment="Summary of the theme adapt to app preference">Les couleurs du thème s\'adaptent à celles de l\'application utilisée, si l\'application est compatible.</string>
-    <string name="pref__theme__source_assets" comment="Label for the theme source field">Ressources de l’application FlorisBoard</string>
+    <string name="pref__theme__source_assets" comment="Label for the theme source field">Ressources de l’application SmartKeyboard</string>
     <string name="pref__theme__source_internal" comment="Label for the theme source field">Stockage interne</string>
     <string name="pref__theme__source_external" comment="Label for the theme source field">Fournisseur externe</string>
     <string name="settings__theme_manager__title_day" comment="Title of the theme manager screen for day theme selection">Sélectionner le thème jour</string>
@@ -410,7 +410,7 @@
     <string name="pref__advanced__incognito_mode__label" comment="Label of Incognito mode preference in Advanced">Mode incognito</string>
     <!-- About UI strings -->
     <string name="about__title" comment="Title of About activity">À propos</string>
-    <string name="about__app_icon_content_description" comment="Content description of app icon in About">Icône de l\'application FlorisBoard</string>
+    <string name="about__app_icon_content_description" comment="Content description of app icon in About">Icône de l\'application SmartKeyboard</string>
     <string name="about__view_licenses" comment="Label of View licenses button in About">Licences Open sources</string>
     <string name="about__view_privacy_policy" comment="Label of View privacy policy button in About">Politique de confidentialité</string>
     <string name="about__view_source_code" comment="Label of View source code button in About">Code source</string>
@@ -425,7 +425,7 @@
     <string name="about__privacy_policy__title" comment="Preference title">Politique de confidentialité</string>
     <string name="about__privacy_policy__summary" comment="Preference summary">La politique de confidentialité pour ce projet</string>
     <string name="about__project_license__title" comment="Preference title">Licence du projet</string>
-    <string name="about__project_license__summary" comment="Preference summary">FlorisBoard est sous licence {license_name}</string>
+    <string name="about__project_license__summary" comment="Preference summary">SmartKeyboard est sous licence {license_name}</string>
     <string name="about__project_license__error_license_text_failed" comment="Error text for license text loading failure">Erreur : Impossible de charger le texte de la licence.\n-&gt; Raison : {error_message}</string>
     <string name="about__project_license__error_reason_asset_manager_null" comment="Error text if asset manager is null">La référence du gestionnaire d\'actifs est nulle</string>
     <string name="about__third_party_licenses__title" comment="Preference title">Licences de tiers</string>
@@ -439,7 +439,7 @@
     <string name="setup__enable_ime__description">Android exige que chaque clavier personnalisé soit activé séparément avant que vous puissiez l\'utiliser. Ouvrez le système <i>Language &amp;amp ; Input</i> Settings, là activez \"{app_name}\".</string>
     <string name="setup__enable_ime__open_settings_btn">Ouvrir paramètres de système</string>
     <string name="setup__select_ime__title">Sélectionner {app_name}</string>
-    <string name="setup__select_ime__description">FlorisBoard est maintenant activé dans votre système. Pour l\'utiliser activement, passez à FlorisBoard en le sélectionnant dans le menu de sélection des saisies !</string>
+    <string name="setup__select_ime__description">SmartKeyboard est maintenant activé dans votre système. Pour l\'utiliser activement, passez à SmartKeyboard en le sélectionnant dans le menu de sélection des saisies !</string>
     <string name="setup__select_ime__switch_keyboard_btn">Changer de Clavier</string>
     <string name="setup__finish_up__title">Finir</string>
     <string name="setup__finish_up__description_p1">{app_name} est maintenant activé dans le système et prêt à être personnalisé par vous.</string>
@@ -473,18 +473,18 @@
     <string name="backup_and_restore__restore__success">Données restaurées avec succès !</string>
     <string name="backup_and_restore__restore__failure">Impossible de restaurer les données : {error_message}</string>
     <!-- Crash Dialog strings -->
-    <string name="crash_dialog__title" comment="Title of crash dialog">Rapport d\'erreur de FlorisBoard</string>
-    <string name="crash_dialog__description" comment="Description of crash dialog">Désolé pour le désagrément, mais FlorisBoard a crashé en raison d\'une erreur inattendue.</string>
-    <string name="crash_dialog__report_instructions" comment="Issue tracker report instructions for the crash dialog. The %s placeholder is the name of the crash report template and always in English/LTR.">Si vous souhaitez signaler cette erreur, vérifier avant tout si votre problème n\'a pas déjà été signalé sur le tracker d\'erreur de github.\nSi ce n\'est pas le cas, copiez le journal d\'erreur généré et ouvrez une nouvelle issue. Utilisez le modèle \"%s\" et remplissez la description, les étapes de reproduction puis collez le journal d\'erreur généré à la fin. Ceci contribue à améliorer FlorisBoard et à le rendre plus stable pour tous. Merci de votre aide!</string>
+    <string name="crash_dialog__title" comment="Title of crash dialog">Rapport d\'erreur de SmartKeyboard</string>
+    <string name="crash_dialog__description" comment="Description of crash dialog">Désolé pour le désagrément, mais SmartKeyboard a crashé en raison d\'une erreur inattendue.</string>
+    <string name="crash_dialog__report_instructions" comment="Issue tracker report instructions for the crash dialog. The %s placeholder is the name of the crash report template and always in English/LTR.">Si vous souhaitez signaler cette erreur, vérifier avant tout si votre problème n\'a pas déjà été signalé sur le tracker d\'erreur de github.\nSi ce n\'est pas le cas, copiez le journal d\'erreur généré et ouvrez une nouvelle issue. Utilisez le modèle \"%s\" et remplissez la description, les étapes de reproduction puis collez le journal d\'erreur généré à la fin. Ceci contribue à améliorer SmartKeyboard et à le rendre plus stable pour tous. Merci de votre aide!</string>
     <string name="crash_dialog__copy_to_clipboard" comment="Label of Copy to clipboard button in crash dialog">Copier vers le presse papier système</string>
     <string name="crash_dialog__copy_to_clipboard_success" comment="Label of Copy to clipboard success message in crash dialog">Copié vers le presse papier système</string>
     <string name="crash_dialog__copy_to_clipboard_failure" comment="Label of Copy to clipboard failure message in crash dialog">Impossible de copier vers le presse papier système : Instance du gestionnaire de presse papier introuvable</string>
     <string name="crash_dialog__open_issue_tracker" comment="Label of Open issue tracker button in crash dialog">Ouvrir le tracker d\'erreur (github.com)</string>
     <string name="crash_dialog__close" comment="Label of Close button in crash dialog">Fermer</string>
-    <string name="crash_notification_channel__title" comment="Title of crash notification channel">Rapports d\'erreur de FlorisBoard</string>
-    <string name="crash_once_notification__title" comment="Title of the notification for a single crash">FlorisBoard a cessé de fonctionner…</string>
+    <string name="crash_notification_channel__title" comment="Title of crash notification channel">Rapports d\'erreur de SmartKeyboard</string>
+    <string name="crash_once_notification__title" comment="Title of the notification for a single crash">SmartKeyboard a cessé de fonctionner…</string>
     <string name="crash_once_notification__body" comment="Body of the notification for a single crash">Touchez pour voir les détails de l\'erreur</string>
-    <string name="crash_multiple_notification__title" comment="Title of the notification for consecutive crashes">FlorisBoard semble cesser de fonctionner de façon répétitive…</string>
+    <string name="crash_multiple_notification__title" comment="Title of the notification for consecutive crashes">SmartKeyboard semble cesser de fonctionner de façon répétitive…</string>
     <string name="crash_multiple_notification__body" comment="Body of the notification for consecutive crashes">Retour au clavier précédent pour arrêter la boucle de plantage infinie. Appuyez pour afficher les détails de l\'erreur</string>
     <!-- Clipboard strings -->
     <string name="clipboard__header_title">Presse-papier</string>
@@ -516,7 +516,7 @@
     <string name="pref__clipboard__use_internal_clipboard__label">Utiliser le presse-papier interne</string>
     <string name="pref__clipboard__use_internal_clipboard__summary">Utiliser un presse-papier interne plutôt que celui du système</string>
     <string name="pref__clipboard__sync_from_system_clipboard__label">Synchroniser depuis le presse-papier système</string>
-    <string name="pref__clipboard__sync_from_system_clipboard__summary">Les mises à jour du presse-papiers du système mettent également à jour le presse-papiers de FlorisBoard.</string>
+    <string name="pref__clipboard__sync_from_system_clipboard__summary">Les mises à jour du presse-papiers du système mettent également à jour le presse-papiers de SmartKeyboard.</string>
     <string name="pref__clipboard__sync_to_system_clipboard__label">Synchroniser vers le presse-papier système</string>
     <string name="pref__clipboard__sync_to_system_clipboard__summary">Le presse-papier Floris met aussi à jour le presse-papier du système</string>
     <string name="pref__clipboard__group_clipboard_history__label">Historique du presse-papiers</string>
@@ -593,7 +593,7 @@
     <string name="ext__export__failure">Échec de l\'exportation de l\'extension : {error_message}</string>
     <string name="ext__import__success">Extension importée avec succès !</string>
     <string name="ext__import__failure">Échec de l\'importation de l\'extension : {error_message}</string>
-    <string name="ext__import__ext_any" comment="Title of Importer screen for import of any supported FlorisBoard extension">Importer l\'extension</string>
+    <string name="ext__import__ext_any" comment="Title of Importer screen for import of any supported SmartKeyboard extension">Importer l\'extension</string>
     <string name="ext__import__ext_keyboard" comment="Title of Importer screen for keyboard extension import">Importer une extension de clavier</string>
     <string name="ext__import__ext_theme" comment="Title of Importer screen for theme extension import">Importer l\'extension de thème</string>
     <string name="ext__import__file_skip" comment="Label when a file cannot be imported in the current context. The actual reason string is in a separate text view below this string.">Le fichier ne peut pas être importé. Raison :</string>

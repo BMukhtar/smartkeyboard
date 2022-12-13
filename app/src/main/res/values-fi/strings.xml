@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FlorisBoard</string>
+    <string name="app_name">SmartKeyboard</string>
     <string name="key__phone_pause" comment="Label for the Pause key in the telephone keyboard layout">Tauko</string>
     <string name="key__phone_wait" comment="Label for the Wait key in the telephone keyboard layout">Odota</string>
     <string name="key_popup__threedots_alt" comment="Content description for the three-dots icon in a key popup">Kolmen pisteen kuvake. Se tarkoittaa, että lisää kirjaimia on saatavilla pitkällä painalluksella.</string>
@@ -38,8 +38,8 @@
     <string name="settings__default" comment="General string which is used when a preference has the default value set">Oletus</string>
     <string name="settings__system_default" comment="General string which is used when a preference has the system default value set">Järjestelmän oletus</string>
     <string name="settings__home__title" comment="Title of the Home screen">Tervetuloa {app_name}iin</string>
-    <string name="settings__home__ime_not_enabled" comment="Error message shown in Home fragment when FlorisBoard is not enabled in the system">FlorisBoardia ei ole otettu järjestelmäasetuksissa käyttöön eikä sen vuoksi ole valittavissa syöttötavaksi. Klikkaa tästä ratkaistaksesi ongelman.</string>
-    <string name="settings__home__ime_not_selected" comment="Warning message shown in Home fragment when FlorisBoard is not selected as the default keyboard">FlorisBoardia ei ole valittu oletussyöttötavaksi. Klikkaa tästä ratkaistaksesi ongelman.</string>
+    <string name="settings__home__ime_not_enabled" comment="Error message shown in Home fragment when SmartKeyboard is not enabled in the system">SmartKeyboardia ei ole otettu järjestelmäasetuksissa käyttöön eikä sen vuoksi ole valittavissa syöttötavaksi. Klikkaa tästä ratkaistaksesi ongelman.</string>
+    <string name="settings__home__ime_not_selected" comment="Warning message shown in Home fragment when SmartKeyboard is not selected as the default keyboard">SmartKeyboardia ei ole valittu oletussyöttötavaksi. Klikkaa tästä ratkaistaksesi ongelman.</string>
     <string name="settings__localization__title" comment="Title of languages and Layout screen">Kielet &amp; ulkoasut</string>
     <string name="settings__localization__display_language_names_in__label" comment="Label of Display language names in preference">Kieli, jolla kielten nimet näytetään</string>
     <string name="settings__localization__group_subtypes__label" comment="Label of subtypes group">Alityypit</string>
@@ -78,7 +78,7 @@
     <string name="pref__theme__any_theme__label" comment="Label of the theme selector preference">Valittu teema</string>
     <string name="pref__theme__any_theme_adapt_to_app__label" comment="Label of the theme adapt to app preference">Mukauta sovelluksen väreihin</string>
     <string name="pref__theme__any_theme_adapt_to_app__summary" comment="Summary of the theme adapt to app preference">Teeman värit mukautetaan avoinna olevan sovelluksen mukaan, mikäli sovellus tukee ominaisuutta.</string>
-    <string name="pref__theme__source_assets" comment="Label for the theme source field">FlorisBoard-sovellus</string>
+    <string name="pref__theme__source_assets" comment="Label for the theme source field">SmartKeyboard-sovellus</string>
     <string name="pref__theme__source_internal" comment="Label for the theme source field">Sisäinen tallennustila</string>
     <string name="pref__theme__source_external" comment="Label for the theme source field">Ulkoinen lähde</string>
     <string name="settings__theme_manager__title_day" comment="Title of the theme manager screen for day theme selection">Valitse päiväteema</string>
@@ -285,7 +285,7 @@
     <string name="pref__advanced__show_app_icon__summary_atleast_q" comment="Summary of Show app icon preference in Advanced for Android 10+">Aina käytössä Android 10+ järjestelmän rajoituksien vuoksi</string>
     <!-- About UI strings -->
     <string name="about__title" comment="Title of About activity">Tietoa</string>
-    <string name="about__app_icon_content_description" comment="Content description of app icon in About">FlorisBoardin kuvake</string>
+    <string name="about__app_icon_content_description" comment="Content description of app icon in About">SmartKeyboardin kuvake</string>
     <string name="about__view_licenses" comment="Label of View licenses button in About">Avoimen lähdekoodin lisenssit</string>
     <string name="about__view_privacy_policy" comment="Label of View privacy policy button in About">Tietosuojakäytäntö</string>
     <string name="about__view_source_code" comment="Label of View source code button in About">Lähdekoodi</string>
@@ -300,7 +300,7 @@
     <string name="about__privacy_policy__title" comment="Preference title">Tietosuojakäytäntö</string>
     <string name="about__privacy_policy__summary" comment="Preference summary">Projektin tietosuojakäytäntö</string>
     <string name="about__project_license__title" comment="Preference title">Projektin lisenssi</string>
-    <string name="about__project_license__summary" comment="Preference summary">FlorisBoardin on lisensoitu lisenssillä {license_name}</string>
+    <string name="about__project_license__summary" comment="Preference summary">SmartKeyboardin on lisensoitu lisenssillä {license_name}</string>
     <string name="about__project_license__error_license_text_failed" comment="Error text for license text loading failure">Virhe: Lisenssitekstin lataus epäonnistui.\n-&gt; Syy: {error_message}</string>
     <string name="about__third_party_licenses__title" comment="Preference title">Kolmannen osapuolen lisenssit</string>
     <string name="about__third_party_licenses__summary" comment="Preference summary">Sovelluksen käyttämien kolmannen osapuolen kirjastojen lisenssit</string>
@@ -316,16 +316,16 @@
     <string name="setup__select_ime__switch_keyboard_btn">Vaihda näppäimistöä</string>
     <!-- Back up & Restore -->
     <!-- Crash Dialog strings -->
-    <string name="crash_dialog__title" comment="Title of crash dialog">FlorisBoardin virheraportti</string>
-    <string name="crash_dialog__description" comment="Description of crash dialog">Pahoittelut, FlorisBoard kaatui odottamattoman virheen vuoksi.</string>
+    <string name="crash_dialog__title" comment="Title of crash dialog">SmartKeyboardin virheraportti</string>
+    <string name="crash_dialog__description" comment="Description of crash dialog">Pahoittelut, SmartKeyboard kaatui odottamattoman virheen vuoksi.</string>
     <string name="crash_dialog__copy_to_clipboard" comment="Label of Copy to clipboard button in crash dialog">Kopioi järjestelmän leikepöydälle</string>
     <string name="crash_dialog__copy_to_clipboard_success" comment="Label of Copy to clipboard success message in crash dialog">Kopioitu järjestelmän leikepöydälle</string>
     <string name="crash_dialog__open_issue_tracker" comment="Label of Open issue tracker button in crash dialog">Avaa ongelmien seuranta (github.com)</string>
     <string name="crash_dialog__close" comment="Label of Close button in crash dialog">Sulje</string>
-    <string name="crash_notification_channel__title" comment="Title of crash notification channel">FlorisBoard-virheraportit</string>
-    <string name="crash_once_notification__title" comment="Title of the notification for a single crash">FlorisBoard on lopettanut toimintansa…</string>
+    <string name="crash_notification_channel__title" comment="Title of crash notification channel">SmartKeyboard-virheraportit</string>
+    <string name="crash_once_notification__title" comment="Title of the notification for a single crash">SmartKeyboard on lopettanut toimintansa…</string>
     <string name="crash_once_notification__body" comment="Body of the notification for a single crash">Napauta nähdäksesi virheen tiedot</string>
-    <string name="crash_multiple_notification__title" comment="Title of the notification for consecutive crashes">FlorisBoard vaikuttaa lopettavan toimintansa toistuvasti…</string>
+    <string name="crash_multiple_notification__title" comment="Title of the notification for consecutive crashes">SmartKeyboard vaikuttaa lopettavan toimintansa toistuvasti…</string>
     <string name="crash_multiple_notification__body" comment="Body of the notification for consecutive crashes">Vaihdetaan edelliseen näppäimistöön, jotta kaatumiskierre loppuu. Napauta nähdäksesi virheen tiedot</string>
     <!-- Clipboard strings -->
     <string name="clipboard__header_title">Leikepöytä</string>

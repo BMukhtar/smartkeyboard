@@ -32,8 +32,8 @@ import kotlin.contracts.contract
 
 /**
  * A universal resource reference, capable to point to destinations within
- * FlorisBoard's app user interface screens, APK assets, cache and internal
- * storage, external resources provided to FlorisBoard via content URIs, as
+ * SmartKeyboard's app user interface screens, APK assets, cache and internal
+ * storage, external resources provided to SmartKeyboard via content URIs, as
  * well as hyperlinks.
  *
  * [android.net.Uri] is used as the underlying implementation for storing the
@@ -86,7 +86,7 @@ value class FlorisRef private constructor(val uri: Uri) {
 
         /**
          * Constructs a new [FlorisRef] pointing to a resource within the
-         * FlorisBoard APK assets.
+         * SmartKeyboard APK assets.
          *
          * @param path The relative path from the APK assets root the resource
          *  is located.
@@ -102,7 +102,7 @@ value class FlorisRef private constructor(val uri: Uri) {
 
         /**
          * Constructs a new [FlorisRef] pointing to a resource within the
-         * cache storage of FlorisBoard.
+         * cache storage of SmartKeyboard.
          *
          * @param path The relative path from the cache root directory.
          *
@@ -117,7 +117,7 @@ value class FlorisRef private constructor(val uri: Uri) {
 
         /**
          * Constructs a new [FlorisRef] pointing to a resource within the
-         * internal storage of FlorisBoard.
+         * internal storage of SmartKeyboard.
          *
          * @param path The relative path from the internal storage root directory.
          *
@@ -132,7 +132,7 @@ value class FlorisRef private constructor(val uri: Uri) {
 
         /**
          * Constructs a new reference from given [uri], this can point to any
-         * destination, regardless of within FlorisBoard or not.
+         * destination, regardless of within SmartKeyboard or not.
          *
          * @param uri The destination, denoted by a system URI format.
          *
@@ -142,7 +142,7 @@ value class FlorisRef private constructor(val uri: Uri) {
 
         /**
          * Constructs a new reference from given [str], this can point to any
-         * destination, regardless of within FlorisBoard or not.
+         * destination, regardless of within SmartKeyboard or not.
          *
          * @param str An RFC 2396-compliant, encoded URI string.
          *
@@ -175,7 +175,7 @@ value class FlorisRef private constructor(val uri: Uri) {
 
         /**
          * Constructs a new reference from given [scheme] and [path], this can
-         * point to any destination, regardless of within FlorisBoard or not.
+         * point to any destination, regardless of within SmartKeyboard or not.
          *
          * @param scheme The scheme of this reference.
          * @param path The relative path of this reference.
@@ -197,21 +197,21 @@ value class FlorisRef private constructor(val uri: Uri) {
         get() = uri.scheme == SCHEME_FLORIS && uri.authority == AUTHORITY_APP_UI
 
     /**
-     * True if the scheme and authority indicates a reference to a FlorisBoard APK asset
+     * True if the scheme and authority indicates a reference to a SmartKeyboard APK asset
      * resource, false otherwise.
      */
     val isAssets: Boolean
         get() = uri.scheme == SCHEME_FLORIS && uri.authority == AUTHORITY_ASSETS
 
     /**
-     * True if the scheme indicates a reference to a FlorisBoard cache
+     * True if the scheme indicates a reference to a SmartKeyboard cache
      * resource, false otherwise.
      */
     val isCache: Boolean
         get() = uri.scheme == SCHEME_FLORIS && uri.authority == AUTHORITY_CACHE
 
     /**
-     * True if the scheme indicates a reference to a FlorisBoard internal
+     * True if the scheme indicates a reference to a SmartKeyboard internal
      * storage resource, false otherwise.
      */
     val isInternal: Boolean
@@ -302,13 +302,13 @@ value class FlorisRef private constructor(val uri: Uri) {
      * Allows this URI to be used depending on where this reference points to.
      * It is guaranteed that one of the four lambda parameters is executed.
      *
-     * @param assets The lambda to run when the reference points to the FlorisBoard
+     * @param assets The lambda to run when the reference points to the SmartKeyboard
      *  screen UI resources. Defaults to do nothing.
-     * @param assets The lambda to run when the reference points to the FlorisBoard
+     * @param assets The lambda to run when the reference points to the SmartKeyboard
      *  APK assets. Defaults to do nothing.
-     * @param cache The lambda to run when the reference points to the FlorisBoard
+     * @param cache The lambda to run when the reference points to the SmartKeyboard
      *  cache resources. Defaults to do nothing.
-     * @param internal The lambda to run when the reference points to the FlorisBoard
+     * @param internal The lambda to run when the reference points to the SmartKeyboard
      *  internal storage. Defaults to do nothing.
      * @param external The lambda to run when the reference points to an external
      * resource. Defaults to do nothing.

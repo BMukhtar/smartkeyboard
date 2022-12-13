@@ -164,7 +164,7 @@ private infix fun UInt.isSet(flag: UInt): Boolean {
 }
 
 /**
- * Main helper object for FlorisBoard logging (=Flog). Manages the enabled
+ * Main helper object for SmartKeyboard logging (=Flog). Manages the enabled
  * state and the active topics. Provides relevant helper functions for the
  * flog methods to properly work.
  *

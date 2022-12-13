@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FlorisBoard</string>
+    <string name="app_name">SmartKeyboard</string>
     <string name="key__phone_pause" comment="Label for the Pause key in the telephone keyboard layout">Szünet</string>
     <string name="key__phone_wait" comment="Label for the Wait key in the telephone keyboard layout">Kérem várjon</string>
     <string name="key_popup__threedots_alt" comment="Content description for the three-dots icon in a key popup">Hárompontos ikon. Ha látható, azt jelzi, hogy több betű használható, ha hosszabb ideig megnyomja.</string>
@@ -38,8 +38,8 @@
     <string name="settings__default" comment="General string which is used when a preference has the default value set">Alapértelmezett</string>
     <string name="settings__system_default" comment="General string which is used when a preference has the system default value set">Rendszer alapértelmezett</string>
     <string name="settings__home__title" comment="Title of the Home screen">A {app_name} üdvözli</string>
-    <string name="settings__home__ime_not_enabled" comment="Error message shown in Home fragment when FlorisBoard is not enabled in the system">FlorisBoard nincs engedélyezve a rendszerben, így nem lesz elérhető, beviteli módszerként a bevitelválasztóban. A probléma megoldásához kattintson ide.</string>
-    <string name="settings__home__ime_not_selected" comment="Warning message shown in Home fragment when FlorisBoard is not selected as the default keyboard">A FlorisBoard nincs kiválasztva alapértelmezett beviteli módszerként. A probléma megoldásához kattintson ide.</string>
+    <string name="settings__home__ime_not_enabled" comment="Error message shown in Home fragment when SmartKeyboard is not enabled in the system">SmartKeyboard nincs engedélyezve a rendszerben, így nem lesz elérhető, beviteli módszerként a bevitelválasztóban. A probléma megoldásához kattintson ide.</string>
+    <string name="settings__home__ime_not_selected" comment="Warning message shown in Home fragment when SmartKeyboard is not selected as the default keyboard">A SmartKeyboard nincs kiválasztva alapértelmezett beviteli módszerként. A probléma megoldásához kattintson ide.</string>
     <string name="settings__localization__title" comment="Title of languages and Layout screen">Nyelvek és elrendezések</string>
     <string name="settings__localization__display_language_names_in__label" comment="Label of Display language names in preference">Nyelvek neveinek megjelenítése ebben</string>
     <string name="settings__localization__group_subtypes__label" comment="Label of subtypes group">Altípusok</string>
@@ -76,7 +76,7 @@
     <string name="pref__theme__any_theme__label" comment="Label of the theme selector preference">Kiválasztott téma</string>
     <string name="pref__theme__any_theme_adapt_to_app__label" comment="Label of the theme adapt to app preference">Színek módosítása az alkalmazáshoz</string>
     <string name="pref__theme__any_theme_adapt_to_app__summary" comment="Summary of the theme adapt to app preference">Színek módosítása az alkalmazáshoz, ha a célalkalmazás támogatja.</string>
-    <string name="pref__theme__source_assets" comment="Label for the theme source field">FlorisBoard alkalmazásadatok</string>
+    <string name="pref__theme__source_assets" comment="Label for the theme source field">SmartKeyboard alkalmazásadatok</string>
     <string name="pref__theme__source_internal" comment="Label for the theme source field">Belső tárhely</string>
     <string name="pref__theme__source_external" comment="Label for the theme source field">Külső szolgáltató</string>
     <string name="settings__theme_manager__title_day" comment="Title of the theme manager screen for day theme selection">Nappali téma kiválasztása</string>
@@ -278,7 +278,7 @@
     <string name="pref__advanced__show_app_icon__label" comment="Label of Show app icon preference in Advanced">Alkalmazás megjelenítése a kezdőképernyőn</string>
     <!-- About UI strings -->
     <string name="about__title" comment="Title of About activity">Névjegy</string>
-    <string name="about__app_icon_content_description" comment="Content description of app icon in About">A FlorisBoard alkalmazásikonja</string>
+    <string name="about__app_icon_content_description" comment="Content description of app icon in About">A SmartKeyboard alkalmazásikonja</string>
     <string name="about__view_licenses" comment="Label of View licenses button in About">Nyílt forráskódú licencek</string>
     <string name="about__view_privacy_policy" comment="Label of View privacy policy button in About">Adatvédelmi Irányelvek</string>
     <string name="about__view_source_code" comment="Label of View source code button in About">Forráskód</string>
@@ -293,7 +293,7 @@
     <string name="about__privacy_policy__title" comment="Preference title">Adatvédelmi Irányelvek</string>
     <string name="about__privacy_policy__summary" comment="Preference summary">A projekt adatvédelmi irányelvei</string>
     <string name="about__project_license__title" comment="Preference title">Projekt licenc</string>
-    <string name="about__project_license__summary" comment="Preference summary">A FlorisBoard ez alatt van licencelve: {license_name}</string>
+    <string name="about__project_license__summary" comment="Preference summary">A SmartKeyboard ez alatt van licencelve: {license_name}</string>
     <string name="about__third_party_licenses__title" comment="Preference title">Harmadik felek licencei</string>
     <string name="about__third_party_licenses__summary" comment="Preference summary">Az alkalmazásban szereplő harmadik felektől származó könyvtárak licencei</string>
     <!-- Setup UI strings -->
@@ -333,18 +333,18 @@
     <string name="backup_and_restore__restore__success">Sikeresen visszaállított adatok!</string>
     <string name="backup_and_restore__restore__failure">Nem sikerült visszaállítani az adatokat: {error_message}</string>
     <!-- Crash Dialog strings -->
-    <string name="crash_dialog__title" comment="Title of crash dialog">FlorisBoard hibajelentés</string>
-    <string name="crash_dialog__description" comment="Description of crash dialog">Elnézést a kellemetlenségért, de a FlorisBoard összeomlott egy váratlan hiba miatt.</string>
-    <string name="crash_dialog__report_instructions" comment="Issue tracker report instructions for the crash dialog. The %s placeholder is the name of the crash report template and always in English/LTR.">Ha szeretné jelenteni ezt a hibát, elsőnek nézze meg a hibakövetőt a GitHubon, hogy az összeomlása nem volt-e már jelentve.\nHa nem volt, másolja ki a generált összeomlásnaplót, és nyisson egy új hibajelentést. Használja a \"%s\" sablont, és töltse ki a leírást, írja le, hogy hogyan lehet előhozni a hibát, és illessze be az összeomlási naplót is a végére. Ez segít jobbá és stabilabbá tenni a FlorisBoardot mindenki számára. Köszönöm!</string>
+    <string name="crash_dialog__title" comment="Title of crash dialog">SmartKeyboard hibajelentés</string>
+    <string name="crash_dialog__description" comment="Description of crash dialog">Elnézést a kellemetlenségért, de a SmartKeyboard összeomlott egy váratlan hiba miatt.</string>
+    <string name="crash_dialog__report_instructions" comment="Issue tracker report instructions for the crash dialog. The %s placeholder is the name of the crash report template and always in English/LTR.">Ha szeretné jelenteni ezt a hibát, elsőnek nézze meg a hibakövetőt a GitHubon, hogy az összeomlása nem volt-e már jelentve.\nHa nem volt, másolja ki a generált összeomlásnaplót, és nyisson egy új hibajelentést. Használja a \"%s\" sablont, és töltse ki a leírást, írja le, hogy hogyan lehet előhozni a hibát, és illessze be az összeomlási naplót is a végére. Ez segít jobbá és stabilabbá tenni a SmartKeyboardot mindenki számára. Köszönöm!</string>
     <string name="crash_dialog__copy_to_clipboard" comment="Label of Copy to clipboard button in crash dialog">Rendszervágólapra másolás</string>
     <string name="crash_dialog__copy_to_clipboard_success" comment="Label of Copy to clipboard success message in crash dialog">Rendszervágólapra másolva</string>
     <string name="crash_dialog__copy_to_clipboard_failure" comment="Label of Copy to clipboard failure message in crash dialog">Nem lehet rendszervágólapra másolni: vágólap kezelő nem található</string>
     <string name="crash_dialog__open_issue_tracker" comment="Label of Open issue tracker button in crash dialog">Hibakövető megnyitása (github.com)</string>
     <string name="crash_dialog__close" comment="Label of Close button in crash dialog">Bezárás</string>
-    <string name="crash_notification_channel__title" comment="Title of crash notification channel">FlorisBoard hibajelentések</string>
-    <string name="crash_once_notification__title" comment="Title of the notification for a single crash">A FlorisBoard leállt…</string>
+    <string name="crash_notification_channel__title" comment="Title of crash notification channel">SmartKeyboard hibajelentések</string>
+    <string name="crash_once_notification__title" comment="Title of the notification for a single crash">A SmartKeyboard leállt…</string>
     <string name="crash_once_notification__body" comment="Body of the notification for a single crash">Érintse meg a hiba részleteinek megtekintéséhez</string>
-    <string name="crash_multiple_notification__title" comment="Title of the notification for consecutive crashes">Úgy tűnik, hogy a FlorisBoard többször leállt…</string>
+    <string name="crash_multiple_notification__title" comment="Title of the notification for consecutive crashes">Úgy tűnik, hogy a SmartKeyboard többször leállt…</string>
     <string name="crash_multiple_notification__body" comment="Body of the notification for consecutive crashes">Visszalépés az előző billentyűzetre, a végtelen összeomlás megakadályozásához. Érintse meg a hiba részleteinek megtekintéséhez</string>
     <!-- Clipboard strings -->
     <string name="clipboard__header_title">Vágólap</string>
@@ -439,7 +439,7 @@
     <string name="ext__export__failure">Nem sikerült exportálni a kiterjesztést: {error_message}</string>
     <string name="ext__import__success">A kiterjesztés sikeresen importálva!</string>
     <string name="ext__import__failure">Nem sikerült importálni a kiterjesztést: {error_message}</string>
-    <string name="ext__import__ext_any" comment="Title of Importer screen for import of any supported FlorisBoard extension">Kiterjesztés importálása</string>
+    <string name="ext__import__ext_any" comment="Title of Importer screen for import of any supported SmartKeyboard extension">Kiterjesztés importálása</string>
     <string name="ext__import__ext_keyboard" comment="Title of Importer screen for keyboard extension import">Billentyűzet kiterjesztés importálása</string>
     <string name="ext__import__ext_theme" comment="Title of Importer screen for theme extension import">Téma kiterjesztés importálása</string>
     <string name="ext__import__file_skip" comment="Label when a file cannot be imported in the current context. The actual reason string is in a separate text view below this string.">A fájlt nem lehet importálni. Oka:</string>
