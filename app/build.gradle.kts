@@ -50,7 +50,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "dev.patrickgold.florisboard"
+        applicationId = "smartkeyboard"
         minSdk = 24
         targetSdk = 31
         versionCode = 90

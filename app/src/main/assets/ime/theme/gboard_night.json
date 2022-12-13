@@ -1,5 +1,5 @@
 {
-  "$type": "dev.patrickgold.florisboard.ime.theme.Theme",
+  "$type": "smartkeyboard.ime.theme.Theme",
   "name": "gboard_night",
   "label": "Gboard Night",
   "authors": [ "Netscaping" ],

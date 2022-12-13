@@ -1,5 +1,5 @@
 {
-  "$type": "dev.patrickgold.florisboard.ime.theme.Theme",
+  "$type": "smartkeyboard.ime.theme.Theme",
   "name": "gboard_day",
   "label": "Gboard Day",
   "authors": [ "patrickgold", "itskareem" ],
