@@ -140,6 +140,7 @@ private class SubtypeEditorState(init: Subtype?) {
         punctuationRule.value = subtype.punctuationRule
         popupMapping.value = subtype.popupMapping
         layoutMap.value = subtype.layoutMap
+        nlpProviders.value = subtype.nlpProviders
     }
 
     fun toSubtype() = runCatching<Subtype> {

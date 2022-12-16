@@ -437,8 +437,8 @@
         "characters": "org.florisboard.layouts:kazakh",
         "symbols": "org.florisboard.layouts:neo2",
         "symbols2": "org.florisboard.layouts:western",
-        "numericRow": "org.florisboard.layouts:neo2",
-        "numericAdvanced": "org.florisboard.layouts:neo2"
+        "numericRow": "org.florisboard.layouts:eastern_arabic",
+        "numericAdvanced": "org.florisboard.layouts:eastern_arabic_pc"
       }
     },
     {
