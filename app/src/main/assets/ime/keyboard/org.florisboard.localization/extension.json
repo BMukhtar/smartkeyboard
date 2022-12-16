@@ -69,6 +69,7 @@
     { "id": "sv", "authors": [ "patrickgold" ] },
     { "id": "tr", "authors": [ "kisekinopureya", "patrickgold", "dvrnynr" ] },
     { "id": "uk", "authors": [ "williamtheaker", "33kk", "honsiorovskyi" ] },
+    { "id": "kk", "authors": [ "mukhtar" ] },
     { "id": "uk-cyr-ext", "authors": [ "williamtheaker", "33kk", "honsiorovskyi" ] },
     { "id": "ur-PK", "authors": [ "mubashir-rehman", "mirfatif" ] },
     { "id": "vi-VN", "authors": [ "patrickgold", "Hayleia" ] }
@@ -421,6 +422,23 @@
       "popupMapping": "org.florisboard.localization:ru",
       "preferred": {
         "characters": "org.florisboard.layouts:jcuken_russian"
+      }
+    },
+    {
+      "languageTag": "kk",
+      "composer": "org.florisboard.composers:appender",
+      "currencySet": "org.florisboard.currencysets:kazakhstani_tenge",
+      "popupMapping": "org.florisboard.localization:ru",
+      "nlpProviders": {
+        "spelling": "org.florisboard.nlp.providers.kazakh",
+        "suggestion": "org.florisboard.nlp.providers.kazakh"
+      },
+      "preferred": {
+        "characters": "org.florisboard.layouts:kazakh",
+        "symbols": "org.florisboard.layouts:neo2",
+        "symbols2": "org.florisboard.layouts:western",
+        "numericRow": "org.florisboard.layouts:neo2",
+        "numericAdvanced": "org.florisboard.layouts:neo2"
       }
     },
     {
