@@ -79,6 +79,7 @@ class LatinLanguageProvider(context: Context) : SpellingProvider, SuggestionProv
                     { tokens: Array<String> -> tokens[1].toLong() }
                 )
             )
+
         maxFreq = unigrams.values.sum()
         val bigrams = appContext.assets.reader("symspell/bigrams.txt")
             .readLines()
