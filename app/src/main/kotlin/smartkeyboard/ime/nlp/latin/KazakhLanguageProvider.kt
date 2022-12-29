@@ -17,6 +17,8 @@
 package smartkeyboard.ime.nlp.latin
 
 import android.content.Context
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import smartkeyboard.appContext
 import smartkeyboard.ime.core.Subtype
 import smartkeyboard.ime.editor.EditorContent
@@ -25,26 +27,26 @@ import smartkeyboard.ime.nlp.SpellingResult
 import smartkeyboard.ime.nlp.SuggestionCandidate
 import smartkeyboard.ime.nlp.SuggestionProvider
 import smartkeyboard.ime.nlp.WordSuggestionCandidate
-import smartkeyboard.lib.android.readText
+import smartkeyboard.ime.nlp.symspell.Bigram
+import smartkeyboard.ime.nlp.symspell.SymSpell
+import smartkeyboard.ime.nlp.symspell.SymSpellImpl
+import smartkeyboard.ime.nlp.symspell.Verbosity
+import smartkeyboard.lib.android.reader
 import smartkeyboard.lib.devtools.flogDebug
-import smartkeyboard.lib.kotlin.guardedByLock
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
-import kotlinx.serialization.builtins.MapSerializer
-import kotlinx.serialization.builtins.serializer
-import kotlinx.serialization.json.Json
+import java.util.stream.Collectors
 
 class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionProvider {
     companion object {
         // Default user ID used for all subtypes, unless otherwise specified.
         // See `ime/core/Subtype.kt` Line 210 and 211 for the default usage
         const val ProviderId = "org.florisboard.nlp.providers.kazakh"
+        private const val MAX_DISTANCE = 2
     }
 
     private val appContext by context.appContext()
 
-    private val wordData = guardedByLock { mutableMapOf<String, Int>() }
-    private val wordDataSerializer = MapSerializer(String.serializer(), Int.serializer())
+    private var symSpell: SymSpell? = null
+    private var maxFreq: Long = 1L
 
     override val providerId = ProviderId
 
@@ -68,15 +70,32 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
 
         // The subtype we get here contains a lot of data, however we are only interested in subtype.primaryLocale and
         // subtype.secondaryLocales.
-
-        wordData.withLock { wordData ->
-            if (wordData.isEmpty()) {
-                // Here we use readText() because the test dictionary is a json dictionary
-                val rawData = appContext.assets.readText("ime/dict/data.json")
-                val jsonData = Json.decodeFromString(wordDataSerializer, rawData)
-                wordData.putAll(jsonData)
-            }
-        }
+        val unigrams = appContext.assets.reader("symspell/words.txt")
+            .readLines()
+            .stream()
+            .map { line: String -> line.split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray() }
+            .collect(
+                Collectors.toMap(
+                    { tokens: Array<String> -> tokens[0] },
+                    { tokens: Array<String> -> tokens[1].toLong() }
+                )
+            )
+        maxFreq = unigrams.values.sum()
+        val bigrams = appContext.assets.reader("symspell/bigrams.txt")
+            .readLines()
+            .stream()
+            .map { line: String -> line.split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray() }
+            .collect(
+                Collectors.toMap(
+                    { tokens: Array<String> -> Bigram(tokens[0], tokens[1]) },
+                    { tokens: Array<String> -> tokens[2].toLong() }
+                )
+            )
+        symSpell = SymSpellImpl(
+            unigramLexicon = unigrams,
+            bigramLexicon = bigrams,
+            maxDictionaryEditDistance = MAX_DISTANCE,
+        )
     }
 
     override suspend fun spell(
@@ -88,15 +107,13 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
         allowPossiblyOffensive: Boolean,
         isPrivateSession: Boolean,
     ): SpellingResult {
-        return when (word.lowercase()) {
-            // Use typo for typing errors
-            "typo" -> SpellingResult.typo(arrayOf("typo1", "typo2", "typo3"))
-            // Use grammar error if the algorithm can detect this. On Android 11 and lower grammar errors are visually
-            // marked as typos due to a lack of support
-            "gerror" -> SpellingResult.grammarError(arrayOf("grammar1", "grammar2", "grammar3"))
-            // Use valid word for valid input
-            else -> SpellingResult.validWord()
+        val suggestItems = symSpell?.lookup(input = word, verbosity = Verbosity.ALL)
+            ?: return SpellingResult.unspecified()
+        if (suggestItems.isEmpty()) {
+            return SpellingResult.validWord()
         }
+
+        return SpellingResult.typo(suggestItems.take(maxSuggestionCount).map { it.suggestion }.toTypedArray())
     }
 
     override suspend fun suggest(
@@ -106,22 +123,17 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
         allowPossiblyOffensive: Boolean,
         isPrivateSession: Boolean,
     ): List<SuggestionCandidate> {
-        val word = content.composingText.ifBlank { "next" }
-        val suggestions = buildList {
-            for (n in 0 until maxCandidateCount) {
-                add(
-                    WordSuggestionCandidate(
-                    text = "$word$n",
-                    secondaryText = if (n % 2 == 1) "secondary" else null,
-                    confidence = 0.5,
-                    isEligibleForAutoCommit = false,//n == 0 && word.startsWith("auto"),
-                    // We set ourselves as the source provider so we can get notify events for our candidate
-                    sourceProvider = this@KazakhLanguageProvider,
-                )
-                )
-            }
+        val suggestItems = symSpell?.lookup(input = content.currentWordText, verbosity = Verbosity.ALL) ?: return emptyList()
+        return suggestItems.take(maxCandidateCount).map {
+            WordSuggestionCandidate(
+                text = it.suggestion,
+                secondaryText = null,
+                confidence = (MAX_DISTANCE - it.editDistance.coerceAtMost(MAX_DISTANCE - 1)) / MAX_DISTANCE.toDouble(),
+                isEligibleForAutoCommit = false,//n == 0 && word.startsWith("auto"),
+                // We set ourselves as the source provider so we can get notify events for our candidate
+                sourceProvider = this@KazakhLanguageProvider,
+            )
         }
-        return suggestions
     }
 
     override suspend fun notifySuggestionAccepted(subtype: Subtype, candidate: SuggestionCandidate) {
@@ -139,11 +151,11 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
     }
 
     override suspend fun getListOfWords(subtype: Subtype): List<String> {
-        return wordData.withLock { it.keys.toList() }
+        return symSpell?.unigramLexicon?.keys?.toList() ?: emptyList()
     }
 
     override suspend fun getFrequencyForWord(subtype: Subtype, word: String): Double {
-        return wordData.withLock { it.getOrDefault(word, 0) / 255.0 }
+        return symSpell?.unigramLexicon?.get(word)?.div(maxFreq.toDouble()) ?: 0.0
     }
 
     override suspend fun destroy() {
