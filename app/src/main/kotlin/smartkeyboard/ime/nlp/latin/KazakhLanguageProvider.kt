@@ -33,7 +33,6 @@ import smartkeyboard.ime.nlp.symspell.SymSpellImpl
 import smartkeyboard.ime.nlp.symspell.Verbosity
 import smartkeyboard.lib.android.reader
 import smartkeyboard.lib.devtools.flogDebug
-import java.util.stream.Collectors
 
 class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionProvider {
     companion object {
@@ -68,35 +67,20 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
         // appContext.assets.copy()
         // appContext.assets.copyRecursively()
 
-        // The subtype we get here contains a lot of data, however we are only interested in subtype.primaryLocale and
-        // subtype.secondaryLocales.
-        val unigrams = appContext.assets.reader("symspell/kk_unigrams.txt").run {
-            val res = readLines()
-                .stream()
-                .map { line: String -> line.split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray() }
-                .collect(
-                    Collectors.toMap(
-                        { tokens: Array<String> -> tokens[0] },
-                        { tokens: Array<String> -> tokens[1].toLong() }
-                    )
-                )
-            close()
-            res
-        }
+        val unigrams = mutableMapOf<String, Long>()
+        appContext.assets.reader("symspell/kk_unigrams.txt")
+            .forEachLine { line: String ->
+                val (word, countAsString) = line.split(",")
+                unigrams[word] = countAsString.toLong()
+            }
         maxFreq = unigrams.values.sum()
-        val bigrams = appContext.assets.reader("symspell/kk_bigrams.txt").run {
-            val res = readLines()
-                .stream()
-                .map { line: String -> line.split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray() }
-                .collect(
-                    Collectors.toMap(
-                        { tokens: Array<String> -> Bigram(tokens[0], tokens[1]) },
-                        { tokens: Array<String> -> tokens[2].toLong() }
-                    )
-                )
-            close()
-            res
-        }
+
+        val bigrams = mutableMapOf<Bigram, Long>()
+        appContext.assets.reader("symspell/kk_bigrams.txt")
+            .forEachLine { line: String ->
+                val (word1, word2, countAsString) = line.split(" ")
+                bigrams[Bigram(word1, word2)] = countAsString.toLong()
+            }
 
         symSpell = SymSpellImpl(
             unigramLexicon = unigrams,

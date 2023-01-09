@@ -67,30 +67,20 @@ class LatinLanguageProvider(context: Context) : SpellingProvider, SuggestionProv
         // appContext.assets.copy()
         // appContext.assets.copyRecursively()
 
-        // The subtype we get here contains a lot of data, however we are only interested in subtype.primaryLocale and
-        // subtype.secondaryLocales.
-        val unigrams = appContext.assets.reader("symspell/words.txt")
-            .readLines()
-            .stream()
-            .map { line: String -> line.split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray() }
-            .collect(
-                Collectors.toMap(
-                    { tokens: Array<String> -> tokens[0] },
-                    { tokens: Array<String> -> tokens[1].toLong() }
-                )
-            )
-
+        val unigrams = mutableMapOf<String, Long>()
+        appContext.assets.reader("symspell/words.txt")
+            .forEachLine { line: String ->
+                val (word, countAsString) = line.split(",")
+                unigrams[word] = countAsString.toLong()
+            }
         maxFreq = unigrams.values.sum()
-        val bigrams = appContext.assets.reader("symspell/bigrams.txt")
-            .readLines()
-            .stream()
-            .map { line: String -> line.split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray() }
-            .collect(
-                Collectors.toMap(
-                    { tokens: Array<String> -> Bigram(tokens[0], tokens[1]) },
-                    { tokens: Array<String> -> tokens[2].toLong() }
-                )
-            )
+
+        val bigrams = mutableMapOf<Bigram, Long>()
+        appContext.assets.reader("symspell/bigrams.txt")
+            .forEachLine { line: String ->
+                val (word1, word2, countAsString) = line.split(" ")
+                bigrams[Bigram(word1, word2)] = countAsString.toLong()
+            }
         symSpell = SymSpellImpl(
             unigramLexicon = unigrams,
             bigramLexicon = bigrams,
