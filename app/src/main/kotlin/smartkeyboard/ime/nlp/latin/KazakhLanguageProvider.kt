@@ -70,7 +70,7 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
 
         // The subtype we get here contains a lot of data, however we are only interested in subtype.primaryLocale and
         // subtype.secondaryLocales.
-        val unigrams = appContext.assets.reader("symspell/words.txt")
+        val unigrams = appContext.assets.reader("symspell/kk_unigrams.txt")
             .readLines()
             .stream()
             .map { line: String -> line.split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray() }
@@ -81,7 +81,7 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
                 )
             )
         maxFreq = unigrams.values.sum()
-        val bigrams = appContext.assets.reader("symspell/bigrams.txt")
+        val bigrams = appContext.assets.reader("symspell/kk_bigrams.txt")
             .readLines()
             .stream()
             .map { line: String -> line.split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray() }
