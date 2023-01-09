@@ -70,27 +70,34 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
 
         // The subtype we get here contains a lot of data, however we are only interested in subtype.primaryLocale and
         // subtype.secondaryLocales.
-        val unigrams = appContext.assets.reader("symspell/kk_unigrams.txt")
-            .readLines()
-            .stream()
-            .map { line: String -> line.split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray() }
-            .collect(
-                Collectors.toMap(
-                    { tokens: Array<String> -> tokens[0] },
-                    { tokens: Array<String> -> tokens[1].toLong() }
+        val unigrams = appContext.assets.reader("symspell/kk_unigrams.txt").run {
+            val res = readLines()
+                .stream()
+                .map { line: String -> line.split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray() }
+                .collect(
+                    Collectors.toMap(
+                        { tokens: Array<String> -> tokens[0] },
+                        { tokens: Array<String> -> tokens[1].toLong() }
+                    )
                 )
-            )
+            close()
+            res
+        }
         maxFreq = unigrams.values.sum()
-        val bigrams = appContext.assets.reader("symspell/kk_bigrams.txt")
-            .readLines()
-            .stream()
-            .map { line: String -> line.split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray() }
-            .collect(
-                Collectors.toMap(
-                    { tokens: Array<String> -> Bigram(tokens[0], tokens[1]) },
-                    { tokens: Array<String> -> tokens[2].toLong() }
+        val bigrams = appContext.assets.reader("symspell/kk_bigrams.txt").run {
+            val res = readLines()
+                .stream()
+                .map { line: String -> line.split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray() }
+                .collect(
+                    Collectors.toMap(
+                        { tokens: Array<String> -> Bigram(tokens[0], tokens[1]) },
+                        { tokens: Array<String> -> tokens[2].toLong() }
+                    )
                 )
-            )
+            close()
+            res
+        }
+
         symSpell = SymSpellImpl(
             unigramLexicon = unigrams,
             bigramLexicon = bigrams,
@@ -123,7 +130,8 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
         allowPossiblyOffensive: Boolean,
         isPrivateSession: Boolean,
     ): List<SuggestionCandidate> {
-        val suggestItems = symSpell?.lookup(input = content.currentWordText, verbosity = Verbosity.ALL) ?: return emptyList()
+        val suggestItems =
+            symSpell?.lookup(input = content.currentWordText, verbosity = Verbosity.ALL) ?: return emptyList()
         return suggestItems.take(maxCandidateCount).map {
             WordSuggestionCandidate(
                 text = it.suggestion,
