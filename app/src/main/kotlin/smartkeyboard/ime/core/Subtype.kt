@@ -61,7 +61,7 @@ data class Subtype(
          * Subtype to use when prefs do not contain any valid subtypes.
          */
         val DEFAULT = Subtype(
-            id = -2,
+            id = -1,
             primaryLocale = FlorisLocale.from("kk", "KZ"),
             secondaryLocales = emptyList(),
             nlpProviders = SubtypeNlpProviderMap(
