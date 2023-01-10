@@ -28,6 +28,7 @@ import smartkeyboard.lib.FlorisLocale
 import smartkeyboard.lib.ext.ExtensionComponentName
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import smartkeyboard.ime.nlp.latin.KazakhLanguageProvider
 
 /**
  * Data class which represents an user-specified set of language and layout. String representations
@@ -69,6 +70,20 @@ data class Subtype(
             punctuationRule = extCorePunctuationRule("default"),
             popupMapping = extCorePopupMapping("en"),
             layoutMap = SubtypeLayoutMap(characters = extCoreLayout("qwerty")),
+        )
+        val DEFAULT_KZ = Subtype(
+            id = -2,
+            primaryLocale = FlorisLocale.from("kz", "KZ"),
+            secondaryLocales = emptyList(),
+            nlpProviders = SubtypeNlpProviderMap(
+                spelling = KazakhLanguageProvider.ProviderId,
+                suggestion = KazakhLanguageProvider.ProviderId,
+            ),
+            composer = extCoreComposer("appender"),
+            currencySet = extCoreCurrencySet("kazakhstani_tenge"),
+            punctuationRule = extCorePunctuationRule("default"),
+            popupMapping = extCorePopupMapping("kk"),
+            layoutMap = SubtypeLayoutMap(characters = extCoreLayout("kazakh")),
         )
     }
 

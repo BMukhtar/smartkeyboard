@@ -60,7 +60,7 @@ class SubtypeManager(context: Context) {
             val list = if (listRaw.isNotBlank()) {
                 SubtypeJsonConfig.decodeFromString<List<Subtype>>(listRaw)
             } else {
-                emptyList()
+                listOf(Subtype.DEFAULT_KZ, Subtype.DEFAULT)
             }
             subtypes = list
             evaluateActiveSubtype(list)

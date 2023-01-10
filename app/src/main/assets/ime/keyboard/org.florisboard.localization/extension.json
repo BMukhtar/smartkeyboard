@@ -430,17 +430,17 @@
       "languageTag": "kk",
       "composer": "org.florisboard.composers:appender",
       "currencySet": "org.florisboard.currencysets:kazakhstani_tenge",
-      "popupMapping": "org.florisboard.localization:ru",
+      "popupMapping": "org.florisboard.localization:kk",
       "nlpProviders": {
         "spelling": "org.florisboard.nlp.providers.kazakh",
         "suggestion": "org.florisboard.nlp.providers.kazakh"
       },
       "preferred": {
         "characters": "org.florisboard.layouts:kazakh",
-        "symbols": "org.florisboard.layouts:neo2",
-        "symbols2": "org.florisboard.layouts:western",
+        "symbols": "org.florisboard.layouts:eastern",
+        "symbols2": "org.florisboard.layouts:eastern",
         "numericRow": "org.florisboard.layouts:eastern_arabic",
-        "numericAdvanced": "org.florisboard.layouts:eastern_arabic_pc"
+        "numericAdvanced": "org.florisboard.layouts:eastern_arabic"
       }
     },
     {
