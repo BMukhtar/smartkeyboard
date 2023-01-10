@@ -436,11 +436,7 @@
         "suggestion": "org.florisboard.nlp.providers.kazakh"
       },
       "preferred": {
-        "characters": "org.florisboard.layouts:kazakh",
-        "symbols": "org.florisboard.layouts:eastern",
-        "symbols2": "org.florisboard.layouts:eastern",
-        "numericRow": "org.florisboard.layouts:eastern_arabic",
-        "numericAdvanced": "org.florisboard.layouts:eastern_arabic"
+        "characters": "org.florisboard.layouts:kazakh"
       }
     },
     {

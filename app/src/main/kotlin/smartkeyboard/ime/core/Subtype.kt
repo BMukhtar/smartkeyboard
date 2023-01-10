@@ -61,19 +61,8 @@ data class Subtype(
          * Subtype to use when prefs do not contain any valid subtypes.
          */
         val DEFAULT = Subtype(
-            id = -1,
-            primaryLocale = FlorisLocale.from("en", "US"),
-            secondaryLocales = emptyList(),
-            nlpProviders = SubtypeNlpProviderMap(),
-            composer = extCoreComposer("appender"),
-            currencySet = extCoreCurrencySet("dollar"),
-            punctuationRule = extCorePunctuationRule("default"),
-            popupMapping = extCorePopupMapping("en"),
-            layoutMap = SubtypeLayoutMap(characters = extCoreLayout("qwerty")),
-        )
-        val DEFAULT_KZ = Subtype(
             id = -2,
-            primaryLocale = FlorisLocale.from("kz", "KZ"),
+            primaryLocale = FlorisLocale.from("kk", "KZ"),
             secondaryLocales = emptyList(),
             nlpProviders = SubtypeNlpProviderMap(
                 spelling = KazakhLanguageProvider.ProviderId,
