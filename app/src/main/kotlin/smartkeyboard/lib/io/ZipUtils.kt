@@ -21,7 +21,9 @@ import android.net.Uri
 import smartkeyboard.assetManager
 import smartkeyboard.lib.android.copyRecursively
 import smartkeyboard.lib.android.write
+import java.io.File
 import java.io.FileOutputStream
+import java.io.IOException
 import java.util.zip.ZipEntry
 import java.util.zip.ZipFile
 import java.util.zip.ZipOutputStream
@@ -142,6 +144,7 @@ object ZipUtils {
             while (flexEntries.hasMoreElements()) {
                 val flexEntry = flexEntries.nextElement()
                 val flexEntryFile = FsFile(dstDir, flexEntry.name)
+                validateFilename(flexEntryFile.name, dstDir)
                 if (flexEntry.isDirectory) {
                     flexEntryFile.mkdir()
                 } else {
@@ -156,6 +159,18 @@ object ZipUtils {
             this.getInputStream(srcEntry).use { inStream ->
                 inStream.copyTo(outStream)
             }
+        }
+    }
+
+    @Throws(IOException::class)
+    private fun validateFilename(filename: String, destDir: FsFile): String? {
+        val f = FsFile(filename)
+        val canonicalPath: String = f.canonicalPath
+        val canonicalID: String = destDir.canonicalPath
+        return if (canonicalPath.startsWith(canonicalID)) {
+            canonicalPath
+        } else {
+            throw IllegalStateException("File is outside extraction target directory.")
         }
     }
 }
