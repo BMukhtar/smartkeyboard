@@ -1,61 +1,12 @@
 <img align="left" width="80" height="80"
 src=".github/repo_icon.png" alt="App icon">
 
-# FlorisBoard [![Crowdin](https://badges.crowdin.net/florisboard/localized.svg)](https://crowdin.florisboard.patrickgold.dev) [![Matrix badge](https://img.shields.io/badge/chat-%23florisboard%3amatrix.org-blue)](https://matrix.to/#/#florisboard:matrix.org) ![FlorisBoard CI](https://github.com/florisboard/florisboard/workflows/FlorisBoard%20CI/badge.svg?event=push)
+# SmartKeyboard
 
-**FlorisBoard** is a free and open-source keyboard for Android 7.0+
+**SmartKeyboard** is a free and open-source keyboard for Android 7.0+
 devices. It aims at being modern, user-friendly and customizable while
-fully respecting your privacy. Currently in early-beta state.
-
-<table>
-<tr>
-<th align="center" width="50%">
-<h3>Stable <a href="https://github.com/florisboard/florisboard/releases/latest"><img alt="Latest stable release" src="https://img.shields.io/github/v/release/florisboard/florisboard"></a></h3>
-</th>
-<th align="center" width="50%">
-<h3>Beta <a href="https://github.com/florisboard/florisboard/releases"><img alt="Latest beta release" src="https://img.shields.io/github/v/release/florisboard/florisboard?include_prereleases"></a></h3>
-</th>
-</tr>
-<tr>
-<td valign="top">
-<p><i>Major versions only, 1 release per 1-5 months</i><br><br>Updates are more polished, new features are matured and tested through to ensure a stable experience.</p>
-</td>
-<td valign="top">
-<p><i>Beta versions, up to 1-2 releases per week</i><br><br>Updates contain new features that may not be fully matured yet and bugs are more likely to occur. Allows you to give early feedback.</p>
-</td>
-</tr>
-<tr>
-<td valign="top">
-<p><a href="https://f-droid.org/packages/smartkeyboard"><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" height="64" alt="F-Droid badge"></a></p>
-<p>
-
-**Google Play**: Join the [FlorisBoard Test Group](https://groups.google.com/g/florisboard-public-alpha-test), then visit the [testing page](https://play.google.com/apps/testing/smartkeyboard). Once joined and installed, updates will be delivered like for any other app. ([Store entry](https://play.google.com/store/apps/details?id=smartkeyboard))
-
-</p>
-<p>
-
-**Manual**: Download and install the APK from the release page.
-
-</p>
-</td>
-<td valign="top">
-<p><a href="https://apt.izzysoft.de/fdroid/index/apk/smartkeyboard.beta"><img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" height="64" alt="IzzySoft repo badge"></a></p>
-<p>
-
-**Google Play**: Join the [FlorisBoard Test Group](https://groups.google.com/g/florisboard-public-alpha-test), then visit the [beta testing page](https://play.google.com/apps/testing/smartkeyboard.beta). Once joined and installed, updates will be delivered like for any other app. ([Store entry](https://play.google.com/store/apps/details?id=smartkeyboard.beta))
-
-</p>
-<p>
-
-**Manual**: Download and install the APK from the release page.
-
-</p>
-</td>
-</tr>
-</table>
-
-Beginning with v0.4.0 FlorisBoard will follow [SemVer](https://semver.org/#summary) versioning scheme.
-Beginning with v0.5.0 FlorisBoard will enter the public beta on Google Play.
+fully respecting your privacy. This is a fork from [FlorisBoard project](https://github.com/florisboard/florisboard).
+Many thanks to Patrick Goldinger for implementing such a beautiful keyboard!
 
 ## Highlighted features
 - Integrated clipboard manager / history
@@ -64,20 +15,17 @@ Beginning with v0.5.0 FlorisBoard will enter the public beta on Google Play.
 - Emoji keyboard
 - Spell checking service
 - Glide typing (currently English only)
-
-Word suggestions are not included in the current releases and are a major goal for the v0.4.0 milestone.
-
-Feature roadmap: See [ROADMAP.md](ROADMAP.md)
+- Word suggestion in Kazakh and English
 
 ## Contributing
-Wanna contribute to FlorisBoard? That's great to hear! There are lots of
+Wanna contribute to SmartKeyboard? That's great to hear! There are lots of
 different ways to help out. Bug reporting, making pull requests,
-translating FlorisBoard to make it more accessible, etc. For more
+translating SmartKeyboard to make it more accessible, etc. For more
 information see the [contributing guidelines](CONTRIBUTING.md). Thank
 you for your help!
 
-## List of permissions FlorisBoard requests
-Please refer to this [page](https://github.com/florisboard/florisboard/wiki/List-of-permissions-FlorisBoard-requests)
+## List of permissions SmartKeyboard requests
+Please refer to this [page](https://github.com/BMukhtar/smartkeyboard)
 to get more information on this topic.
 
 ## Used libraries, components and icons
@@ -97,14 +45,14 @@ to get more information on this topic.
   [Kotlin](https://github.com/Kotlin)
 * [ICU4C](https://github.com/unicode-org/icu) by
   [The Unicode Consortium](https://github.com/unicode-org)
-* [Nuspell](https://github.com/nuspell/nuspell) by
-  [Nuspell](https://github.com/nuspell)
+* [Symspell](https://github.com/BMukhtar/ksymspell) by
+  [Symspell](https://github.com/BMukhtar)
 
 Many thanks to [Nikolay Anzarov](https://www.behance.net/nikolayanzarov) ([@BloodRaven0](https://github.com/BloodRaven0)) for designing and providing the main app icons to this project!
 
 ## License
 ```
-Copyright 2020-2022 Patrick Goldinger
+Copyright 2020-2022 Mukhtar Bimurat
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

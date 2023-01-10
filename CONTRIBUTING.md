@@ -1,28 +1,20 @@
 # Contributing
 
-First off, thanks for considering contributing to FlorisBoard!
+First off, thanks for considering contributing to SmartKeyboard!
 
-There are several ways to contribute to FlorisBoard. This document provides some general guidelines for each type of
+There are several ways to contribute to SmartKeyboard. This document provides some general guidelines for each type of
 contribution.
 
 ## Giving general feedback
 
-NEW! You can now [give general feedback](https://github.com/florisboard/florisboard/discussions/new?category=feedback)
+NEW! You can now [give general feedback](https://github.com/BMukhtar/smartkeyboard/discussions/new?category=feedback)
 directly here on GitHub. This is the preferred way to give feedback, as it allows not only for me to read and respond to
 feedback, but for everyone in this community.
 
 Optionally you can also use the review function within Google Play or email me
-at [florisboard@patrickgold.dev](mailto:florisboard@patrickgold.dev). I love to hear from you! Note, that the amount of
+at [bimurat.mukhtar@gmail.com](mailto:bimurat.mukhtar@gmail.com). I love to hear from you! Note, that the amount of
 feedback emails I get is overwhelmingly high - so if I don't answer or answer really late, I apologize - I guarantee
-though that I read through every email and that I will use every feedback to improve FlorisBoard :)
-
-## Translations
-
-To make FlorisBoard accessible in as many languages as possible, the
-platform [Crowdin](https://crowdin.florisboard.patrickgold.dev) is used to crowdsource and manage translations. This is
-the only source of translations from now on - **PRs that add/update translations are no longer accepted.** The list of
-languages in Crowdin covers the top 20 languages, but feel free to email me at
-[florisboard@patrickgold.dev](mailto:florisboard@patrickgold.dev) to request a language and I'll add it.
+though that I read through every email and that I will use every feedback to improve SmartKeyboard :)
 
 ## Adding a new feature or making large changes
 
@@ -32,7 +24,7 @@ change. If you have any questions, feel free to ask for help at any time!
 
 ## Adding a new keyboard layout
 
-Adding a layout to FlorisBoard is very simple and does not require any coding skills, although you should understand the
+Adding a layout to SmartKeyboard is very simple and does not require any coding skills, although you should understand the
 basics of the JSON syntax (it is very easy though by just looking at some other layout files). Most of the time is
 enough to look at the existing layout files, but the following attempts to help you in creating layouts from scratch.
 
@@ -68,7 +60,7 @@ For internal codes of functional or UI keys, see
 .
 
 The label is equally important and should always match up with the defined code. If `code` and `label` don't match up,
-FlorisBoard won't crash but it will most likely lead to confusion in the key processing logic.
+SmartKeyboard won't crash but it will most likely lead to confusion in the key processing logic.
 
 Any accents or diacritics that should be exposed via long press can be added
 at [`app/src/main/assets/ime/keyboard/org.florisboard.localization/popupMappings/<languageTag>.json`](app/src/main/assets/ime/keyboard/org.florisboard.localization/popupMappings)
@@ -85,14 +77,14 @@ currently not accepted.
 
 ## Bug reporting
 
-This kind of contribution is the most important, as it tells where FlorisBoard has flaws and thus should be improved to
+This kind of contribution is the most important, as it tells where SmartKeyboard has flaws and thus should be improved to
 maximize stability and user experience. To make this process as smooth as possible, please use the
 pre-made [issue template](.github/ISSUE_TEMPLATE/bug_report.md)
 for bug reporting. This makes it easy for us to understand what the bug is and how to solve it.
 
 ### Capturing error logs
 
-Logs are captured by FlorisBoard's crash handler, which gives you the ability to copy it to the clipboard and paste it
+Logs are captured by SmartKeyboard's crash handler, which gives you the ability to copy it to the clipboard and paste it
 in GitHub. This is the preferred way to capture logs.
 
 Alternatively, you can also use ADB (Android Debug Bridge) to capture the error log. This is recommended for experienced
