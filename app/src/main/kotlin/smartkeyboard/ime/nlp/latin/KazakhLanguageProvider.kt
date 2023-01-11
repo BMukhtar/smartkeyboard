@@ -53,7 +53,7 @@ val RussianToKazakhChars = mapOf(
 object KazakhCharComparator : CharComparator {
 
     override fun areEqual(ch1: Char, ch2: Char): Boolean {
-        return ch1 == ch2 || ch1 == RussianToKazakhChars[ch2]
+        return ch1 == ch2 || ch1 == RussianToKazakhChars[ch2] || ch2 == RussianToKazakhChars[ch1]
     }
 }
 
@@ -63,6 +63,7 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
         // See `ime/core/Subtype.kt` Line 210 and 211 for the default usage
         const val ProviderId = "org.florisboard.nlp.providers.kazakh"
         private const val MAX_DISTANCE = 2
+        private const val PREFIX_LENGTH = 5
     }
 
     private val appContext by context.appContext()
@@ -109,6 +110,7 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
             unigramLexicon = unigrams,
             bigramLexicon = bigrams,
             maxDictionaryEditDistance = MAX_DISTANCE,
+            prefixLength = PREFIX_LENGTH,
             stringDistance = DamerauLevenshteinOSA(KazakhCharComparator)
         )
     }
