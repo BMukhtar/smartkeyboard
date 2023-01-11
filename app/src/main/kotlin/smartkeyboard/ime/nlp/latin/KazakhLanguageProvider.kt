@@ -28,11 +28,34 @@ import smartkeyboard.ime.nlp.SuggestionCandidate
 import smartkeyboard.ime.nlp.SuggestionProvider
 import smartkeyboard.ime.nlp.WordSuggestionCandidate
 import smartkeyboard.ime.nlp.symspell.Bigram
+import smartkeyboard.ime.nlp.symspell.CharComparator
+import smartkeyboard.ime.nlp.symspell.DamerauLevenshteinOSA
 import smartkeyboard.ime.nlp.symspell.SymSpell
 import smartkeyboard.ime.nlp.symspell.SymSpellImpl
 import smartkeyboard.ime.nlp.symspell.Verbosity
 import smartkeyboard.lib.android.reader
 import smartkeyboard.lib.devtools.flogDebug
+
+val RussianToKazakhChars = mapOf(
+    'е' to 'ё',
+    'а' to 'ә',
+    'и' to 'і',
+    'ы' to 'і',
+    'н' to 'ң',
+    'г' to 'ғ',
+    'у' to 'ү',
+    'у' to 'ұ',
+    'к' to 'қ',
+    'о' to 'ө',
+    'х' to 'һ',
+)
+
+object KazakhCharComparator : CharComparator {
+
+    override fun areEqual(ch1: Char, ch2: Char): Boolean {
+        return ch1 == ch2 || ch1 == RussianToKazakhChars[ch2]
+    }
+}
 
 class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionProvider {
     companion object {
@@ -86,6 +109,7 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
             unigramLexicon = unigrams,
             bigramLexicon = bigrams,
             maxDictionaryEditDistance = MAX_DISTANCE,
+            stringDistance = DamerauLevenshteinOSA(KazakhCharComparator)
         )
     }
 

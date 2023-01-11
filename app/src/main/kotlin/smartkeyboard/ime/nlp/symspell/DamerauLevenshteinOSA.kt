@@ -21,19 +21,12 @@ interface StringDistance {
     }
 }
 
-class DamerauLevenshteinOSA : StringDistance {
-    private val charComparator: CharComparator
+class DamerauLevenshteinOSA constructor(
+    private val charComparator: CharComparator = DefaultCharComparator()
+) : StringDistance {
 
-    constructor() {
-        charComparator = DefaultCharComparator()
-    }
-
-    constructor(charComparator: CharComparator) {
-        this.charComparator = charComparator
-    }
-
-    override fun distanceWithEarlyStop(baseString: String, string2: String, maxDistance: Int): Int {
-        var string2 = string2
+    override fun distanceWithEarlyStop(baseString: String, other: String, maxDistance: Int): Int {
+        var string2 = other
         var maxDistance = maxDistance
         if (string2.isEmpty()) return baseString.length
         if (maxDistance == 0) return if (baseString == string2) 0 else -1
