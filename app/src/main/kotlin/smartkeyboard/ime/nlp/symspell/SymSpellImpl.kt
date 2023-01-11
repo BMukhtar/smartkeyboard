@@ -115,7 +115,7 @@ class SymSpellImpl(
                 }
             }
         }
-        return res.values.sortedDescending()
+        return res.values.sorted()
     }
 
     @Throws(NotInitializedException::class)

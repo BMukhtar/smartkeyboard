@@ -163,7 +163,8 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
         val variations = mutableListOf(initialWord)
 
         while (index < initialWord.length) {
-            for (variation in variations) {
+            val localList = variations.toMutableList()
+            for (variation in localList) {
                 val kazakhChar = RussianToKazakhChars[variation[index]] ?: continue
                 val chars = variation.toCharArray()
                 chars[index] = kazakhChar
@@ -171,7 +172,7 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
             }
             index++
         }
-        return symSpell?.lookupSeveral(inputs = variations, verbosity = Verbosity.ALL) ?: return emptyList()
+        return symSpell?.lookupSeveral(inputs = variations, verbosity = Verbosity.CLOSEST) ?: return emptyList()
     }
 
     override suspend fun notifySuggestionAccepted(subtype: Subtype, candidate: SuggestionCandidate) {
