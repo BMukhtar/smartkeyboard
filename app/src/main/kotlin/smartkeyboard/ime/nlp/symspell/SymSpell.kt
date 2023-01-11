@@ -18,6 +18,17 @@ interface SymSpell {
     fun lookup(input: String, verbosity: Verbosity, includeUnknown: Boolean = false): List<SuggestItem>
 
     /**
+     * Returns a sorted `List` of `SuggestItem` for a given `input`
+     * @param inputs list of string to apply spelling correction to
+     * @param verbosity see [Verbosity]
+     * @param includeUnknown controls whether non-lexicon words should be considered
+     * @return sorted `List` of `SuggestItem` for a given `input`
+     * @throws NotInitializedException if no unigram lexicon has been provided, i.e. [SymSpell.getUnigramLexicon] is empty
+     */
+    @Throws(NotInitializedException::class)
+    fun lookupSeveral(inputs: List<String>, verbosity: Verbosity, includeUnknown: Boolean = false): List<SuggestItem>
+
+    /**
      * Performs spelling correction of multiple space separated words.
      * @param input string to apply spelling correction to, where words are separated by spaces
      * @param editDistanceMax limit up to which lexicon words can be considered suggestions, must be lower or equal than [SymSpell.getMaxDictionaryEditDistance]

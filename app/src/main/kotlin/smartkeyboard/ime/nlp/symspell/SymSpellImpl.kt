@@ -102,6 +102,22 @@ class SymSpellImpl(
         return edits(key, 0, set)
     }
 
+    override fun lookupSeveral(inputs: List<String>, verbosity: Verbosity, includeUnknown: Boolean): List<SuggestItem> {
+        val res = mutableMapOf<String, SuggestItem>()
+        inputs.forEach { input ->
+            val suggestions = lookup(input, verbosity, maxDictionaryEditDistance, includeUnknown)
+            suggestions.forEach {
+                val alreadyExisting = res[it.suggestion]
+                res[it.suggestion] = if (alreadyExisting != null) {
+                    Collections.min(listOf(alreadyExisting, it))
+                } else {
+                    it
+                }
+            }
+        }
+        return res.values.sortedDescending()
+    }
+
     @Throws(NotInitializedException::class)
     override fun lookup(input: String, verbosity: Verbosity, includeUnknown: Boolean): List<SuggestItem> {
         return lookup(input, verbosity, maxDictionaryEditDistance, includeUnknown)
