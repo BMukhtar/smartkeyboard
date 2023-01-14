@@ -112,7 +112,9 @@ class LatinLanguageProvider(context: Context) : SpellingProvider, SuggestionProv
         allowPossiblyOffensive: Boolean,
         isPrivateSession: Boolean,
     ): List<SuggestionCandidate> {
-        val suggestItems = symSpell?.lookup(input = content.currentWordText, verbosity = Verbosity.ALL) ?: return emptyList()
+        val suggestItems = symSpell?.lookup(input = content.currentWordText, verbosity = Verbosity.ALL)
+            ?.filter { !it.equals(content.currentWordText) }
+            ?: return emptyList()
         return suggestItems.take(maxCandidateCount).map {
             WordSuggestionCandidate(
                 text = it.suggestion,
