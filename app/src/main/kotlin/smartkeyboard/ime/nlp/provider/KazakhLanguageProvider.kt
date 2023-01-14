@@ -39,6 +39,7 @@ import smartkeyboard.lib.android.reader
 import smartkeyboard.lib.devtools.flogDebug
 import trie.PruningRadixTrie
 import trie.Term
+import java.util.Collections.frequency
 
 val RussianToKazakhChars = mapOf(
     'е' to 'ё',
@@ -141,7 +142,7 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
         allowPossiblyOffensive: Boolean,
         isPrivateSession: Boolean,
     ): SpellingResult {
-        val suggestItems = getSuggestedItems(initialWord = word).ifEmpty { null }
+        val suggestItems = getSpellingSuggestedItems(initialWord = word).ifEmpty { null }
             ?: return SpellingResult.unspecified()
         if (suggestItems.isEmpty()) {
             return SpellingResult.validWord()
@@ -159,13 +160,30 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
     ): List<SuggestionCandidate> {
         val localTrie = trie ?: return emptyList()
         val lastWord = content.currentWordText.ifEmpty {
+            // when ...word1_word2_ take only word2_
             content.text.trim().split(" ").lastOrNull()?.plus(" ")
         }.orEmpty()
-        val suggestItems = localTrie.getTopkTermsForPrefix(prefix = lastWord, topK = maxCandidateCount)
-        val maxFreq = suggestItems.maxByOrNull { it.frequency }?.frequency ?: return emptyList()
-        return suggestItems.map {
+        val autocompleteItems = localTrie.getTopkTermsForPrefix(prefix = lastWord, topK = maxCandidateCount)
+
+        if (autocompleteItems.isEmpty()) {
+            val spellingSuggestItems = getSpellingSuggestedItems(initialWord = content.currentWordText)
+            return spellingSuggestItems.take(maxCandidateCount).map {
+                WordSuggestionCandidate(
+                    text = it.suggestion,
+                    secondaryText = null,
+                    confidence = (MAX_DISTANCE - it.editDistance.coerceAtMost(MAX_DISTANCE - 1))
+                        / MAX_DISTANCE.toDouble(),
+                    isEligibleForAutoCommit = false,//n == 0 && word.startsWith("auto"),
+                    // We set ourselves as the source provider so we can get notify events for our candidate
+                    sourceProvider = this@KazakhLanguageProvider,
+                )
+            }
+        }
+
+        val maxFreq = autocompleteItems.maxBy { it.frequency }.frequency
+        return autocompleteItems.map {
             WordSuggestionCandidate(
-                text = it.word,
+                text = it.word.trimEnd().split(" ").last(), // instead word1_word2 take only word2
                 secondaryText = null,
                 confidence = it.frequency / maxFreq.toDouble(),
                 isEligibleForAutoCommit = false,//n == 0 && word.startsWith("auto"),
@@ -175,8 +193,8 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
         }
     }
 
-    private fun getSuggestedItems(initialWord: String): List<SuggestItem> {
-        if (initialWord.isEmpty()) return emptyList()
+    private fun getSpellingSuggestedItems(initialWord: String): List<SuggestItem> {
+        if (initialWord.isBlank()) return emptyList()
 
         var index = 0
         val variations = mutableListOf(initialWord)
