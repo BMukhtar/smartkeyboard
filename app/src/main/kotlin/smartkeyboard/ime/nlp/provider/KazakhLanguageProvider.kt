@@ -67,7 +67,7 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
         // Default user ID used for all subtypes, unless otherwise specified.
         // See `ime/core/Subtype.kt` Line 210 and 211 for the default usage
         const val ProviderId = "org.florisboard.nlp.providers.kazakh"
-        private const val MAX_DISTANCE = 2
+        private const val MAX_DISTANCE = 1
         private const val PREFIX_LENGTH = 5
     }
 
