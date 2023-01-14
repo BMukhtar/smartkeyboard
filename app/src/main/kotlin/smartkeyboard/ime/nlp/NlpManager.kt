@@ -32,7 +32,7 @@ import smartkeyboard.editorInstance
 import smartkeyboard.ime.clipboard.provider.ItemType
 import smartkeyboard.ime.core.Subtype
 import smartkeyboard.ime.editor.EditorContent
-import smartkeyboard.ime.nlp.latin.LatinLanguageProvider
+import smartkeyboard.ime.nlp.provider.LatinLanguageProvider
 import smartkeyboard.keyboardManager
 import smartkeyboard.lib.devtools.flogError
 import smartkeyboard.lib.kotlin.collectLatestIn
@@ -48,7 +48,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
-import smartkeyboard.ime.nlp.latin.KazakhLanguageProvider
+import smartkeyboard.ime.nlp.provider.KazakhLanguageProvider
 import java.util.*
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicInteger

@@ -28,7 +28,7 @@ data class SuggestItem(val suggestion: String, val editDistance: Int, val freque
 /**
  * Holds a pair of words.
  */
-data class Bigram(private val word1: String, private val word2: String) {
+data class Bigram(val word1: String, val word2: String) {
     override fun toString(): String {
         return "$word1 $word2"
     }

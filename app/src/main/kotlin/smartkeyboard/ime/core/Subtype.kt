@@ -23,12 +23,12 @@ import smartkeyboard.ime.keyboard.extCoreCurrencySet
 import smartkeyboard.ime.keyboard.extCoreLayout
 import smartkeyboard.ime.keyboard.extCorePopupMapping
 import smartkeyboard.ime.keyboard.extCorePunctuationRule
-import smartkeyboard.ime.nlp.latin.LatinLanguageProvider
+import smartkeyboard.ime.nlp.provider.LatinLanguageProvider
 import smartkeyboard.lib.FlorisLocale
 import smartkeyboard.lib.ext.ExtensionComponentName
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import smartkeyboard.ime.nlp.latin.KazakhLanguageProvider
+import smartkeyboard.ime.nlp.provider.KazakhLanguageProvider
 
 /**
  * Data class which represents an user-specified set of language and layout. String representations

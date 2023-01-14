@@ -14,12 +14,11 @@
  * limitations under the License.
  */
 
-package smartkeyboard.ime.nlp.latin
+package smartkeyboard.ime.nlp.provider
 
 import android.content.Context
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import kotlinx.serialization.json.JsonNull.content
 import smartkeyboard.appContext
 import smartkeyboard.ime.core.Subtype
 import smartkeyboard.ime.editor.EditorContent
@@ -29,46 +28,19 @@ import smartkeyboard.ime.nlp.SuggestionCandidate
 import smartkeyboard.ime.nlp.SuggestionProvider
 import smartkeyboard.ime.nlp.WordSuggestionCandidate
 import smartkeyboard.ime.nlp.symspell.Bigram
-import smartkeyboard.ime.nlp.symspell.CharComparator
-import smartkeyboard.ime.nlp.symspell.DamerauLevenshteinOSA
-import smartkeyboard.ime.nlp.symspell.SuggestItem
 import smartkeyboard.ime.nlp.symspell.SymSpell
 import smartkeyboard.ime.nlp.symspell.SymSpellImpl
 import smartkeyboard.ime.nlp.symspell.Verbosity
-import smartkeyboard.lib.android.AndroidInternalR
 import smartkeyboard.lib.android.reader
 import smartkeyboard.lib.devtools.flogDebug
 
-val RussianToKazakhChars = mapOf(
-    'е' to 'ё',
-    'а' to 'ә',
-    'и' to 'і',
-    'ы' to 'і',
-    'н' to 'ң',
-    'г' to 'ғ',
-    'у' to 'ү',
-    'у' to 'ұ',
-    'к' to 'қ',
-    'о' to 'ө',
-    'х' to 'һ',
-)
-
-object KazakhCharComparator : CharComparator {
-
-    override fun areEqual(ch1: Char, ch2: Char): Boolean {
-        return ch1 == ch2 || ch1 == RussianToKazakhChars[ch2] || ch2 == RussianToKazakhChars[ch1]
-    }
-}
-
-class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionProvider {
+class LatinLanguageProvider(context: Context) : SpellingProvider, SuggestionProvider {
     companion object {
         // Default user ID used for all subtypes, unless otherwise specified.
         // See `ime/core/Subtype.kt` Line 210 and 211 for the default usage
-        const val ProviderId = "org.florisboard.nlp.providers.kazakh"
+        const val ProviderId = "org.florisboard.nlp.providers.latin"
         private const val MAX_DISTANCE = 2
-        private const val PREFIX_LENGTH = 5
     }
-
     private val appContext by context.appContext()
 
     private var symSpell: SymSpell? = null
@@ -95,7 +67,7 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
         // appContext.assets.copyRecursively()
 
         val unigrams = mutableMapOf<String, Long>()
-        appContext.assets.reader("symspell/kk_unigrams.txt")
+        appContext.assets.reader("symspell/words.txt")
             .forEachLine { line: String ->
                 val (word, countAsString) = line.split(",")
                 unigrams[word] = countAsString.toLong()
@@ -103,18 +75,15 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
         maxFreq = unigrams.values.sum()
 
         val bigrams = mutableMapOf<Bigram, Long>()
-        appContext.assets.reader("symspell/kk_bigrams.txt")
+        appContext.assets.reader("symspell/bigrams.txt")
             .forEachLine { line: String ->
                 val (word1, word2, countAsString) = line.split(" ")
                 bigrams[Bigram(word1, word2)] = countAsString.toLong()
             }
-
         symSpell = SymSpellImpl(
             unigramLexicon = unigrams,
             bigramLexicon = bigrams,
             maxDictionaryEditDistance = MAX_DISTANCE,
-            prefixLength = PREFIX_LENGTH,
-            stringDistance = DamerauLevenshteinOSA(KazakhCharComparator)
         )
     }
 
@@ -127,7 +96,7 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
         allowPossiblyOffensive: Boolean,
         isPrivateSession: Boolean,
     ): SpellingResult {
-        val suggestItems = getSuggestedItems(initialWord = word).ifEmpty { null }
+        val suggestItems = symSpell?.lookup(input = word, verbosity = Verbosity.ALL)
             ?: return SpellingResult.unspecified()
         if (suggestItems.isEmpty()) {
             return SpellingResult.validWord()
@@ -143,7 +112,7 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
         allowPossiblyOffensive: Boolean,
         isPrivateSession: Boolean,
     ): List<SuggestionCandidate> {
-        val suggestItems = getSuggestedItems(initialWord = content.currentWordText)
+        val suggestItems = symSpell?.lookup(input = content.currentWordText, verbosity = Verbosity.ALL) ?: return emptyList()
         return suggestItems.take(maxCandidateCount).map {
             WordSuggestionCandidate(
                 text = it.suggestion,
@@ -151,28 +120,9 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
                 confidence = (MAX_DISTANCE - it.editDistance.coerceAtMost(MAX_DISTANCE - 1)) / MAX_DISTANCE.toDouble(),
                 isEligibleForAutoCommit = false,//n == 0 && word.startsWith("auto"),
                 // We set ourselves as the source provider so we can get notify events for our candidate
-                sourceProvider = this@KazakhLanguageProvider,
+                sourceProvider = this@LatinLanguageProvider,
             )
         }
-    }
-
-    private fun getSuggestedItems(initialWord: String): List<SuggestItem> {
-        if (initialWord.isEmpty()) return emptyList()
-
-        var index = 0
-        val variations = mutableListOf(initialWord)
-
-        while (index < initialWord.length) {
-            val localList = variations.toMutableList()
-            for (variation in localList) {
-                val kazakhChar = RussianToKazakhChars[variation[index]] ?: continue
-                val chars = variation.toCharArray()
-                chars[index] = kazakhChar
-                variations.add(String(chars))
-            }
-            index++
-        }
-        return symSpell?.lookupSeveral(inputs = variations, verbosity = Verbosity.CLOSEST) ?: return emptyList()
     }
 
     override suspend fun notifySuggestionAccepted(subtype: Subtype, candidate: SuggestionCandidate) {
