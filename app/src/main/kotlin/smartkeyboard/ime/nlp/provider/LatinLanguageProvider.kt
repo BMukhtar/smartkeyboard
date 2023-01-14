@@ -19,6 +19,7 @@ package smartkeyboard.ime.nlp.provider
 import android.content.Context
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import kotlinx.serialization.json.JsonNull.content
 import smartkeyboard.appContext
 import smartkeyboard.ime.core.Subtype
 import smartkeyboard.ime.editor.EditorContent
@@ -97,6 +98,7 @@ class LatinLanguageProvider(context: Context) : SpellingProvider, SuggestionProv
         isPrivateSession: Boolean,
     ): SpellingResult {
         val suggestItems = symSpell?.lookup(input = word, verbosity = Verbosity.ALL)
+            ?.filter { !it.equals(word) }
             ?: return SpellingResult.unspecified()
         if (suggestItems.isEmpty()) {
             return SpellingResult.validWord()
