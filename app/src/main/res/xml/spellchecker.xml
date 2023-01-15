@@ -92,10 +92,6 @@
     <subtype android:label="@string/general__system_string_placeholder" android:subtypeLocale="ki"/>
     <subtype android:label="Kazakhs spell checker kkkz"
         android:subtypeLocale="kk_KZ"/>
-    <subtype android:label="Kazakhs spell checker kz"
-        android:subtypeLocale="kz"/>
-    <subtype android:label="Kazakhs spell checker kk"
-        android:subtypeLocale="kk"/>
     <subtype android:label="@string/general__system_string_placeholder" android:subtypeLocale="kkj"/>
     <subtype android:label="@string/general__system_string_placeholder" android:subtypeLocale="kl"/>
     <subtype android:label="@string/general__system_string_placeholder" android:subtypeLocale="kln"/>
