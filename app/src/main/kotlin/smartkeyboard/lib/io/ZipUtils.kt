@@ -144,7 +144,12 @@ object ZipUtils {
             while (flexEntries.hasMoreElements()) {
                 val flexEntry = flexEntries.nextElement()
                 val flexEntryFile = FsFile(dstDir, flexEntry.name)
-                validateFilename(flexEntryFile.name, dstDir)
+                val f = FsFile(flexEntryFile.name)
+                val canonicalPath: String = f.canonicalPath
+                val canonicalID: String = dstDir.canonicalPath
+                if (!canonicalPath.startsWith(canonicalID)) {
+                    throw SecurityException("File is outside extraction target directory.")
+                }
                 if (flexEntry.isDirectory) {
                     flexEntryFile.mkdir()
                 } else {
