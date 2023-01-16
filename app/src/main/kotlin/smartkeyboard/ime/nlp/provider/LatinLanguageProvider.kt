@@ -18,6 +18,7 @@ package smartkeyboard.ime.nlp.provider
 
 import android.content.Context
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.JsonNull.content
 import smartkeyboard.appContext
@@ -29,25 +30,30 @@ import smartkeyboard.ime.nlp.SuggestionCandidate
 import smartkeyboard.ime.nlp.SuggestionProvider
 import smartkeyboard.ime.nlp.WordSuggestionCandidate
 import smartkeyboard.ime.nlp.symspell.Bigram
+import smartkeyboard.ime.nlp.symspell.DamerauLevenshteinOSA
+import smartkeyboard.ime.nlp.symspell.SuggestItem
 import smartkeyboard.ime.nlp.symspell.SymSpell
 import smartkeyboard.ime.nlp.symspell.SymSpellImpl
 import smartkeyboard.ime.nlp.symspell.Verbosity
 import smartkeyboard.lib.android.reader
 import smartkeyboard.lib.devtools.flogDebug
+import trie.PruningRadixTrie
+import trie.Term
 
 class LatinLanguageProvider(context: Context) : SpellingProvider, SuggestionProvider {
     companion object {
         // Default user ID used for all subtypes, unless otherwise specified.
         // See `ime/core/Subtype.kt` Line 210 and 211 for the default usage
         const val ProviderId = "org.florisboard.nlp.providers.latin"
-        private const val MAX_DISTANCE = 2
     }
+
     private val appContext by context.appContext()
 
     private var symSpell: SymSpell? = null
+    private var trie: PruningRadixTrie? = null
     private var maxFreq: Long = 1L
 
-    override val providerId = ProviderId
+    override val providerId = KazakhLanguageProvider.ProviderId
 
     override suspend fun create() {
         // Here we initialize our provider, set up all things which are not language dependent.
@@ -81,11 +87,26 @@ class LatinLanguageProvider(context: Context) : SpellingProvider, SuggestionProv
                 val (word1, word2, countAsString) = line.split(" ")
                 bigrams[Bigram(word1, word2)] = countAsString.toLong()
             }
-        symSpell = SymSpellImpl(
-            unigramLexicon = unigrams,
-            bigramLexicon = bigrams,
-            maxDictionaryEditDistance = MAX_DISTANCE,
-        )
+
+        launch {
+            val localTrie = PruningRadixTrie()
+            unigrams.forEach { (word, frequency) -> localTrie.addTerm(Term(word, frequency)) }
+            bigrams.forEach { (bigram, frequency) ->
+                localTrie.addTerm(Term("${bigram.word1} ${bigram.word2}", frequency))
+            }
+            trie = localTrie
+        }
+
+        launch {
+            symSpell = SymSpellImpl(
+                unigramLexicon = unigrams,
+                bigramLexicon = bigrams,
+                maxDictionaryEditDistance = KazakhLanguageProvider.MAX_DISTANCE,
+                prefixLength = KazakhLanguageProvider.PREFIX_LENGTH,
+                stringDistance = DamerauLevenshteinOSA(KazakhCharComparator)
+            )
+        }
+        Unit
     }
 
     override suspend fun spell(
@@ -97,8 +118,7 @@ class LatinLanguageProvider(context: Context) : SpellingProvider, SuggestionProv
         allowPossiblyOffensive: Boolean,
         isPrivateSession: Boolean,
     ): SpellingResult {
-        val suggestItems = symSpell?.lookup(input = word, verbosity = Verbosity.ALL)
-            ?.filter { !it.equals(word) }
+        val suggestItems = getSpellingSuggestedItems(initialWord = word).ifEmpty { null }
             ?: return SpellingResult.unspecified()
         if (suggestItems.isEmpty()) {
             return SpellingResult.validWord()
@@ -114,19 +134,53 @@ class LatinLanguageProvider(context: Context) : SpellingProvider, SuggestionProv
         allowPossiblyOffensive: Boolean,
         isPrivateSession: Boolean,
     ): List<SuggestionCandidate> {
-        val suggestItems = symSpell?.lookup(input = content.currentWordText, verbosity = Verbosity.ALL)
-            ?.filter { !it.equals(content.currentWordText) }
-            ?: return emptyList()
-        return suggestItems.take(maxCandidateCount).map {
+        val localTrie = trie ?: return emptyList()
+        val lastWord = content.currentWordText.ifEmpty {
+            // when ...word1_word2_ take only word2_
+            content.text.trim().split(" ").lastOrNull()?.plus(" ")
+        }.orEmpty()
+        val autocompleteItems = localTrie.getTopkTermsForPrefix(prefix = lastWord, topK = maxCandidateCount)
+
+        if (autocompleteItems.isEmpty()) {
+            val spellingSuggestItems = getSpellingSuggestedItems(initialWord = content.currentWordText)
+            return spellingSuggestItems.take(maxCandidateCount).map {
+                WordSuggestionCandidate(
+                    text = it.suggestion,
+                    secondaryText = null,
+                    confidence = (KazakhLanguageProvider.MAX_DISTANCE - it.editDistance.coerceAtMost(
+                        KazakhLanguageProvider.MAX_DISTANCE - 1))
+                        / KazakhLanguageProvider.MAX_DISTANCE.toDouble(),
+                    isEligibleForAutoCommit = false,//n == 0 && word.startsWith("auto"),
+                    // We set ourselves as the source provider so we can get notify events for our candidate
+                    sourceProvider = this@LatinLanguageProvider,
+                )
+            }
+        }
+
+        val maxFreq = autocompleteItems.maxBy { it.frequency }.frequency
+        return autocompleteItems.map {
             WordSuggestionCandidate(
-                text = it.suggestion,
+                text = if (content.currentWordText.isEmpty()) {
+                    it.word.trimEnd()
+                        .split(" ")
+                        .lastOrNull() // take last if
+                        .orEmpty()
+                } else {
+                    it.word
+                }, // instead word1_word2 take only word2
                 secondaryText = null,
-                confidence = (MAX_DISTANCE - it.editDistance.coerceAtMost(MAX_DISTANCE - 1)) / MAX_DISTANCE.toDouble(),
+                confidence = it.frequency / maxFreq.toDouble(),
                 isEligibleForAutoCommit = false,//n == 0 && word.startsWith("auto"),
                 // We set ourselves as the source provider so we can get notify events for our candidate
                 sourceProvider = this@LatinLanguageProvider,
             )
         }
+    }
+
+    private fun getSpellingSuggestedItems(initialWord: String): List<SuggestItem> {
+        if (initialWord.isBlank()) return emptyList()
+
+        return symSpell?.lookup(input = initialWord, verbosity = Verbosity.CLOSEST) ?: return emptyList()
     }
 
     override suspend fun notifySuggestionAccepted(subtype: Subtype, candidate: SuggestionCandidate) {
@@ -154,5 +208,7 @@ class LatinLanguageProvider(context: Context) : SpellingProvider, SuggestionProv
     override suspend fun destroy() {
         // Here we have the chance to de-allocate memory and finish our work. However this might never be called if
         // the app process is killed (which will most likely always be the case).
+        symSpell = null
+        trie = null
     }
 }

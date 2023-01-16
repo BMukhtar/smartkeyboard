@@ -67,8 +67,8 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
         // Default user ID used for all subtypes, unless otherwise specified.
         // See `ime/core/Subtype.kt` Line 210 and 211 for the default usage
         const val ProviderId = "org.florisboard.nlp.providers.kazakh"
-        private const val MAX_DISTANCE = 1
-        private const val PREFIX_LENGTH = 5
+        const val MAX_DISTANCE = 1
+        const val PREFIX_LENGTH = 5
     }
 
     private val appContext by context.appContext()
@@ -244,5 +244,7 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
     override suspend fun destroy() {
         // Here we have the chance to de-allocate memory and finish our work. However this might never be called if
         // the app process is killed (which will most likely always be the case).
+        symSpell = null
+        trie = null
     }
 }
