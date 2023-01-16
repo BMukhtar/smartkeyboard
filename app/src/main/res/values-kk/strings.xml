@@ -396,6 +396,7 @@
     <string name="settings__udm__dialog__locale_error_invalid" comment="Error label for the language code in the user dictionary add/edit dialog">Бұл тіл коды күтілетін синтаксиске сәйкес келмейді. Код тек тіл (мысалы, en), Тіл және ел (мысалы, en_US) немесе тіл, ел және сценарий (мысалы, en_US-сценарий) болуы керек.</string>
 
     <string name="settings__gestures__title" comment="Title of Gestures screen">Қимылдар және жылжымалы мәтін енгізу</string>
+    <string name="pref__glide__info" comment="Info about glide typing">Glide typing қазіргі уақытта тек ағылшын тілінде (АҚШ) қол жетімді.</string>
     <string name="pref__glide__title" comment="Preference group title">Жылжымалы мәтін енгізу</string>
     <string name="pref__glide__enabled__label" comment="Preference title">Тегіс теруді қосыңыз</string>
     <string name="pref__glide__enabled__summary" comment="Preference summary">Саусағыңызды оның әріптеріне сырғыту арқылы сөзді енгізіңіз</string>
@@ -422,7 +423,7 @@
     <string name="pref__gestures__swipe_velocity_threshold__label" comment="Preference title">Сырғыту жылдамдығының шегі</string>
     <string name="pref__gestures__swipe_distance_threshold__label" comment="Preference title">Аралықтың шекті қашықтығы</string>
 
-    <string name="settings__advanced__title" comment="Title of Advanced settings">Озат</string>
+    <string name="settings__advanced__title" comment="Title of Advanced settings">Қосымша параметрлер</string>
     <string name="pref__advanced__settings_theme__label" comment="Label of Settings theme preference in Advanced">Тақырып параметрлері</string>
     <string name="pref__advanced__settings_theme__auto_amoled" comment="Possible value of Settings theme preference in Advanced">Әдепкі жүйе (AMOLED)</string>
     <string name="pref__advanced__settings_theme__light" comment="Possible value of Settings theme preference in Advanced">Жарық</string>
@@ -567,7 +568,7 @@
 
 
     <!-- Devtools strings -->
-    <string name="devtools__title" comment="Title of Devtools screen. Translators: treat this string as 'Developer tools' for translation, except a similar short term is available for your language.">Даму құралдары</string>
+    <string name="devtools__title" comment="Title of Devtools screen. Translators: treat this string as 'Developer tools' for translation, except a similar short term is available for your language.">Өзірлеуші құралдары</string>
     <string name="devtools__enabled__label" comment="Label of Enable developer tools in Devtools">Әзірлеуші құралдарын қосыңыз</string>
     <string name="devtools__enabled__summary" comment="Summary of Enable developer tools in Devtools">Жөндеу және ақаулықтарды жою үшін арнайы жасалған құралдар</string>
     <string name="devtools__show_heap_memory_stats__label" comment="Label of Show heap memory stats in Devtools">Жад үйіндісінің статистикасын көрсету</string>

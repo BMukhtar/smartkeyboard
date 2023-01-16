@@ -40,9 +40,7 @@ fun GesturesScreen() = FlorisScreen {
     content {
         FlorisInfoCard(
             modifier = Modifier.padding(8.dp),
-            text = """
-                Glide typing is currently only available in English (US). This will change with the development for the 0.4.0 release.
-            """.trimIndent()
+            text = stringRes(id = R.string.pref__glide__info)
         )
 
         PreferenceGroup(title = stringRes(R.string.pref__glide__title)) {
