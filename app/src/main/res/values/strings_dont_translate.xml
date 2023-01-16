@@ -26,4 +26,13 @@
     <!-- Media strings -->
     <string name="media__tab__emoticons_label" translatable="false">;-)</string>
     <string name="media__tab__kaomoji_label" translatable="false">(^-^*)/</string>
+
+    <!-- Unit strings (symbols) -->
+    <string name="unit__hours__symbol" translatable="false">{v} h</string>
+    <string name="unit__minutes__symbol" translatable="false">{v} м</string>
+    <string name="unit__seconds__symbol" translatable="false">{v} с</string>
+    <string name="unit__milliseconds__symbol" translatable="false">{v} мс</string>
+    <string name="unit__percent__symbol" translatable="false">{v}%</string>
+    <string name="unit__display_pixel__symbol" translatable="false">{v} dp</string>
+    <string name="unit__display_pixel_per_seconds__symbol" translatable="false">{v} DP / s</string>
 </resources>

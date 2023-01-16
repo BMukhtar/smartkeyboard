@@ -1,0 +1,864 @@
+<resources>
+    <string name="app_name">Ақылды пернетақта</string>
+
+    <string name="key__phone_pause" comment="Label for the Pause key in the telephone keyboard layout">Кідірту</string>
+    <string name="key__phone_wait" comment="Label for the Wait key in the telephone keyboard layout">Күте тұрыңыз</string>
+    <string name="key_popup__threedots_alt" comment="Content description for the three-dots icon in a key popup">Үш нүктелі белгіше. Егер көрініп тұрса, ұзақ басқан кезде көбірек әріптерді қолдануға болатындығын көрсетеді.</string>
+
+    <!-- One-handed strings -->
+    <string name="one_handed__close_btn_content_description" comment="Content description for the one-handed close button">Жұмыс режимін бір қолмен жабыңыз.</string>
+    <string name="one_handed__move_start_btn_content_description" comment="Content description for the one-handed move to left button">Пернетақтаны солға жылжытыңыз.</string>
+    <string name="one_handed__move_end_btn_content_description" comment="Content description for the one-handed move to right button">Пернетақтаны оңға жылжытыңыз.</string>
+
+    <!-- Media strings -->
+    <string name="settings__media__title">Эмодзи</string>
+    <string name="media__tab__emojis" comment="Tab description for emojis in the media UI">Эмодзи</string>
+    <string name="media__tab__emoticons" comment="Tab description for emoticons in the media UI">Эмодзилер</string>
+    <string name="media__tab__kaomoji" comment="Tab description for kaomoji in the media UI">Каомодзи</string>
+    <string name="prefs__media__emoji_recently_used_max_size">Эмодзи тарихының максималды мөлшері</string>
+    <string name="prefs__media__emoji_preferred_skin_tone">Таңдаулы Эмодзи тері реңі</string>
+    <string name="prefs__media__emoji_preferred_hair_style">Таңдаулы эмодзи шаш үлгісі</string>
+
+    <!-- Emoji strings -->
+    <string name="emoji__category__smileys_emotion" comment="Emoji category name">Эмодзилер мен эмоциялар</string>
+    <string name="emoji__category__people_body" comment="Emoji category name">Адамдар мен дене</string>
+    <string name="emoji__category__animals_nature" comment="Emoji category name">Жануарлар мен табиғат</string>
+    <string name="emoji__category__food_drink" comment="Emoji category name">Тамақ және сусындар</string>
+    <string name="emoji__category__travel_places" comment="Emoji category name">Саяхат және орындар</string>
+    <string name="emoji__category__activities" comment="Emoji category name">Іс-шаралар</string>
+    <string name="emoji__category__objects" comment="Emoji category name">Нысандар</string>
+    <string name="emoji__category__symbols" comment="Emoji category name">Рәміздер</string>
+    <string name="emoji__category__flags" comment="Emoji category name">Жалаулар</string>
+    <string name="emoji__recently_used__empty_message" comment="Message if no recently used emojis exist">Жақында қолданылған эмодзилер табылған жоқ. Эмодзилерді тере бастағаннан кейін олар автоматты түрде осында пайда болады.</string>
+    <string name="emoji__recently_used__removal_tip" comment="Feature discoverability for removal of recently used emojis">Кәсіби кеңес: жаңадан қолданылған эмодзилерді осы көріністен қайтадан жою үшін ұзақ басыңыз!</string>
+    <string name="emoji__recently_used__removal_success_message" comment="Toast message if user has long pressed emoji in recently used collection to remove it">Жақында қолданылған эмодзилерден {emoji} жойылды</string>
+
+    <!-- Quick action strings -->
+    <string name="quick_action__arrow_up" maxLength="12">Жоғары көрсеткі</string>
+    <string name="quick_action__arrow_up__tooltip">Жоғары көрсеткіні орындаңыз</string>
+    <string name="quick_action__arrow_down" maxLength="12">Төмен көрсеткі</string>
+    <string name="quick_action__arrow_down__tooltip">Төмен көрсеткімен қозғалысты орындаңыз</string>
+    <string name="quick_action__arrow_left" maxLength="12">Сол жақ көрсеткі</string>
+    <string name="quick_action__arrow_left__tooltip">Сол жақ көрсеткіні орындаңыз</string>
+    <string name="quick_action__arrow_right" maxLength="12">Оң жақ көрсеткі</string>
+    <string name="quick_action__arrow_right__tooltip">Оң жақ көрсеткіні іске қосыңыз</string>
+    <string name="quick_action__clipboard_clear_primary_clip" maxLength="12">Алмасу буферінің негізгі клипін тазалаңыз</string>
+    <string name="quick_action__clipboard_clear_primary_clip__tooltip">Алмасу буферінің негізгі клипін тазалаңыз</string>
+    <string name="quick_action__clipboard_copy" maxLength="12">Көшіру</string>
+    <string name="quick_action__clipboard_copy__tooltip">Алмасу буферіне көшіруді орындаңыз</string>
+    <string name="quick_action__clipboard_cut" maxLength="12">Кесу</string>
+    <string name="quick_action__clipboard_cut__tooltip">Аралық сақтағыштан кесуді орындаңыз</string>
+    <string name="quick_action__clipboard_paste" maxLength="12">Кірістіру</string>
+    <string name="quick_action__clipboard_paste__tooltip">Аралық сақтағыштан кірістіру</string>
+    <string name="quick_action__clipboard_select_all" maxLength="12">Барлығын таңдаңыз</string>
+    <string name="quick_action__clipboard_select_all__tooltip">Буферді іске қосыңыз барлығын таңдаңыз</string>
+    <string name="quick_action__ime_ui_mode_clipboard" maxLength="12">Алмасу буфері</string>
+    <string name="quick_action__ime_ui_mode_clipboard__tooltip">Алмасу буферінің ашылу тарихы</string>
+    <string name="quick_action__ime_ui_mode_media" maxLength="12">Эмодзи</string>
+    <string name="quick_action__ime_ui_mode_media__tooltip">Эмодзи жолағын ашыңыз</string>
+    <string name="quick_action__settings" maxLength="12">Параметрлер</string>
+    <string name="quick_action__settings__tooltip">Параметрлерді ашыңыз</string>
+    <string name="quick_action__undo" maxLength="12">Бас тарту</string>
+    <string name="quick_action__undo__tooltip">Соңғы енгізуді болдырмау</string>
+    <string name="quick_action__redo" maxLength="12">Қайта жасау</string>
+    <string name="quick_action__redo__tooltip">Соңғы енгізуді қайталаңыз</string>
+    <string name="quick_action__toggle_actions_overflow" maxLength="12">Қосымша әрекеттер</string>
+    <string name="quick_action__toggle_actions_overflow__tooltip">Қосымша әрекеттерді көрсету немесе жасыру</string>
+    <string name="quick_action__toggle_incognito_mode" maxLength="12">Инкогнито</string>
+    <string name="quick_action__toggle_incognito_mode__tooltip">Инкогнито режимін ауыстырыңыз</string>
+    <string name="quick_action__toggle_autocorrect" maxLength="12">Автотүзету</string>
+    <string name="quick_action__toggle_autocorrect__tooltip">Автотүзетуді ауыстырыңыз</string>
+    <string name="quick_action__voice_input" maxLength="12">Дауыстық енгізу</string>
+    <string name="quick_action__voice_input__tooltip" comment="IME stands for Input Method Editor and is indirectly equivalent to 'keyboard'.">Ашық дауыстық енгізу провайдері</string>
+    <string name="quick_action__one_handed_mode" maxLength="12">Бір қолмен</string>
+    <string name="quick_action__one_handed_mode__tooltip">Бір қолмен жұмыс режимін ауыстыру</string>
+    <string name="quick_action__drag_marker" maxLength="12" comment="This action is only used as a placeholder in the actions editor drag and drop screen and only visible in debug mode">Маркерді сүйреңіз</string>
+    <string name="quick_action__drag_marker__tooltip" comment="This action is only used as a placeholder in the actions editor drag and drop screen and only visible in debug mode">Сүйреп апару маркерінің ағымдағы орны</string>
+    <string name="quick_action__noop" maxLength="12" comment="Noop=no operation; this action is only used as a placeholder in the actions editor drag and drop screen">Ешкім</string>
+    <string name="quick_action__noop__tooltip" comment="Noop=no operation; this action is only used as a placeholder in the actions editor drag and drop screen">Операция жоқ</string>
+    <string name="quick_actions_overflow__customize_actions_button">Әрекет тәртібін өзгертіңіз</string>
+    <string name="quick_actions_editor__header">Әрекет тәртібін орнату</string>
+    <string name="quick_actions_editor__subheader_sticky_action">Жабысқақ әрекет ({n})</string>
+    <string name="quick_actions_editor__subheader_dynamic_actions">Динамикалық әрекеттер ({n})</string>
+    <string name="quick_actions_editor__subheader_hidden_actions">Жасырын әрекеттер ({n})</string>
+
+    <!-- Incognito mode strings -->
+    <string name="incognito_mode__toast_after_enabled">Инкогнито режимі енді \n\n{app_name} қосулы, бұл режим белсенді болған кезде сіздің енгізуіңіздегі сөздерді есте сақтамайды</string>
+    <string name="incognito_mode__toast_after_disabled">Инкогнито режимі енді әдепкі бойынша өшірілген</string>
+
+    <!-- Settings UI strings -->
+    <string name="settings__title" comment="Title of Settings">Параметрлер</string>
+    <string name="settings__preview_keyboard" comment="Hint for try your setup box">Орнатуды қолданып көріңіз</string>
+    <string name="settings__help" comment="General label for help buttons in Settings">Көмек</string>
+    <string name="settings__default" comment="General string which is used when a preference has the default value set">Әдепкі бойынша</string>
+    <string name="settings__system_default" comment="General string which is used when a preference has the system default value set">Әдепкі жүйе</string>
+
+    <string name="settings__home__title" comment="Title of the Home screen">{app_name} қош келдіңіз</string>
+    <string name="settings__home__ime_not_enabled" comment="Error message shown in Home fragment when SmartKeyboard is not enabled in the system">Smartkeyboard жүйеге кірмейді, сондықтан кірісті таңдау құралында енгізу әдісі ретінде қол жетімді болмайды. Бұл мәселені шешу үшін мына жерді басыңыз.</string>
+    <string name="settings__home__ime_not_selected" comment="Warning message shown in Home fragment when SmartKeyboard is not selected as the default keyboard">Smartkeyboard әдепкі енгізу әдісі ретінде таңдалмаған. Бұл мәселені шешу үшін мына жерді басыңыз.</string>
+
+    <string name="settings__localization__title" comment="Title of languages and Layout screen">Тілдер мен макеттер</string>
+    <string name="settings__localization__display_language_names_in__label" comment="Label of Display language names in preference">Тіл атауларын көрсету</string>
+    <string name="settings__localization__group_subtypes__label" comment="Label of subtypes group">Кіші түрлері</string>
+    <string name="settings__localization__subtype_add_title" comment="Title of subtype dialog when adding a new subtype">Кіші түрді қосыңыз</string>
+    <string name="settings__localization__subtype_edit_title" comment="Title of subtype dialog when editing an existing subtype">Кіші түрді өңдеу</string>
+    <string name="settings__localization__subtype_locale" comment="Label for locale dropdown in subtype dialog">Негізгі тіл</string>
+    <string name="settings__localization__subtype_popup_mapping" comment="Label for popup mapping dropdown in subtype screen">Қалқымалы терезелерді көрсету</string>
+    <string name="settings__localization__subtype_characters_layout" comment="Label for layout dropdown in subtype dialog">Таңбалардың орналасуы</string>
+    <string name="settings__localization__subtype_symbols_layout" comment="Label for layout dropdown in subtype dialog">Таңбалардың бастапқы орналасуы</string>
+    <string name="settings__localization__subtype_symbols2_layout" comment="Label for layout dropdown in subtype dialog">Таңбалардың екінші орналасуы</string>
+    <string name="settings__localization__subtype_composer" comment="Label for composer dropdown in subtype dialog.">Композитор</string>
+    <string name="settings__localization__subtype_currency_set" comment="Label for currency set dropdown in subtype dialog. 'set' is used as a noun here and can be compared to a group of elements (in this case currency symbols).">Валюта жиынтығы</string>
+    <string name="settings__localization__subtype_numeric_layout" comment="Label for layout dropdown in subtype dialog">Сандық орналасу</string>
+    <string name="settings__localization__subtype_numeric_advanced_layout" comment="Label for layout dropdown in subtype dialog">Сандық (кеңейтілген) орналасу</string>
+    <string name="settings__localization__subtype_numeric_row_layout" comment="Label for layout dropdown in subtype dialog">Сандық жолдардың орналасуы</string>
+    <string name="settings__localization__subtype_phone_layout" comment="Label for layout dropdown in subtype dialog">Телефонның негізгі орналасуы</string>
+    <string name="settings__localization__subtype_phone2_layout" comment="Label for layout dropdown in subtype dialog">Телефонның екінші орналасуы</string>
+    <string name="settings__localization__subtype_select_locale" comment="Subtype select language title">Тілді таңдаңыз</string>
+    <string name="settings__localization__subtype_search_locale_placeholder" comment="Subtype search language placeholder">Тіл бойынша іздеу</string>
+    <string name="settings__localization__subtype_search_locale_not_found" comment="Subtype search language not found">\"{Search_term}\ " сәйкес тіл табылмады.</string>
+    <string name="settings__localization__subtype_select_placeholder" comment="Subtype dialog select value placeholder (&amp;#8210; is a hyphen character)">&#8210; таңдаңыз &#8210;</string>
+    <string name="settings__localization__subtype_summary" comment="Subtype summary">{characters_name} / {symbols_name} / {currency_set_name}</string>
+    <string name="settings__localization__suggested_subtype_presets" comment="Suggested presets title">Ұсынылатын кіші түрдегі алдын ала орнатулар</string>
+    <string name="settings__localization__suggested_subtype_presets_none_found" comment="Suggested presets none found">Ұсынылған алдын ала орнатулар қол жетімді емес. Барлық ішкі түрдегі алдын ала орнатуларды көру үшін төмендегі түймені пайдаланыңыз.</string>
+    <string name="settings__localization__subtype_presets" comment="Subtype presets dialog title">Кіші түрлердің алдын ала орнатулары</string>
+    <string name="settings__localization__subtype_presets_view_all" comment="View all presets button">Барлығын көрсету</string>
+    <string name="settings__localization__subtype_no_subtypes_configured_warning" comment="Warning message that no subtype has been defined">Сіз ешқандай кіші түрлерді орнатпаған сияқтысыз. Қосалқы нұсқа ретінде қазақ/Kazakh кіші түрі пайдаланылатын болады!</string>
+    <string name="settings__localization__subtype_error_already_exists" comment="Error message shown in subtype dialog when a subtype to add already exists">Бұл кіші түрі қазірдің өзінде бар!</string>
+    <string name="settings__localization__subtype_error_fields_no_value" comment="Error message shown in subtype editor if at least one field is set to '- select -' (means no value specified)">Кем дегенде бір өрісте мән таңдалмаған. Өріс(тар) үшін мәнді таңдаңыз.</string>
+    <string name="settings__localization__subtype_error_layout_not_installed" comment="Error message shown in subtype list when a layout is not installed, where %s will be replaced by the layout ID">{layout_id} (орнатылмаған)</string>
+    <string name="settings__localization__group_layouts__label" comment="Label of layouts group">Макеттер</string>
+
+    <string name="settings__theme__title" comment="Title of the Theme screen">Тақырып</string>
+    <string name="pref__theme__mode__label" comment="Label of the theme mode preference">Тақырып режимі</string>
+    <string name="pref__theme__sunrise_time__label" comment="Label of the sunrise time preference">Күннің шығу уақыты</string>
+    <string name="pref__theme__sunset_time__label" comment="Label of the sunset time preference">Күннің бату уақыты</string>
+    <string name="pref__theme__day" comment="Label of the day group (day means light theme)">Күннің тақырыбы</string>
+    <string name="pref__theme__night" comment="Label of the night group (night means dark theme)">Түнгі тақырып</string>
+    <string name="pref__theme__any_theme__label" comment="Label of the theme selector preference">Таңдалған тақырып</string>
+    <string name="pref__theme__any_theme_adapt_to_app__label" comment="Label of the theme adapt to app preference">Түстерді қолданбаға бейімдеу</string>
+    <string name="pref__theme__any_theme_adapt_to_app__summary" comment="Summary of the theme adapt to app preference">Тақырып түстері ағымдағы қолданбаның түстеріне бейімделеді, Егер мақсатты қолданба оны қолдаса.</string>
+    <string name="pref__theme__source_assets" comment="Label for the theme source field">Smartkeyboard қосымшасының ресурстары</string>
+    <string name="pref__theme__source_internal" comment="Label for the theme source field">Ішкі сақтау</string>
+    <string name="pref__theme__source_external" comment="Label for the theme source field">Сыртқы жеткізуші</string>
+
+    <string name="settings__theme_manager__title_day" comment="Title of the theme manager screen for day theme selection">Күннің тақырыбын таңдаңыз</string>
+    <string name="settings__theme_manager__title_night" comment="Title of the theme manager screen for night theme selection">Түнгі тақырыпты таңдаңыз</string>
+    <string name="settings__theme_manager__title_manage" comment="Title of the theme manager screen for managing installed and custom themes">Белгіленген тақырыптарды басқару</string>
+
+    <string name="settings__theme_editor__fine_tune__title">Дәл баптау редакторы</string>
+    <string name="settings__theme_editor__fine_tune__level">Өңдеу деңгейі</string>
+    <string name="settings__theme_editor__fine_tune__display_colors_as">Түстерді келесідей көрсету</string>
+    <string name="settings__theme_editor__fine_tune__display_kbd_after_dialogs">Диалогтық терезелерден кейін пернетақтаны көрсету</string>
+    <string name="settings__theme_editor__add_rule">Ереже қосу</string>
+    <string name="settings__theme_editor__edit_rule">Редакциялау ережесі</string>
+    <string name="settings__theme_editor__no_rules_defined">Бұл стильдер кестесінде ережелер анықталмаған. Осы стильдер кестесін орнатуды бастау үшін ереже қосыңыз.</string>
+    <string name="settings__theme_editor__rule_already_exists">Бұл стиль кестесінің ережесі қазірдің өзінде анықталған.</string>
+    <string name="settings__theme_editor__rule_element">Мақсатты элемент</string>
+    <string name="settings__theme_editor__rule_codes">Мақсатты негізгі кодтар</string>
+    <string name="settings__theme_editor__rule_groups">Топтар</string>
+    <string name="settings__theme_editor__rule_shift_states">Ауысым күйлері</string>
+    <string name="settings__theme_editor__rule_selectors">Селекторлар</string>
+    <string name="settings__theme_editor__add_code">Кілт кодын қосыңыз</string>
+    <string name="settings__theme_editor__edit_code">Кілт кодын өңдеу</string>
+    <string name="settings__theme_editor__no_codes_defined">Ережені барлық мақсатты элементтерге қолданыңыз.</string>
+    <string name="settings__theme_editor__codes_defined">Ережені тек келесі кілт кодтары бар мақсатты элементтерге қолданыңыз:</string>
+    <string name="settings__theme_editor__code_already_exists">Бұл кілт коды қазірдің өзінде анықталған.</string>
+    <string name="settings__theme_editor__code_invalid">Бұл кілт коды жарамсыз. Кілт коды таңбалар үшін {c_min} - ден {c_max} - ке дейін немесе ішкі арнайы кілттер үшін {i_min} - ден {i_max} - ке дейін екеніне көз жеткізіңіз.</string>
+    <string name="settings__theme_editor__code_help_text">Сонымен қатар, келесі сілтемелер сізге сәйкес кілт кодын табуға көмектеседі:</string>
+    <string name="settings__theme_editor__code_placeholder">Код</string>
+    <string name="settings__theme_editor__code_recording_help_text">Кілт кодын табу үшін кодты енгізу өрісінің жанындағы түймені пайдаланыңыз. Іске қосылғаннан кейін ол келесі пернені басып, кодты енгізу өрісіне енгізеді.</string>
+    <string name="settings__theme_editor__code_recording_started">Негізгі кодты жазу басталды</string>
+    <string name="settings__theme_editor__code_recording_stopped">Кілт кодын жазу тоқтатылды</string>
+    <string name="settings__theme_editor__code_recording_requires_default_ime_floris">{app_name} кілт кодын жазу үшін әдепкі пернетақта болуы керек</string>
+    <string name="settings__theme_editor__code_recording_placeholder">Жазу…</string>
+    <string name="settings__theme_editor__add_property">Сипат қосу</string>
+    <string name="settings__theme_editor__edit_property">Сипатты өңдеу</string>
+    <string name="settings__theme_editor__property_already_exists">Осы атаумен мүлік қазіргі Ережеде бұрыннан бар.</string>
+    <string name="settings__theme_editor__property_name">Қасиет атауы</string>
+    <string name="settings__theme_editor__property_value">Жылжымайтын мүлік құны</string>
+    <string name="settings__theme_editor__property_value_shape_apply_for_all_corners">Барлық бұрыштар үшін қолданылады</string>
+    <string name="settings__theme_editor__property_value_color_dialog_title">Түс жолағын өңдеу</string>
+    <string name="settings__theme_editor__component_meta_is_night_theme">Бұл түнгі тақырып</string>
+    <string name="settings__theme_editor__component_meta_is_borderless">Шекарасы жоқ</string>
+    <string name="settings__theme_editor__component_meta_stylesheet_path">Стиль кестесіне жол</string>
+
+    <string name="snygg__rule_element__defines">Айнымалылар</string>
+    <string name="snygg__rule_element__defines_description">Стиль кестесіндегі жалпы түстерді немесе өлшемдерді қайта пайдалану үшін осы ережедегі айнымалыларды анықтаңыз.</string>
+    <string name="snygg__rule_element__keyboard">Пернетақта терезесі</string>
+    <string name="snygg__rule_element__key">Кілт</string>
+    <string name="snygg__rule_element__key_hint">Негізгі Кеңес</string>
+    <string name="snygg__rule_element__key_popup">Кілті бар қалқымалы терезе</string>
+    <string name="snygg__rule_element__clipboard_header">Алмасу буферінің тақырыбы</string>
+    <string name="snygg__rule_element__clipboard_item">Алмасу буферінің элементі</string>
+    <string name="snygg__rule_element__clipboard_item_popup">Аралық сақтағыш элементінің қалқымалы терезесі</string>
+    <string name="snygg__rule_element__emoji_key">Эмодзи кілті</string>
+    <string name="snygg__rule_element__emoji_key_popup">Эмодзи кілті бар қалқымалы терезе</string>
+    <string name="snygg__rule_element__emoji_key_tab">Эмодзи қойындысы</string>
+    <string name="snygg__rule_element__extracted_landscape_input_layout">Ландшафтты енгізу макеті</string>
+    <string name="snygg__rule_element__extracted_landscape_input_field">Ландшафтты енгізу өрісі</string>
+    <string name="snygg__rule_element__extracted_landscape_input_action">Ландшафтты енгізу әрекеті</string>
+    <string name="snygg__rule_element__glide_trail">Жылжымалы із</string>
+    <string name="snygg__rule_element__incognito_mode_indicator">Инкогнито режимінің индикаторы</string>
+    <string name="snygg__rule_element__one_handed_panel">Бір қолмен Панель</string>
+    <string name="snygg__rule_element__smartbar">Ақылды панель</string>
+    <string name="snygg__rule_element__smartbar_shared_actions_row">Smartbar жалпы әрекет жолы</string>
+    <string name="snygg__rule_element__smartbar_shared_actions_toggle">Smartbar жалпы әрекет қосқышы</string>
+    <string name="snygg__rule_element__smartbar_extended_actions_row">Smartbar кеңейтілген әрекеттер жолы</string>
+    <string name="snygg__rule_element__smartbar_extended_actions_toggle">Smartbar кеңейтілген әрекет қосқышы</string>
+    <string name="snygg__rule_element__smartbar_action_key">Smartbar әрекет пернесі</string>
+    <string name="snygg__rule_element__smartbar_action_tile">Smartbar әрекет тақтайшасы</string>
+    <string name="snygg__rule_element__smartbar_actions_overflow">Smartbar әрекеттерінің толып кетуі</string>
+    <string name="snygg__rule_element__smartbar_actions_overflow_customize_button">Smartbar әрекеттерінің толып кетуін орнату түймесі</string>
+    <string name="snygg__rule_element__smartbar_actions_editor">Smartbar әрекет редакторы</string>
+    <string name="snygg__rule_element__smartbar_actions_editor_header">Smartbar әрекет редакторының тақырыбы</string>
+    <string name="snygg__rule_element__smartbar_actions_editor_subheader">Smartbar әрекет редакторының субтитрі</string>
+    <string name="snygg__rule_element__smartbar_candidates_row">Smartbar кандидаттар жолы</string>
+    <string name="snygg__rule_element__smartbar_candidate_word">Smartbar кандидаты сөзі</string>
+    <string name="snygg__rule_element__smartbar_candidate_clip">Smartbar клипіне үміткер</string>
+    <string name="snygg__rule_element__smartbar_candidate_spacer">Төсеу - үміткер smartbar</string>
+    <string name="snygg__rule_element__system_nav_bar">Жүйенің навигациялық тақтасы</string>
+    <string name="snygg__rule_selector__pressed">Престелген</string>
+    <string name="snygg__rule_selector__focus">Шоғырланған</string>
+    <string name="snygg__rule_selector__disabled">Еңбекке жарамсыз</string>
+    <string name="snygg__property_name__width">Ені</string>
+    <string name="snygg__property_name__height">Биіктігі</string>
+    <string name="snygg__property_name__background">Фон</string>
+    <string name="snygg__property_name__foreground">Алдыңғы жоспар</string>
+    <string name="snygg__property_name__border_color">Шекара түсі</string>
+    <string name="snygg__property_name__border_style">Шекара стилі</string>
+    <string name="snygg__property_name__border_width">Шекара ені</string>
+    <string name="snygg__property_name__font_family">Қаріптер отбасы</string>
+    <string name="snygg__property_name__font_size">Қаріп өлшемі</string>
+    <string name="snygg__property_name__font_style">Қаріп стилі</string>
+    <string name="snygg__property_name__font_variant">Қаріп опциясы</string>
+    <string name="snygg__property_name__font_weight">Қаріп салмағы</string>
+    <string name="snygg__property_name__shadow_elevation">Көлеңке биіктігі</string>
+    <string name="snygg__property_name__shape">Пішін</string>
+    <string name="snygg__property_name__var_primary">Негізгі түс</string>
+    <string name="snygg__property_name__var_primary_variant">Негізгі түс (опция)</string>
+    <string name="snygg__property_name__var_secondary">Екінші түс</string>
+    <string name="snygg__property_name__var_secondary_variant">Қосымша түс (опция)</string>
+    <string name="snygg__property_name__var_background">Жалпы фон</string>
+    <string name="snygg__property_name__var_surface">Жалпы беті</string>
+    <string name="snygg__property_name__var_surface_variant">Жалпы беті (нұсқа)</string>
+    <string name="snygg__property_name__var_on_primary">Бастапқы жоспар</string>
+    <string name="snygg__property_name__var_on_secondary">Екінші жоспардың алдыңғы жағы</string>
+    <string name="snygg__property_name__var_on_background">Алдыңғы Фон</string>
+    <string name="snygg__property_name__var_on_surface">Беттің алдыңғы жағы</string>
+    <string name="snygg__property_name__var_on_surface_variant">Беттің алдыңғы жағы (нұсқа)</string>
+    <string name="snygg__property_name__var_shape">Жалпы форма</string>
+    <string name="snygg__property_name__var_shape_variant">Кәдімгі пішін (нұсқа)</string>
+    <string name="snygg__property_value__explicit_inherit">Мұрагерлік</string>
+    <string name="snygg__property_value__solid_color">Қатты түс</string>
+    <string name="snygg__property_value__image_ref">Сурет сілтемесі</string>
+    <string name="snygg__property_value__rectangle_shape">Тікбұрышты пішін</string>
+    <string name="snygg__property_value__circle_shape">Шеңбердің пішіні</string>
+    <string name="snygg__property_value__cut_corner_shape_dp">Кесілген бұрыштың пішіні (dp)</string>
+    <string name="snygg__property_value__cut_corner_shape_percent">Кесілген бұрыштың пішіні (%)</string>
+    <string name="snygg__property_value__rounded_corner_shape_dp">Дөңгелек бұрыштың пішіні (dp)</string>
+    <string name="snygg__property_value__rounded_corner_shape_percent">Дөңгелек бұрыштың пішіні (%)</string>
+    <string name="snygg__property_value__dp_size">Өлшемі (dp)</string>
+    <string name="snygg__property_value__sp_size">Өлшемі (sp)</string>
+    <string name="snygg__property_value__percentage_size">Көлемі (%)</string>
+    <string name="snygg__property_value__defined_var">Var сілтемесі</string>
+
+    <string name="settings__input_feedback__title" comment="Title of Input Feedback screen">Дыбыстар мен діріл</string>
+    <string name="pref__input_feedback__group_audio__label" comment="Preference group title">Дыбыстық кері байланыс / дыбыстар</string>
+    <string name="pref__input_feedback__audio_enabled__label" comment="Preference title">Дыбыстық кері байланысты қосыңыз</string>
+    <string name="pref__input_feedback__audio_enabled__summary_disabled" comment="Preference summary">Жүйе параметрлеріне қарамастан, кіріс оқиғалары үшін дыбыстарды ешқашан ойнатпаңыз</string>
+    <string name="pref__input_feedback__audio_volume__label" comment="Preference title">Кіріс оқиғалары үшін дыбыс деңгейі</string>
+    <string name="pref__input_feedback__audio_feat_key_press__label" comment="Preference title">Пернелерді басу дыбыстары</string>
+    <string name="pref__input_feedback__audio_feat_key_long_press__label" comment="Preference title">Ұзақ пернені басу дыбыстары</string>
+    <string name="pref__input_feedback__audio_feat_key_repeated_action__label" comment="Preference title">Әрекеттің негізгі қайталанатын дыбыстары</string>
+    <string name="pref__input_feedback__audio_feat_gesture_swipe__label" comment="Preference title">Жест сырғыту дыбыстары</string>
+    <string name="pref__input_feedback__audio_feat_gesture_moving_swipe__label" comment="Preference title">Қимылды жылжыту және сырғыту дыбыстары</string>
+    <string name="pref__input_feedback__group_haptic__label" comment="Preference group title">Тактильді кері байланыс / діріл</string>
+    <string name="pref__input_feedback__haptic_enabled__label" comment="Preference title">Тактильді кері байланысты қосыңыз</string>
+    <string name="pref__input_feedback__haptic_enabled__summary_disabled" comment="Preference summary">Жүйе параметрлеріне қарамастан оқиғаларды енгізу кезінде ешқашан дірілдемеңіз</string>
+    <string name="pref__input_feedback__haptic_vibration_mode__label" comment="Preference title">Діріл режимі</string>
+    <string name="pref__input_feedback__haptic_vibration_duration__label" comment="Preference title">Дірілдің ұзақтығы</string>
+    <string name="pref__input_feedback__haptic_vibration_strength__label" comment="Preference title">Діріл беріктігі</string>
+    <string name="pref__input_feedback__haptic_vibration_strength__summary_no_vibrator" comment="Preference summary">Бұл функция осы құрылғыда жоқ сияқты көрінетін аппараттық вибраторды қажет етеді</string>
+    <string name="pref__input_feedback__haptic_vibration_strength__summary_no_amplitude_ctrl" comment="Preference summary">Бұл функция құрылғыда жоқ амплитудалық басқаруды аппараттық қолдауды қажет етеді</string>
+    <string name="pref__input_feedback__haptic_vibration_strength__summary_unsupported_android_version" comment="Preference summary">Бұл мүмкіндік тек Android 8.0 немесе одан кейінгі нұсқаларында қол жетімді amplitude control қолдауын қажет етеді</string>
+    <string name="pref__input_feedback__haptic_feat_key_press__label" comment="Preference title">Пернені басқан кезде діріл</string>
+    <string name="pref__input_feedback__haptic_feat_key_long_press__label" comment="Preference title">Пернені ұзақ басқан кезде діріл</string>
+    <string name="pref__input_feedback__haptic_feat_key_repeated_action__label" comment="Preference title">Қайталанатын кілт әрекетінің дірілі</string>
+    <string name="pref__input_feedback__haptic_feat_gesture_swipe__label" comment="Preference title">Қимылмен сырғытыңыз діріл</string>
+    <string name="pref__input_feedback__haptic_feat_gesture_moving_swipe__label" comment="Preference title">Қимыл жылжыту діріл сырғыту</string>
+    <string name="pref__input_feedback__any_feat_key_press__summary" comment="Preference summary">, мысалы, пернелер, түймелер, Эмодзи қойындылары</string>
+    <string name="pref__input_feedback__any_feat_key_long_press__summary" comment="Preference summary">, мысалы, қалқымалы мәзір</string>
+    <string name="pref__input_feedback__any_feat_key_repeated_action__summary" comment="Preference summary">, мысалы, жою пернесі</string>
+    <string name="pref__input_feedback__any_feat_gesture_swipe__summary" comment="Preference summary">іске асырылған жоқ</string>
+    <string name="pref__input_feedback__any_feat_gesture_moving_swipe__summary" comment="Preference summary">, мысалы, сырғыту курсорын басқару</string>
+
+    <string name="settings__keyboard__title" comment="Title of Keyboard preferences screen">Пернетақта</string>
+    <string name="pref__keyboard__number_row__label" comment="Preference title">Сандық жол</string>
+    <string name="pref__keyboard__number_row__summary" comment="Preference summary">Таңбалар орналасуының үстінде сандары бар жолды көрсету</string>
+    <string name="pref__keyboard__hinted_number_row_mode__label" comment="Preference title">Нөмірі бар жол</string>
+    <string name="pref__keyboard__hinted_symbols_mode__label" comment="Preference title">Таңбалар</string>
+    <string name="pref__keyboard__utility_key_enabled__label" comment="Preference title">Қызмет кілтін көрсету</string>
+    <string name="pref__keyboard__utility_key_enabled__summary" comment="Preference summary">Бос орынның жанында теңшелетін қызмет пернесін көрсетеді</string>
+    <string name="pref__keyboard__utility_key_action__label" comment="Preference title">Утилита кілтінің әрекеті</string>
+    <string name="pref__keyboard__space_bar_language_display_enabled__label" comment="Preference title">Бос орын пернесін пайдаланып көрсету тілі</string>
+    <string name="pref__keyboard__space_bar_language_display_enabled__summary" comment="Preference summary">Бос орын жолағында ағымдағы белсенді тілдің атауын көрсетеді</string>
+    <string name="pref__keyboard__font_size_multiplier__label" comment="Preference title">Қаріп өлшемінің мультипликаторы</string>
+    <string name="pref__keyboard__group_layout__label" comment="Preference group title">Орналасқан жері</string>
+    <string name="pref__keyboard__one_handed_mode__label" comment="Preference title">Бір қолмен жұмыс режимі</string>
+    <string name="pref__keyboard__one_handed_mode_scale_factor__label" comment="Preference title">Бір қолмен жұмыс режиміндегі пернетақтаның ені</string>
+    <string name="pref__keyboard__landscape_input_ui_mode__label" comment="Preference value">Ландшафттық толық экранды енгізу</string>
+    <string name="pref__keyboard__height_factor__label" comment="Preference title">Пернетақта биіктігі</string>
+    <string name="pref__keyboard__key_spacing__label" comment="Preference title">Пернелер арасындағы қашықтық</string>
+    <string name="pref__keyboard__bottom_offset__label" comment="Preference title">Төменгі жылжу</string>
+    <string name="pref__keyboard__group_keypress__label" comment="Preference group title">Пернені басу</string>
+    <string name="pref__keyboard__popup_enabled__label" comment="Preference title">Қалқымалы терезенің көрінуі</string>
+    <string name="pref__keyboard__popup_enabled__summary" comment="Preference summary">Пернені басқан кезде қалқымалы терезені көрсету</string>
+    <string name="pref__keyboard__merge_hint_popups_enabled__label" comment="Preference title">Екпіндерге таңбалары бар қалқымалы терезелер кіреді</string>
+    <string name="pref__keyboard__merge_hint_popups_enabled__summary" comment="Preference summary">Әдепкі орналасу екпініне таңбалар қалқымалы терезелерін қосады</string>
+    <string name="pref__keyboard__long_press_delay__label" comment="Preference title">Пернені ұзақ басудың кешігуі</string>
+    <string name="pref__keyboard__space_bar_switches_to_characters__label" comment="Preference title">Бос орын таңбаларға ауысады</string>
+    <string name="pref__keyboard__space_bar_switches_to_characters__summary" comment="Preference summary">Таңбаларды немесе сандарды енгізген кезде автоматты түрде таңбаларға ауысады</string>
+
+    <!-- Smartbar strings -->
+    <string name="settings__smartbar__title" comment="Title of Smartbar screen">Ақылды панель</string>
+    <string name="pref__smartbar__enabled__label" comment="Preference title">Smartbar Қосыңыз</string>
+    <string name="pref__smartbar__enabled__summary" comment="Preference summary">Пернетақтаның жоғарғы жағында көрсетіледі</string>
+    <string name="pref__smartbar__layout__label" comment="Preference title">Орналасқан жері</string>
+    <string name="pref__smartbar__group_layout_specific__label" comment="Preference group title">Орналасуға байланысты параметрлер</string>
+    <string name="pref__smartbar__flip_toggles__label" comment="Preference title">Ауыстыру түймелерін басыңыз</string>
+    <string name="pref__smartbar__flip_toggles__summary" comment="Preference summary">Әрекетті айналдырады, жолды ауыстырады</string>
+    <string name="pref__smartbar__shared_actions_auto_expand_collapse__label" comment="Preference title">Автоматты түрде ашу/бүктеу</string>
+    <string name="pref__smartbar__shared_actions_auto_expand_collapse__summary" comment="Preference summary">Ағымдағы күйге негізделген жалпы әрекет жолын автоматты түрде кеңейту /кішірейту</string>
+    <string name="pref__smartbar__extended_actions_placement__label" comment="Preference title">Әрекет жолын орналастыру</string>
+
+    <!-- Typing strings -->
+    <string name="settings__typing__title" comment="Title of Typing screen">Басып шығару</string>
+    <string name="pref__suggestion__title" comment="Preference group title">Ұсыныстар</string>
+    <string name="pref__suggestion__enabled__label" comment="Preference title">Ұсыныстарды көрсету</string>
+    <string name="pref__suggestion__enabled__summary" comment="Preference summary">Енгізу кезінде ұсыныстар береді</string>
+    <string name="pref__suggestion__display_mode__label" comment="Preference title">Ұсыныстарды көрсету режимі</string>
+    <string name="pref__suggestion__block_possibly_offensive__label" comment="Preference title">Ықтимал қорлайтын сөздерді блоктаңыз</string>
+    <string name="pref__suggestion__block_possibly_offensive__summary" comment="Preference summary">Теру кезінде ықтимал қорлайтын сөздерді ұсынуға жол бермейді</string>
+    <string name="pref__suggestion__clipboard_content_enabled__label" comment="Preference title">Алмасу буферінің мазмұны бойынша ұсыныстар</string>
+    <string name="pref__suggestion__clipboard_content_enabled__summary" comment="Preference summary">Бұрын көшірілген алмасу буферінің мазмұнын ұсыныңыз</string>
+    <string name="pref__suggestion__clipboard_content_timeout__label" comment="Preference title; Translators: This should form a sentence together with `pref__suggestion__clipboard_content_timeout__summary` and is the first part">Алмасу буферінің ұсыныстарын шектеңіз</string>
+    <string name="pref__suggestion__clipboard_content_timeout__summary" comment="Preference summary; Translators: This should form a sentence together with `pref__suggestion__clipboard_content_timeout__label` and is the second part">Соңғы {v} ішінде көшірілген элементтер</string>
+    <string name="pref__suggestion__api30_inline_suggestions_enabled__label" comment="Preference title">Жүйені автотолтыру бойынша ұсыныстар</string>
+    <string name="pref__suggestion__api30_inline_suggestions_enabled__summary" comment="Preference summary">Автотолтыру қызметтері ұсынатын кірістірілген ұсыныстарды көрсету</string>
+    <string name="pref__correction__title" comment="Preference group title">Түзетулер</string>
+    <string name="pref__correction__auto_capitalization__label" comment="Preference title">Автоматты капиталдандыру</string>
+    <string name="pref__correction__auto_capitalization__summary" comment="Preference summary">Ағымдағы енгізу контекстіне байланысты бас әріппен жазылған сөздерді қолданыңыз</string>
+    <string name="pref__correction__auto_space_punctuation__label" comment="Preference title">Тыныс белгілерінен кейінгі Автоматты бос орын</string>
+    <string name="pref__correction__auto_space_punctuation__summary" comment="Preference summary">Тыныс белгісінен кейін бос орынды автоматты түрде салыңыз</string>
+    <string name="pref__correction__remember_caps_lock_state__label" comment="Preference title">Caps lock күйін есте сақтаңыз</string>
+    <string name="pref__correction__remember_caps_lock_state__summary" comment="Preference summary">Басқа мәтін жолағына ауысқан кезде бас әріптерді құлыптау қосулы қалады</string>
+    <string name="pref__correction__double_space_period__label" comment="Preference title">Қос алшақтық кезеңі</string>
+    <string name="pref__correction__double_space_period__summary" comment="Preference summary">Бос орынды екі рет басу нүктені енгізеді, содан кейін бос орын</string>
+    <string name="pref__spelling__title" comment="Preference group title">Жазу</string>
+    <string name="pref__spelling__active_spellchecker__summary_disabled">Бүкіл жүйе бойынша өшірілген. Қате сөздер үшін мәтін жолақтарында қызыл сызықтар көрсетілмейді. Өзгерту үшін басыңыз.</string>
+    <string name="pref__spelling__active_spellchecker__summary_none">Кірістірілген мәтіннің емлесін тексеру қызметі орнатылмаған. Өзгерту үшін басыңыз.</string>
+    <string name="pref__spelling__language_mode__label" comment="Label of Language mode pref">Тілдер</string>
+    <string name="pref__spelling__use_contacts__label" comment="Label of Use contact list pref">Контактілерден атауларды қолданыңыз</string>
+    <string name="pref__spelling__use_contacts__summary" comment="Summary of Use contact list pref">Контактілер тізімінен атауларды табыңыз</string>
+    <string name="pref__spelling__use_udm_entries__label" comment="Label of Use user dictionary entries pref">Пайдаланушы сөздік жазбаларын пайдаланыңыз</string>
+    <string name="pref__spelling__use_udm_entries__summary" comment="Summary of Use user dictionary entries pref">Жеке сөздіктердегі жазбаларды іздеңіз</string>
+
+    <string name="settings__dictionary__title" comment="Title of the User dictionaries screen">Арнайы сөздіктер</string>
+    <string name="pref__dictionary__enable_system_user_dictionary__label" comment="Preference title">Жүйелік пайдаланушы сөздігін қосыңыз</string>
+    <string name="pref__dictionary__enable_system_user_dictionary__summary" comment="Preference summary">Жүйелік пайдаланушы сөздігінде сақталған сөздерді ұсыныңыз</string>
+    <string name="pref__dictionary__manage_system_user_dictionary__label" comment="Preference title">Жүйелік пайдаланушы сөздігін басқару</string>
+    <string name="pref__dictionary__manage_system_user_dictionary__summary" comment="Preference summary">Жүйелік пайдаланушы сөздігі үшін жазбаларды қосу, қарау және жою</string>
+    <string name="pref__dictionary__enable_internal_user_dictionary__label" comment="Preference title">Ішкі пайдаланушы сөздігін қосыңыз</string>
+    <string name="pref__dictionary__enable_internal_user_dictionary__summary" comment="Preference summary">Ішкі пайдаланушы сөздігінде сақталған сөздерді ұсыныңыз</string>
+    <string name="pref__dictionary__manage_floris_user_dictionary__label" comment="Preference title">Ішкі пайдаланушы сөздігін басқару</string>
+    <string name="pref__dictionary__manage_floris_user_dictionary__summary" comment="Preference summary">Ішкі пайдаланушы сөздігі үшін жазбаларды қосыңыз, шолыңыз және жойыңыз</string>
+    <string name="settings__udm__title_floris" comment="Title of the User Dictionary Manager activity for internal">Ішкі пайдаланушы сөздігі</string>
+    <string name="settings__udm__title_system" comment="Title of the User Dictionary Manager activity for system">Жүйелік пайдаланушы сөздігі</string>
+    <string name="settings__udm__no_words_in_dictionary" comment="String to show if no words are present in the dictionary">Бұл реттелетін сөздікте ешқандай сөз жоқ.</string>
+    <string name="settings__udm__word_summary_freq" comment="Summary label for a word entry. The decimal placeholder inserts the frequency for the word it summarizes.">Жиілік: {freq}</string>
+    <string name="settings__udm__word_summary_freq_shortcut" comment="Summary label for a word entry. The first placeholder inserts the frequency for the word it summarizes, the second placeholder the shortcut defined.">Жиілік: {freq} | төте жол: {shortcut}</string>
+    <string name="settings__udm__all_languages" comment="Label of the For all languages entry in the language list">Барлық тілдер үшін</string>
+    <string name="settings__udm__open_system_manager_ui" comment="Label of the Open system manager UI menu option">Жүйе менеджерінің пайдаланушы интерфейсін ашыңыз</string>
+    <string name="settings__udm__dictionary_import_success" comment="Message for dictionary import success">Пайдаланушы сөздігі сәтті импортталды!</string>
+    <string name="settings__udm__dictionary_export_success" comment="Message for dictionary export success">Пайдаланушы сөздігі сәтті экспортталды!</string>
+    <string name="settings__udm__dialog__title_add" comment="Label for the title (when in adding mode) in the user dictionary add/edit dialog">Сөз қосу</string>
+    <string name="settings__udm__dialog__title_edit" comment="Label for the title (when in editing mode) in the user dictionary add/edit dialog">Сөзді өңдеу</string>
+    <string name="settings__udm__dialog__word_label" comment="Label for the word in the user dictionary add/edit dialog">Сөз</string>
+    <string name="settings__udm__dialog__word_error_empty" comment="Error label for the word in the user dictionary add/edit dialog">Сөзді енгізіңіз</string>
+    <string name="settings__udm__dialog__word_error_invalid" comment="Error label for the word in the user dictionary add/edit dialog">{regex}сәйкес келетін сөзді енгізіңіз</string>
+    <string name="settings__udm__dialog__freq_label" comment="Label for the frequency in the user dictionary add/edit dialog. The two decimal placeholders are the minimum and maximum frequency, both inclusive.">Жиілік ({f_min} және {f_max} арасында)</string>
+    <string name="settings__udm__dialog__freq_error_empty" comment="Error label for the frequency in the user dictionary add/edit dialog">Жиілік мәнін енгізіңіз</string>
+    <string name="settings__udm__dialog__freq_error_invalid" comment="Error label for the frequency in the user dictionary add/edit dialog">Көрсетілген шектерде жарамды нөмірді енгізіңіз</string>
+    <string name="settings__udm__dialog__shortcut_label" comment="Label for the shortcut in the user dictionary add/edit dialog">Төте жол (міндетті емес)</string>
+    <string name="settings__udm__dialog__shortcut_error_invalid" comment="Error label for the shortcut in the user dictionary add/edit dialog">{regex}сәйкес келетін таңбашаны енгізіңіз</string>
+    <string name="settings__udm__dialog__locale_label" comment="Label for the language code in the user dictionary add/edit dialog">Тіл коды (міндетті емес)</string>
+    <string name="settings__udm__dialog__locale_error_invalid" comment="Error label for the language code in the user dictionary add/edit dialog">Бұл тіл коды күтілетін синтаксиске сәйкес келмейді. Код тек тіл (мысалы, en), Тіл және ел (мысалы, en_US) немесе тіл, ел және сценарий (мысалы, en_US-сценарий) болуы керек.</string>
+
+    <string name="settings__gestures__title" comment="Title of Gestures screen">Қимылдар және жылжымалы мәтін енгізу</string>
+    <string name="pref__glide__title" comment="Preference group title">Жылжымалы мәтін енгізу</string>
+    <string name="pref__glide__enabled__label" comment="Preference title">Тегіс теруді қосыңыз</string>
+    <string name="pref__glide__enabled__summary" comment="Preference summary">Саусағыңызды оның әріптеріне сырғыту арқылы сөзді енгізіңіз</string>
+    <string name="pref__glide__show_trail__label" comment="Preference title">Жылжымалы жолды көрсету</string>
+    <string name="pref__glide__show_trail__summary" comment="Preference summary">Әр сөзден кейін жоғалады</string>
+    <string name="pref__glide_trail_fade_duration">Жылжымалы із уақыт өте келе жоғалады</string>
+    <string name="pref__glide_preview_refresh_delay">Алдын ала қарауды жаңартудың кешігуі</string>
+    <string name="pref__glide__show_preview">Жылжымалы теру кезінде алдын ала қарауды көрсету</string>
+    <string name="pref__glide__immediate_backspace_deletes_word__label">Әрқашан сөзді алып тастаңыз</string>
+    <string name="pref__glide__immediate_backspace_deletes_word__summary">Сырғығаннан кейін бірден жою түймесін басу бүкіл сөзді жояды</string>
+    <string name="pref__gestures__general_title" comment="Preference group title">Жалпы қимылдар</string>
+    <string name="pref__gestures__space_bar_title" comment="Preference group title">Бос орынмен қимылдар</string>
+    <string name="pref__gestures__other_title" comment="Preference group title">Басқа қимылдар / қимылдың шегі</string>
+    <string name="pref__gestures__swipe_up__label" comment="Preference title">Жоғары сырғытыңыз</string>
+    <string name="pref__gestures__swipe_down__label" comment="Preference title">Төмен сырғытыңыз</string>
+    <string name="pref__gestures__swipe_left__label" comment="Preference title">Солға сырғытыңыз</string>
+    <string name="pref__gestures__swipe_right__label" comment="Preference title">Оңға сырғытыңыз</string>
+    <string name="pref__gestures__space_bar_swipe_up__label" comment="Preference title">Бос орын жоғары сырғытыңыз</string>
+    <string name="pref__gestures__space_bar_swipe_left__label" comment="Preference title">Бос орын солға сырғытыңыз</string>
+    <string name="pref__gestures__space_bar_swipe_right__label" comment="Preference title">Бос орынды оңға қарай сырғытыңыз</string>
+    <string name="pref__gestures__space_bar_long_press__label" comment="Preference title">Бос орын пернесін ұзақ басу</string>
+    <string name="pref__gestures__delete_key_swipe_left__label" comment="Preference title">Пернені жою солға сырғытыңыз</string>
+    <string name="pref__gestures__delete_key_long_press__label" comment="Preference title">Жою пернесін ұзақ басу</string>
+    <string name="pref__gestures__swipe_velocity_threshold__label" comment="Preference title">Сырғыту жылдамдығының шегі</string>
+    <string name="pref__gestures__swipe_distance_threshold__label" comment="Preference title">Аралықтың шекті қашықтығы</string>
+
+    <string name="settings__advanced__title" comment="Title of Advanced settings">Озат</string>
+    <string name="pref__advanced__settings_theme__label" comment="Label of Settings theme preference in Advanced">Тақырып параметрлері</string>
+    <string name="pref__advanced__settings_theme__auto_amoled" comment="Possible value of Settings theme preference in Advanced">Әдепкі жүйе (AMOLED)</string>
+    <string name="pref__advanced__settings_theme__light" comment="Possible value of Settings theme preference in Advanced">Жарық</string>
+    <string name="pref__advanced__settings_theme__dark" comment="Possible value of Settings theme preference in Advanced">Қараңғы</string>
+    <string name="pref__advanced__settings_theme__amoled_dark" comment="Possible value of Settings theme preference in Advanced">AMOLED қараңғы</string>
+    <string name="pref__advanced__settings_language__label" comment="Label of Settings language preference in Advanced">Параметрлер тілі</string>
+    <string name="pref__advanced__show_app_icon__label" comment="Label of Show app icon preference in Advanced">Іске қосқышта Қолданба белгішесін көрсету</string>
+    <string name="pref__advanced__show_app_icon__summary_atleast_q" comment="Summary of Show app icon preference in Advanced for Android 10+">Жүйенің шектеулеріне байланысты әрқашан Android 10+ жүйесінде қосылады</string>
+    <string name="pref__advanced__incognito_mode__label" comment="Label of Incognito mode preference in Advanced">Инкогнито режимі</string>
+
+    <!-- About UI strings -->
+    <string name="about__title" comment="Title of About activity">Туралы</string>
+    <string name="about__app_icon_content_description" comment="Content description of app icon in About">Smartkeyboard қолданбасының белгішесі</string>
+    <string name="about__view_licenses" comment="Label of View licenses button in About">Ашық бастапқы лицензиялар</string>
+    <string name="about__view_privacy_policy" comment="Label of View privacy policy button in About">Құпиялылық саясаты</string>
+    <string name="about__view_source_code" comment="Label of View source code button in About">Бастапқы код</string>
+
+    <string name="about__license__title" comment="Title of Open-source licenses dialog">Ашық бастапқы лицензиялар</string>
+
+    <string name="about__version__title" comment="Preference title">Нұсқа</string>
+    <string name="about__version_copied__title" comment="Title of the toast for copying the version string">Алмасу буферіне көшірілген нұсқа</string>
+    <string name="about__version_copied__error" comment="Title of the error toast for copying the version string">Бірдеңе дұрыс болмады: {error_message}</string>
+    <string name="about__changelog__title" comment="Preference title">Өзгерістер журналы</string>
+    <string name="about__changelog__summary" comment="Preference summary">Не жаңалық</string>
+    <string name="about__repository__title" comment="Preference title">Репозиторий (GitHub)</string>
+    <string name="about__repository__summary" comment="Preference summary">Бастапқы код, талқылаулар, мәселелер және ақпарат</string>
+    <string name="about__privacy_policy__title" comment="Preference title">Құпиялылық саясаты</string>
+    <string name="about__privacy_policy__summary" comment="Preference summary">Бұл жобаның құпиялылық саясаты</string>
+    <string name="about__project_license__title" comment="Preference title">Жоба лицензиясы</string>
+    <string name="about__project_license__summary" comment="Preference summary">SmartKeyboard {license_name} астында лицензияланған</string>
+    <string name="about__project_license__error_license_text_failed" comment="Error text for license text loading failure">Қате: лицензия мәтінін жүктеу мүмкін болмады.\ n себебі: {error_message}</string>
+    <string name="about__project_license__error_reason_asset_manager_null" comment="Error text if asset manager is null">Активтер менеджеріне сілтеме нөлге тең</string>
+    <string name="about__third_party_licenses__title" comment="Preference title">Үшінші тарап лицензиялары</string>
+    <string name="about__third_party_licenses__summary" comment="Preference summary">Осы Қосымшаға енгізілген үшінші тарап кітапханаларының лицензиялары</string>
+
+    <!-- Setup UI strings -->
+    <string name="setup__title" comment="Title of Setup">Қош келдіңіздер!</string>
+    <string name="setup__intro_message" comment="Short intro message welcoming new users">{app_name} пайдаланғаныңыз үшін рахмет! Бұл жылдам орнату құрылғыда {app_name} пайдалану үшін қажетті қадамдарды орындайды.</string>
+    <string name="setup__footer__privacy_policy" comment="Privacy policy label for URL">Құпиялылық саясаты</string>
+    <string name="setup__footer__repository" comment="Repository label for URL">Сақтау</string>
+
+    <string name="setup__enable_ime__title">Қосу {app_name}</string>
+    <string name="setup__enable_ime__description">Android оны пайдаланбас бұрын әрбір пайдаланушы пернетақтасын бөлек қосуды талап етеді. Жүйе параметрлерін iLanguage &amp; Input ашыңыз, сонда "{app_name}"қосыңыз.</string>
+    <string name="setup__enable_ime__open_settings_btn">Жүйе параметрлерін ашыңыз</string>
+
+    <string name="setup__select_ime__title">{app_name}таңдаңыз</string>
+    <string name="setup__select_ime__description">{app_name} енді сіздің жүйеңізде қосылады. Оны белсенді пайдалану үшін енгізу таңдау тілқатысу терезесінде оны таңдау арқылы {app_name} тармағына ауысыңыз!</string>
+    <string name="setup__select_ime__switch_keyboard_btn">Пернетақтаны ауыстырыңыз</string>
+
+    <string name="setup__finish_up__title">Finish Up</string>
+    <string name="setup__finish_up__description_p1">{app_name} енді жүйеде қосылған және сіз орнатуға дайын.</string>
+    <string name="setup__finish_up__description_p2">Егер сіз қандай да бір мәселелерге, қателерге, ақауларға тап болсаңыз немесе жай ғана ұсыныс жасағыңыз келсе, "туралы"экранындағы жоба репозиторийін қараңыз!</string>
+    <string name="setup__finish_up__finish_btn">Орнатуды бастаңыз</string>
+
+    <!-- Back up & Restore -->
+    <string name="backup_and_restore__title">Сақтық көшірме жасау және қалпына келтіру</string>
+    <string name="backup_and_restore__back_up__title">Деректердің сақтық көшірмесі</string>
+    <string name="backup_and_restore__back_up__summary">Қалаулар мен параметрлер мұрағатының сақтық көшірмесін жасаңыз</string>
+    <string name="backup_and_restore__back_up__destination">Сақтық көшірме жасау мақсатын таңдаңыз</string>
+    <string name="backup_and_restore__back_up__destination_file_sys">Жергілікті файлдық жүйе</string>
+    <string name="backup_and_restore__back_up__destination_share_intent">Бөлісу мәзірі арқылы үшінші тарап қолданбасы</string>
+    <string name="backup_and_restore__back_up__files">Сақтық көшірме жасау керек нәрсені таңдаңыз</string>
+    <string name="backup_and_restore__back_up__files_jetpref_datastore">ҚАЛАУЛАР</string>
+    <string name="backup_and_restore__back_up__files_ime_keyboard">Пернетақта кеңейтімдері</string>
+    <string name="backup_and_restore__back_up__files_ime_spelling">Емле кеңейтімдері / сөздіктер</string>
+    <string name="backup_and_restore__back_up__files_ime_theme">Тақырып кеңейтімдері</string>
+    <string name="backup_and_restore__back_up__success">Сәтті экспортталған сақтық көшірме мұрағаты!</string>
+    <string name="backup_and_restore__back_up__failure">Сақтық көшірме мұрағатын экспорттау мүмкін болмады: {error_message}</string>
+    <string name="backup_and_restore__restore__title">Деректерді қалпына келтіру</string>
+    <string name="backup_and_restore__restore__summary">Сақтық көшірме мұрағатынан параметрлерді қалпына келтіру</string>
+    <string name="backup_and_restore__restore__files">Нені қалпына келтіру керектігін таңдаңыз</string>
+    <string name="backup_and_restore__restore__metadata">Таңдалған сақтық көшірме мұрағаты</string>
+    <string name="backup_and_restore__restore__metadata_warn_different_version">Бұл сақтық көшірме мұрағаты әдетте қолдау көрсетілетін ағымдағы нұсқадан басқа нұсқада жасалған. Дегенмен, мүмкіндіктердегі айырмашылықтарға байланысты кішігірім мәселелер туындауы мүмкін немесе кейбір параметрлер қате жіберілуі мүмкін екенін есте сақтаңыз.</string>
+    <string name="backup_and_restore__restore__metadata_warn_different_vendor">Бұл сақтық көшірме мұрағаты әдетте қолдау көрсетілмейтін үшінші тарап қолданбасында жасалған. Деректердің жоғалуы мүмкін, өз тәуекеліңізбен қалпына келтіріңіз!</string>
+    <string name="backup_and_restore__restore__metadata_error_invalid_metadata">Бұл сақтық көшірме мұрағатында жарамсыз метадеректер бар. Ол зақымдалған немесе нашар өзгертілген. Бұл мұрағаттан қалпына келтіру мүмкін емес, басқасын таңдаңыз.</string>
+    <string name="backup_and_restore__restore__metadata_error_nothing_to_restore">Бұл сақтық көшірме мұрағатында қалпына келтіру файлдары жоқ, басқасын таңдаңыз.</string>
+    <string name="backup_and_restore__restore__mode">Қалпына келтіру режимі</string>
+    <string name="backup_and_restore__restore__mode_merge">Ағымдағы деректермен біріктіру</string>
+    <string name="backup_and_restore__restore__mode_erase_and_overwrite">Ағымдағы деректерді өшіру және қайта жазу</string>
+    <string name="backup_and_restore__restore__success">Сәтті қалпына келтірілген деректер!</string>
+    <string name="backup_and_restore__restore__failure">Деректерді қалпына келтіру мүмкін болмады: {error_message}</string>
+
+    <!-- Crash Dialog strings -->
+    <string name="crash_dialog__title" comment="Title of crash dialog">Smartkeyboard қате туралы есеп</string>
+    <string name="crash_dialog__description" comment="Description of crash dialog">Қолайсыздықтар үшін кешіріңіз, бірақ SmartKeyboard күтпеген қатеге байланысты істен шықты.</string>
+    <string name="crash_dialog__report_instructions" comment="Issue tracker report instructions for the crash dialog. The %s placeholder is the name of the crash report template and always in English/LTR.">Егер сіз бұл қате туралы хабарлағыңыз келсе, алдымен GitHub-та ақаулықтарды бақылау жүйесін тексеріңіз, егер сіздің сәтсіздігіңіз туралы әлі хабарланбаған болса.\ Егер олай болмаса, жасалған апаттар журналын көшіріп, жаңа мәселені ашыңыз. \"%S\ " үлгісін қолданыңыз және сипаттаманы, ойнату қадамдарын толтырыңыз және соңында құрылған апаттар журналын салыңыз. Бұл smartkeyboard-ты барлығына жақсырақ және тұрақты етуге көмектеседі. Рахмет!</string>
+    <string name="crash_dialog__bug_report_template" comment="Name of the template to use in the GitHub issue tracker (is always in English)" translatable="false">Сәтсіздік туралы есеп</string>
+    <string name="crash_dialog__copy_to_clipboard" comment="Label of Copy to clipboard button in crash dialog">Жүйелік алмасу буферіне көшіру</string>
+    <string name="crash_dialog__copy_to_clipboard_success" comment="Label of Copy to clipboard success message in crash dialog">Жүйелік алмасу буферіне көшірілді</string>
+    <string name="crash_dialog__copy_to_clipboard_failure" comment="Label of Copy to clipboard failure message in crash dialog">Жүйелік алмасу буферіне көшіру мүмкін емес: алмасу буфері менеджерінің данасы табылмады</string>
+    <string name="crash_dialog__open_issue_tracker" comment="Label of Open issue tracker button in crash dialog">Ашық мәселелерді қадағалау (github.com )</string>
+    <string name="crash_dialog__close" comment="Label of Close button in crash dialog">Жабу</string>
+    <string name="crash_notification_channel__title" comment="Title of crash notification channel">Smartkeyboard қате туралы хабарламалар</string>
+    <string name="crash_once_notification__title" comment="Title of the notification for a single crash">SmartKeyboard жұмысын тоқтатты…</string>
+    <string name="crash_once_notification__body" comment="Body of the notification for a single crash">Қате туралы мәліметтерді көру үшін басыңыз</string>
+    <string name="crash_multiple_notification__title" comment="Title of the notification for consecutive crashes">SmartKeyboard үнемі жұмысын тоқтататын сияқты…</string>
+    <string name="crash_multiple_notification__body" comment="Body of the notification for consecutive crashes">Шексіз үзіліс циклін тоқтату үшін алдыңғы пернетақтаға оралыңыз. Қате туралы мәліметтерді көру үшін басыңыз</string>
+
+
+    <!-- Clipboard strings -->
+    <string name="clipboard__header_title">Алмасу буфері</string>
+    <string name="clipboard__disabled__title">Алмасу буферінің тарихы қазіргі уақытта өшірілген</string>
+    <string name="clipboard__disabled__message">алмасу буферінің тарихы {app_name} көшіріп жатқан мәтін мен кескіндерді жылдам сақтауға және оларға қол жеткізуге мүмкіндік береді, элементтерді бекіту, автоматты түрде тазалауды орнату және элементтердің максималды шектеулерін орнату мүмкіндігі бар.</string>
+    <string name="clipboard__disabled__enable_button">Алмасу буферінің тарихын қосыңыз</string>
+    <string name="clipboard__empty__title">Сіздің алмасу буферіңіз бос</string>
+    <string name="clipboard__empty__message">Мәтіндік клиптерді немесе суреттерді көшіргеннен кейін олар осы жерде пайда болады.</string>
+    <string name="clipboard__locked__title">Сіздің алмасу буферіңіз бұғатталған</string>
+    <string name="clipboard__locked__message">Алмасу буферінің тарихына қол жеткізу үшін алдымен құрылғының құлпын ашыңыз.</string>
+    <string name="clipboard__group_pinned">Бекітілген</string>
+    <string name="clipboard__group_recent">Соңғы</string>
+    <string name="clipboard__group_other">Басқа</string>
+    <string name="clipboard__item_description_email">Электрондық пошта</string>
+    <string name="clipboard__item_description_url">URL мекенжайы</string>
+    <string name="clipboard__item_description_phone">Телефон</string>
+    <string name="clip__clear_history">Нақты тарих</string>
+    <string name="clip__unpin_item">Элементті босатыңыз</string>
+    <string name="clip__pin_item">Байланыс элементі</string>
+    <string name="clip__delete_item">Жою</string>
+    <string name="clip__paste_item">Кірістіру</string>
+    <string name="clip__back_to_text_input">Мәтін енгізуге оралу</string>
+    <string name="clip__cant_paste">Бұл қолданба бұл мазмұнды кірістіруге мүмкіндік бермейді.</string>
+    <string name="clipboard__cleared_primary_clip">Тазартылған негізгі клип</string>
+    <string name="clipboard__cleared_history">Тазартылған тарих</string>
+    <string name="clipboard__cleared_full_history">Толық тарих тазартылды</string>
+    <string name="clipboard__confirm_clear_history__message">Алмасу буферінің тарихын өшіргіңіз келетініне сенімдісіз бе?</string>
+    <string name="settings__clipboard__title">Алмасу буфері</string>
+    <string name="pref__clipboard__use_internal_clipboard__label">Ішкі алмасу буферін пайдаланыңыз</string>
+    <string name="pref__clipboard__use_internal_clipboard__summary">Жүйелік алмасу буферінің орнына ішкі алмасу буферін пайдаланыңыз</string>
+    <string name="pref__clipboard__sync_from_system_clipboard__label">Жүйелік алмасу буферінен синхрондау</string>
+    <string name="pref__clipboard__sync_from_system_clipboard__summary">Жүйелік алмасу буферінің жаңартулары Floris алмасу буферін де жаңартады</string>
+    <string name="pref__clipboard__sync_to_system_clipboard__label">Жүйелік алмасу буферімен синхрондау</string>
+    <string name="pref__clipboard__sync_to_system_clipboard__summary">Floris алмасу буферінің жаңартулары жүйелік алмасу буферін де жаңартады</string>
+    <string name="pref__clipboard__group_clipboard_history__label">Алмасу буферінің тарихы</string>
+    <string name="pref__clipboard__enable_clipboard_history__label">Алмасу буферінің тарихын қосыңыз</string>
+    <string name="pref__clipboard__enable_clipboard_history__summary">Жылдам қол жеткізу үшін алмасу буферінің элементтерін сақтаңыз</string>
+    <string name="pref__clipboard__clean_up_old__label">Ескі заттарды тазалаңыз</string>
+    <string name="pref__clipboard__clean_up_after__label">Ескі заттарды кейін тазалаңыз</string>
+    <string name="pref__clipboard__limit_history_size__label">Тарихтың көлемін шектеңіз</string>
+    <string name="pref__clipboard__max_history_size__label">Тарихтың максималды мөлшері</string>
+    <string name="pref__clipboard__clear_primary_clip_deletes_last_item__label">Негізгі клипті тазарту тарихқа әсер етеді</string>
+    <string name="pref__clipboard__clear_primary_clip_deletes_last_item__summary">Негізгі клипті тазарту сонымен қатар Тарихтағы соңғы жазбаның жойылуына әкеледі</string>
+
+
+    <!-- Devtools strings -->
+    <string name="devtools__title" comment="Title of Devtools screen. Translators: treat this string as 'Developer tools' for translation, except a similar short term is available for your language.">Даму құралдары</string>
+    <string name="devtools__enabled__label" comment="Label of Enable developer tools in Devtools">Әзірлеуші құралдарын қосыңыз</string>
+    <string name="devtools__enabled__summary" comment="Summary of Enable developer tools in Devtools">Жөндеу және ақаулықтарды жою үшін арнайы жасалған құралдар</string>
+    <string name="devtools__show_heap_memory_stats__label" comment="Label of Show heap memory stats in Devtools">Жад үйіндісінің статистикасын көрсету</string>
+    <string name="devtools__show_heap_memory_stats__summary" comment="Summary of Show heap memory stats in Devtools">Жоғарғы оң жақ бұрышта үйінді жадының қолданылуын және максималды өлшемін көрсетеді</string>
+    <string name="devtools__show_primary_clip__label" comment="Label of Show primary clip in Devtools">Негізгі клипті көрсету</string>
+    <string name="devtools__show_primary_clip__summary" comment="Summary of Show primary clip in Devtools">Аралық сақтағыштан ағымдағы негізгі клипті қабаттастырады</string>
+    <string name="devtools__show_input_state_overlay__label" comment="Label of Show input cache overlay in Devtools">Енгізу күйінің қабаттасуын көрсету</string>
+    <string name="devtools__show_input_state_overlay__summary" comment="Summary of Show input cache overlay in Devtools">Күйін келтіру үшін ағымдағы енгізу күйін қабаттастырады</string>
+    <string name="devtools__show_spelling_overlay__label" comment="Label of Show spelling overlay in Devtools">Емле қабаттасуын көрсету</string>
+    <string name="devtools__show_spelling_overlay__summary" comment="Summary of Show spelling overlay in Devtools">Түзету үшін емлені тексерудің ағымдағы нәтижелерін қабаттастырады</string>
+    <string name="devtools__show_key_touch_boundaries__label" comment="Label of Show key touch boundaries in Devtools">Пернелерді түрту шекараларын көрсету</string>
+    <string name="devtools__show_key_touch_boundaries__summary" comment="Summary of Show key touch boundaries in Devtools">Пернелерді түрту жиектерін қызыл түспен бөлектеңіз</string>
+    <string name="devtools__show_drag_and_drop_helpers__label" comment="Label of Show drag and drop helpers in Devtools">Сүйреп апару көмекшілерін көрсету</string>
+    <string name="devtools__show_drag_and_drop_helpers__summary" comment="Summary of Show drag and drop helpers in Devtools">Жөндеу үшін апарып тастау экрандарында көрінбейтін көмекшілерді елестетіңіз</string>
+    <string name="devtools__clear_udm_internal_database__label" comment="Label of Clear internal user dictionary database in Devtools">Пайдаланушы сөздіктерінің ішкі дерекқорын тазалаңыз</string>
+    <string name="devtools__clear_udm_internal_database__summary" comment="Summary of Clear internal user dictionary database in Devtools">Сөздіктің дерекқор кестесінен барлық сөздерді жояды</string>
+    <string name="devtools__reset_flag__label" comment="Label of Reset flag preferences in Devtools">Қалпына келтіру \"{flag_name}\" жалау</string>
+    <string name="devtools__reset_flag_is_ime_set_up__summary" comment="Summary of Reset is IME set up flag in Devtools">Орнату экранын қайта көрсету үшін жөндеу әрекеті</string>
+    <string name="devtools__test_crash_report__label" comment="Label of Test Crash Report in Devtools">Сынақ сәтсіздігі туралы есеп экраны</string>
+    <string name="devtools__test_crash_report__summary" comment="Summary of Test Crash Report in Devtools">Ақаулықты әдейі тудыратын түзету әрекеті</string>
+    <string name="devtools__group_android__title" comment="Title of Android group in Devtools">Android жүйелік құралдары</string>
+    <string name="devtools__android_settings_global__title" comment="Title of Android settings (global) screen">Android Ғаламдық параметрлері</string>
+    <string name="devtools__android_settings_secure__title" comment="Title of Android settings (secure) screen">Android қауіпсіз параметрлері</string>
+    <string name="devtools__android_settings_system__title" comment="Title of Android settings (system) screen">Android жүйесінің параметрлері</string>
+    <string name="devtools__android_locales__title" comment="Title of Android locales screen">Жүйелік тілдер</string>
+
+
+    <!-- Extension strings -->
+    <string name="ext__meta__authors">Авторлар</string>
+    <string name="ext__meta__components">Толық компоненттер</string>
+    <string name="ext__meta__components_theme">Біріктірілген тақырыптар</string>
+    <string name="ext__meta__components_none_found">Бұл кеңейтім мұрағатында толық компоненттер жоқ.</string>
+    <string name="ext__meta__description">Сипаттама</string>
+    <string name="ext__meta__homepage">Басты бет</string>
+    <string name="ext__meta__id">Идентификатор</string>
+    <string name="ext__meta__issue_tracker">Мәселелерді бақылау</string>
+    <string name="ext__meta__keywords">Кілт сөздер</string>
+    <string name="ext__meta__label">Жапсырма</string>
+    <string name="ext__meta__license">Лицензия</string>
+    <string name="ext__meta__maintainers">Еріп жүрушілер</string>
+    <string name="ext__meta__maintainers_by">Автор: {maintainers}</string>
+    <string name="ext__meta__title">Атауы</string>
+    <string name="ext__meta__version">Нұсқа</string>
+    <string name="ext__error__not_found_title">Кеңейту табылмады</string>
+    <string name="ext__error__not_found_description">"{id} " идентификаторы бар кеңейтімді табу мүмкін болмады.</string>
+    <string name="ext__editor__title_create_any">Кеңейтім жасаңыз</string>
+    <string name="ext__editor__title_create_keyboard">Пернетақта кеңейтімін жасаңыз</string>
+    <string name="ext__editor__title_create_theme">Тақырып кеңейтімін жасаңыз</string>
+    <string name="ext__editor__title_edit_any">Кеңейтімді өңдеу</string>
+    <string name="ext__editor__title_edit_keyboard">Пернетақта кеңейтімін өңдеу</string>
+    <string name="ext__editor__title_edit_theme">Тақырып кеңейтімін өңдеу</string>
+    <string name="ext__editor__metadata__title">Метадеректерді басқару</string>
+    <string name="ext__editor__metadata__title_invalid">Жарамсыз метадеректер</string>
+    <string name="ext__editor__metadata__message_invalid">Бұл кеңейтімге арналған метадеректер жарамсыз, толық ақпарат алу үшін метадеректер редакторын тексеріңіз!</string>
+    <string name="ext__editor__dependencies__title">Тәуелділікті басқару</string>
+    <string name="ext__editor__files__title">Мұрағаттық файлдарды басқару</string>
+    <string name="ext__editor__create_component__title">Компонент жасаңыз</string>
+    <string name="ext__editor__create_component__title_theme">Тақырып құру</string>
+    <string name="ext__editor__create_component__from_empty">Бос</string>
+    <string name="ext__editor__create_component__from_existing">Қолданыстағы</string>
+    <string name="ext__editor__create_component__from_empty_warning">Егер сіз {app_name} жаңадан бастасаңыз немесе ерекшеліктермен таныс болмасаңыз, бос компонентті құру және конфигурациялау қиын болуы мүмкін. Бар компонентті көшіруді және егер солай болса, оны өз қалауыңыз бойынша Өзгертуді қарастырыңыз.</string>
+    <string name="ext__editor__edit_component__title">Компонентті өңдеу</string>
+    <string name="ext__editor__edit_component__title_theme">Тақырып компонентін өңдеу</string>
+    <string name="ext__export__success">Сәтті экспортталған кеңейту!</string>
+    <string name="ext__export__failure">Кеңейтімді экспорттау мүмкін болмады: {error_message}</string>
+    <string name="ext__import__success">Сәтті импортталған кеңейту!</string>
+    <string name="ext__import__failure">Кеңейтімді импорттау мүмкін болмады: {error_message}</string>
+    <string name="ext__import__ext_any" comment="Title of Importer screen for import of any supported SmartKeyboard extension">Импортты кеңейту</string>
+    <string name="ext__import__ext_keyboard" comment="Title of Importer screen for keyboard extension import">Пернетақта кеңейтімін импорттау</string>
+    <string name="ext__import__ext_theme" comment="Title of Importer screen for theme extension import">Тақырыпты кеңейтуді импорттау</string>
+    <string name="ext__import__file_skip" comment="Label when a file cannot be imported in the current context. The actual reason string is in a separate text view below this string.">Файлды импорттау мүмкін емес. Себебі:</string>
+    <string name="ext__import__file_skip_unsupported" comment="Reason string when file is unsupported">Қолдау көрсетілмейтін немесе танылмаған файл түрі.</string>
+    <string name="ext__import__file_skip_ext_core" comment="Reason string when ext has core extension ID">Қолданбаның негізгі ресурстарымен бірге келетін әдепкі кеңейтім бумаларын ауыстыру немесе жаңарту мүмкін емес. Егер сіз негізгі кеңейту пакетінің жаңа нұсқасын қолданғыңыз келсе, қосымшаның өзін жаңартуды қарастырыңыз.</string>
+    <string name="ext__import__file_skip_ext_corrupted" comment="Reason string when file seems to be ext but is corrupted">Файл кеңейтімі бар мұрағат болып көрінеді, бірақ мұрағаттық деректерді талдау мүмкін болмады. Мұрағат бүлінген немесе бұл файлда кеңейтім мүлдем жоқ.</string>
+    <string name="ext__import__file_skip_ext_incorrect_type" comment="Reason string when file is of incorrect extension serial type">\"{expected_serial_type}\" сериялық типті кеңейту мұрағаты күтілді, бірақ \"{actual_serial_type}\"болды.</string>
+    <string name="ext__import__file_skip_ext_not_supported" comment="Reason string when file is loaded in incorrect context">Медиа файл күтілді (сурет, аудио, қаріп және т.б.), бірақ кеңейтімдер мұрағаты табылды.</string>
+    <string name="ext__import__file_skip_media_not_supported" comment="Reason string when file is loaded in incorrect context">Мен кеңейту мұрағатын күттім, бірақ медиа файлды таптым (сурет, аудио, қаріп және т.б.).</string>
+    <string name="ext__import__error_unexpected_exception" comment="Label when an error occurred during import. The error message will be appended below this text view">Импорттау кезінде күтпеген қате пайда болды. Келесі мәліметтер берілді:</string>
+
+
+    <!-- Action strings -->
+    <string name="action__add">Қосу</string>
+    <string name="action__apply">Қолдану</string>
+    <string name="action__back_up">Шегіну</string>
+    <string name="action__cancel">Бас тарту</string>
+    <string name="action__create">Жасау</string>
+    <string name="action__default">Әдепкі бойынша</string>
+    <string name="action__delete">Жою</string>
+    <string name="action__delete_confirm_title">Жоюды растаңыз</string>
+    <string name="action__delete_confirm_message">Сіз \"{name}\" жойғыңыз келетініне сенімдісіз бе? Бұл әрекетті орындағаннан кейін оны жою мүмкін емес.</string>
+    <string name="action__discard">Лақтыру</string>
+    <string name="action__discard_confirm_title">Сақталмаған өзгерістер</string>
+    <string name="action__discard_confirm_message">Сақталмаған өзгерістерден бас тартқыңыз келетініне сенімдісіз бе? Бұл әрекетті орындағаннан кейін оны жою мүмкін емес.</string>
+    <string name="action__edit">Өңдеу</string>
+    <string name="action__export">Экспорт</string>
+    <string name="action__import">Импорт</string>
+    <string name="action__no">Жоқ</string>
+    <string name="action__ok">. жарайды</string>
+    <string name="action__restore">Қалпына келтіру</string>
+    <string name="action__save">Сақтау</string>
+    <string name="action__select">Таңдау</string>
+    <string name="action__select_dir">Каталогты таңдаңыз</string>
+    <string name="action__select_dirs">Каталогтарды таңдаңыз</string>
+    <string name="action__select_file">Файлды таңдаңыз</string>
+    <string name="action__select_files">Файлдарды таңдаңыз</string>
+    <string name="action__yes">Иә</string>
+
+    <!-- Error strings (generic) -->
+    <string name="error__title">Қате</string>
+    <string name="error__details">Толығырақ</string>
+    <string name="error__invalid">Жарамсыз</string>
+    <string name="error__snackbar_message">Бірдеңе дұрыс болмады</string>
+    <string name="error__snackbar_message_template">Бірдеңе дұрыс болмады: {error_message}</string>
+
+    <!-- General strings -->
+    <string name="general__example_given" comment="This string is used where an example will be inserted in the {example} block. When translating, use the abbreviation used in your language for 'example given'.">мысалы {example}</string>
+    <string name="general__no_browser_app_found_for_url">URL {url} өңдеуге арналған шолғыш қолданбасы табылмады</string>
+    <string name="general__select_dropdown_value_placeholder">&#45; таңдаңыз &#45;</string>
+    <string name="general__unlimited">Шексіз</string>
+
+    <!-- Screen orientation strings -->
+    <string name="screen_orientation__portrait">Портрет</string>
+    <string name="screen_orientation__landscape">Пейзаж</string>
+    <string name="screen_orientation__vertical">Тік</string>
+    <string name="screen_orientation__horizontal">Көлденең</string>
+
+    <!-- State strings -->
+    <string name="state__disabled">Еңбекке жарамсыз</string>
+    <string name="state__enabled">Қосылған</string>
+    <string name="state__no_dir_selected">Каталог таңдалмаған</string>
+    <string name="state__no_dirs_selected">Каталогтар таңдалмаған</string>
+    <string name="state__no_file_selected">Файл таңдалмаған</string>
+    <string name="state__no_files_selected">Файлдар таңдалмаған</string>
+
+
+    <!-- Enum label and description strings -->
+    <string name="enum__candidates_display_mode__classic" comment="Enum value label">Классикалық (3 баған)</string>
+    <string name="enum__candidates_display_mode__dynamic" comment="Enum value label">Динамикалық ені</string>
+    <string name="enum__candidates_display_mode__dynamic_scrollable" comment="Enum value label">Динамикалық ені және айналдыру мүмкіндігі</string>
+
+    <string name="enum__display_colors_as__hex8" comment="Enum value label">Он алтылық</string>
+    <string name="enum__display_colors_as__rgba" comment="Enum value label">Қызыл Жасыл Көк Альфа</string>
+
+    <string name="enum__display_kbd_after_dialogs__always" comment="Enum value label">Әрқашан көрсетіңіз</string>
+    <string name="enum__display_kbd_after_dialogs__always__description" comment="Enum value description">Кез келген редактор тілқатысу терезесін жапқаннан кейін әрқашан пернетақтаны көрсетіңіз</string>
+    <string name="enum__display_kbd_after_dialogs__never" comment="Enum value label">Ешқашан өзіңізді көрсетпеңіз</string>
+    <string name="enum__display_kbd_after_dialogs__never__description" comment="Enum value description">Редактордың кез келген тілқатысу терезесін жапқаннан кейін ешқашан пернетақтаны көрсетпеңіз</string>
+    <string name="enum__display_kbd_after_dialogs__remember" comment="Enum value label">Соңғы жағдайды есте сақтаңыз</string>
+    <string name="enum__display_kbd_after_dialogs__remember__description" comment="Enum value description">Пернетақтаны кез-келген редактордың диалогтық терезесі жабылғаннан кейін ғана көрсетуге болады, егер ол бұрын көрінсе</string>
+
+    <string name="enum__display_language_names_in__system_locale" comment="Enum value label">Жүйелік тіл</string>
+    <string name="enum__display_language_names_in__system_locale__description" comment="Enum value description">Қолданбадағы және пернетақтаның пайдаланушы интерфейсіндегі тіл атаулары бүкіл құрылғы үшін орнатылған тіл стандартында көрсетіледі</string>
+    <string name="enum__display_language_names_in__native_locale" comment="Enum value label">Ана тілі</string>
+    <string name="enum__display_language_names_in__native_locale__description" comment="Enum value description">Қолданбадағы және пернетақтаның пайдаланушы интерфейсіндегі тіл атаулары Пайдаланушының өзі көрсеткен тіл стандартында көрсетіледі</string>
+
+    <string name="enum__emoji_skin_tone__default" comment="Enum value label">{emoji} әдепкі тері реңі</string>
+    <string name="enum__emoji_skin_tone__light_skin_tone" comment="Enum value label">{emoji} ашық тері реңі</string>
+    <string name="enum__emoji_skin_tone__medium_light_skin_tone" comment="Enum value label">{emoji} орташа ашық тері реңі</string>
+    <string name="enum__emoji_skin_tone__medium_skin_tone" comment="Enum value label">{emoji} орташа тері реңі</string>
+    <string name="enum__emoji_skin_tone__medium_dark_skin_tone" comment="Enum value label">{emoji} орташа қара тері реңі</string>
+    <string name="enum__emoji_skin_tone__dark_skin_tone" comment="Enum value label">{emoji} қара тері реңі</string>
+
+    <string name="enum__emoji_hair_style__default" comment="Enum value label">{emoji} әдепкі шаш</string>
+    <string name="enum__emoji_hair_style__red_hair" comment="Enum value label">{emoji} қызыл шаш</string>
+    <string name="enum__emoji_hair_style__curly_hair" comment="Enum value label">{emoji} бұйра шаш</string>
+    <string name="enum__emoji_hair_style__white_hair" comment="Enum value label">{emoji} ақ шаш</string>
+    <string name="enum__emoji_hair_style__bald" comment="Enum value label">{emoji} Таз</string>
+
+    <string name="enum__extended_actions_placement__above_candidates" comment="Enum value label">Жоғарыда аталған кандидаттар</string>
+    <string name="enum__extended_actions_placement__above_candidates__description" comment="Enum value description">Қолданбаның пайдаланушы интерфейсі мен үміткер жолының арасына кеңейтілген әрекеттер жолын орналастырады</string>
+    <string name="enum__extended_actions_placement__below_candidates" comment="Enum value label">Төменде үміткерлер берілген</string>
+    <string name="enum__extended_actions_placement__below_candidates__description" comment="Enum value description">Үміткер жолы мен мәтіндік пернетақта арасында кеңейтілген әрекеттер жолын орналастырады</string>
+    <string name="enum__extended_actions_placement__overlay_app_ui" comment="Enum value label">Қолданбаның пайдаланушы интерфейсін қабаттастыру</string>
+    <string name="enum__extended_actions_placement__overlay_app_ui__description" comment="Enum value description">Пернетақтаның пайдаланушы интерфейсінің биіктігіне әсер етпестен қосымшаның пайдаланушы интерфейсінің үстінен қабаттасу түрінде кеңейтілген әрекеттер жолын орналастырады. Мұндай орналастыру қосымшаның енгізу өрісін ішінара қайта құруға әкелуі мүмкін екенін ескеріңіз</string>
+
+    <string name="enum__haptic_vibration_mode__use_vibrator_directly" comment="Enum value label">Вибраторды тікелей қолданыңыз</string>
+    <string name="enum__haptic_vibration_mode__use_vibrator_directly__description" comment="Enum value description">{app_name} әдепкі аппараттық вибратормен тікелей әрекеттеседі. Бұл дірілдің ұзақтығы мен күшін көбірек басқаруға мүмкіндік береді, бірақ діріл тактильді кері байланыс интерфейсін пайдалану сияқты тегіс және оңтайландырылмаған болуы мүмкін</string>
+    <string name="enum__haptic_vibration_mode__use_haptic_feedback_interface" comment="Enum value label">Тактильді кері байланыс интерфейсін пайдаланыңыз</string>
+    <string name="enum__haptic_vibration_mode__use_haptic_feedback_interface__description" comment="Enum value description">{app_name} пернелер басылған кезде алдын ала анықталған діріл тізбегін іске қосу үшін тактильді кері байланыс интерфейсін пайдаланады. Бұл кейбір құрылғыларда өте жақсы жұмыс істеуі мүмкін, бірақ басқаларында мүлдем істен шығуы немесе өте нашар жұмыс істеуі мүмкін</string>
+
+    <string name="enum__key_hint_mode__accent_priority" comment="Enum value label">Екпін басымдыққа ие</string>
+    <string name="enum__key_hint_mode__accent_priority__description" comment="Enum value description">Ұзақ басқаннан кейін таңдалған бастапқы таңба, егер негізгі екпін болмаса, әрқашан негізгі екпін немесе шақыру белгісі болып табылады</string>
+    <string name="enum__key_hint_mode__hint_priority" comment="Enum value label">Кеңес басымдыққа ие</string>
+    <string name="enum__key_hint_mode__hint_priority__description" comment="Enum value description">Ұзақ басқаннан кейін таңдалған бастапқы таңба әрқашан шақыру белгісі немесе егер шақыру белгісі болмаса, негізгі екпін болып табылады</string>
+    <string name="enum__key_hint_mode__smart_priority" comment="Enum value label">Ақылға қонымды басымдық</string>
+    <string name="enum__key_hint_mode__smart_priority__description" comment="Enum value description">Ұзақ басқаннан кейін таңдалған бастапқы таңба динамикалық түрде ағымдағы тіл мен орналасуға байланысты негізгі екпін немесе шақыру белгісі ретінде анықталады</string>
+
+    <string name="enum__incognito_mode__force_off" comment="Enum value label">Мәжбүрлеп өшіру</string>
+    <string name="enum__incognito_mode__force_off__description" comment="Enum value description">Мақсатты қолданбаның берілген параметрлеріне қарамастан, инкогнито режимі әрқашан өшіріледі. Smartbar-да жылдам инкогнито әрекеті бұл опциямен қол жетімді болмайды.</string>
+    <string name="enum__incognito_mode__force_on" comment="Enum value label">Күш қосулы</string>
+    <string name="enum__incognito_mode__force_on__description" comment="Enum value description">Мақсатты қолданбаның берілген параметрлеріне қарамастан, инкогнито режимі әрқашан қосылады. Smartbar-да жылдам инкогнито әрекеті бұл опциямен қол жетімді болмайды.</string>
+    <string name="enum__incognito_mode__dynamic_on_off" comment="Enum value label">Динамикалық қосу/өшіру</string>
+    <string name="enum__incognito_mode__dynamic_on_off__description" comment="Enum value description">Ұсынылған нұсқа. Инкогнито режимі мақсатты қолданбаның берілген параметрлері арқылы немесе Smartbar-да жылдам инкогнито әрекеті арқылы оны қолмен ауыстыру арқылы динамикалық түрде қосылады немесе өшіріледі.</string>
+
+    <string name="enum__input_feedback_activation_mode__audio_respect_system_settings" comment="Enum value label">Жүйе параметрлеріне байланысты кіріс оқиғалары үшін дыбыстарды динамикалық түрде ойнату</string>
+    <string name="enum__input_feedback_activation_mode__audio_ignore_system_settings" comment="Enum value label">Жүйе параметрлеріне қарамастан, әрқашан кіріс оқиғалары үшін дыбыстарды ойнатыңыз</string>
+    <string name="enum__input_feedback_activation_mode__haptic_respect_system_settings" comment="Enum value label">Жүйе параметрлеріне байланысты кіріс оқиғалары үшін динамикалық діріл</string>
+    <string name="enum__input_feedback_activation_mode__haptic_ignore_system_settings" comment="Enum value label">Жүйе параметрлеріне қарамастан оқиғаларды енгізу кезінде әрқашан дірілдеңіз</string>
+
+    <string name="enum__input_shift_state__unshifted" comment="Enum value label">Жылжытылмаған</string>
+    <string name="enum__input_shift_state__shifted_manual" comment="Enum value label">Орын ауыстыру (қолмен)</string>
+    <string name="enum__input_shift_state__shifted_automatic" comment="Enum value label">Офсеттік (Автоматты)</string>
+    <string name="enum__input_shift_state__caps_lock" comment="Enum value label">Қақпақ құлпы</string>
+
+    <string name="enum__landscape_input_ui_mode__never_show" comment="Enum value label">Ешқашан өзіңізді көрсетпеңіз</string>
+    <string name="enum__landscape_input_ui_mode__always_show" comment="Enum value label">Әрқашан көрсетіңіз</string>
+    <string name="enum__landscape_input_ui_mode__dynamically_show" comment="Enum value label">Динамикалық көрсету</string>
+
+    <string name="enum__one_handed_mode__off" comment="Enum value label">Өшірулі</string>
+    <string name="enum__one_handed_mode__start" comment="Enum value label">сол қолмен жұмыс режимі</string>
+    <string name="enum__one_handed_mode__end" comment="Enum value label">Оң қолмен жұмыс режимі</string>
+
+    <string name="enum__shape_corner__top_start" comment="Enum value label">Үздік бастама</string>
+    <string name="enum__shape_corner__top_end" comment="Enum value label">Жоғарғы ұшы</string>
+    <string name="enum__shape_corner__bottom_end" comment="Enum value label">Төменгі ұшы</string>
+    <string name="enum__shape_corner__bottom_start" comment="Enum value label">Төменгі старт</string>
+
+    <string name="enum__smartbar_layout__suggestions_only" comment="Enum value label">Тек ұсыныстар</string>
+    <string name="enum__smartbar_layout__suggestions_only__description" comment="Enum value description">Тек кандидат жолын көрсетеді, ешқандай әрекет / ауысу немесе жабысқақ әрекет жоқ</string>
+    <string name="enum__smartbar_layout__actions_only" comment="Enum value label">Тек әрекеттер</string>
+    <string name="enum__smartbar_layout__actions_only__description" comment="Enum value description">Тек әрекет жолын көрсетеді, үміткер жолы немесе айқын жабысқақ әрекет жоқ</string>
+    <string name="enum__smartbar_layout__suggestions_action_shared" comment="Enum value label">Жалпы ұсыныстар мен әрекеттер</string>
+    <string name="enum__smartbar_layout__suggestions_action_shared__description" comment="Enum value description">Жалпы ауыспалы үміткер және тіркелген әрекет жолы</string>
+    <string name="enum__smartbar_layout__suggestions_actions_extended" comment="Enum value label">Кеңейтілген ұсыныстар мен әрекеттер</string>
+    <string name="enum__smartbar_layout__suggestions_actions_extended__description" comment="Enum value description">Статикалық кандидат жолы және жабысқақ әрекеті бар ауысу мүмкіндігі бар қосымша әрекет жолы</string>
+
+    <string name="enum__snygg_level__basic" comment="Enum value label">Негізгі</string>
+    <string name="enum__snygg_level__basic__description" comment="Enum value description">Тек түс қасиеттері көрсетіледі, қасиеттері мен ережелері аударылады.</string>
+    <string name="enum__snygg_level__advanced" comment="Enum value label">Озат</string>
+    <string name="enum__snygg_level__advanced__description" comment="Enum value description">Барлық қасиеттер көрсетіледі, сипаттар мен ережелер аударылады.</string>
+    <string name="enum__snygg_level__developer" comment="Enum value label">Әзірлеуші</string>
+    <string name="enum__snygg_level__developer__description" comment="Enum value description">Барлық қасиеттер, қасиеттер мен ережелер стиль кестесінің файлында жазылғандай көрсетіледі.</string>
+
+    <string name="enum__spelling_language_mode__use_system_languages" comment="Enum value label">Жүйелік тілдерді қолданыңыз</string>
+    <string name="enum__spelling_language_mode__use_keyboard_subtypes" comment="Enum value label">Пернетақтаның ішкі түрлерін қолданыңыз</string>
+
+    <string name="enum__swipe_action__no_action" comment="Enum value label">Ешқандай әрекет жоқ</string>
+    <string name="enum__swipe_action__cycle_to_previous_keyboard_mode" comment="Enum value label">Алдыңғы пернетақта режиміне оралу</string>
+    <string name="enum__swipe_action__cycle_to_next_keyboard_mode" comment="Enum value label">Келесі пернетақта режиміне өтіңіз</string>
+    <string name="enum__swipe_action__delete_character" comment="Enum value label">Меңзердің алдындағы таңбаны жою</string>
+    <string name="enum__swipe_action__delete_characters_precisely" comment="Enum value label">Таңбаларды дәл жою</string>
+    <string name="enum__swipe_action__delete_word" comment="Enum value label">Меңзердің алдындағы сөзді жойыңыз</string>
+    <string name="enum__swipe_action__delete_words_precisely" comment="Enum value label">Сөздерді дәл алып тастаңыз</string>
+    <string name="enum__swipe_action__hide_keyboard" comment="Enum value label">Пернетақтаны жасыру</string>
+    <string name="enum__swipe_action__insert_space" comment="Enum value label">Бос орын салыңыз</string>
+    <string name="enum__swipe_action__move_cursor_up" comment="Enum value label">Курсорды жоғары жылжытыңыз</string>
+    <string name="enum__swipe_action__move_cursor_down" comment="Enum value label">Курсорды төмен жылжытыңыз</string>
+    <string name="enum__swipe_action__move_cursor_left" comment="Enum value label">Курсорды солға жылжытыңыз</string>
+    <string name="enum__swipe_action__move_cursor_right" comment="Enum value label">Курсорды оңға жылжытыңыз</string>
+    <string name="enum__swipe_action__move_cursor_start_of_line" comment="Enum value label">Жүгіргіні жолдың басына жылжытыңыз</string>
+    <string name="enum__swipe_action__move_cursor_end_of_line" comment="Enum value label">Жүгіргіні жолдың соңына жылжытыңыз</string>
+    <string name="enum__swipe_action__move_cursor_start_of_page" comment="Enum value label">Курсорды беттің басына жылжытыңыз</string>
+    <string name="enum__swipe_action__move_cursor_end_of_page" comment="Enum value label">Курсорды беттің соңына жылжытыңыз</string>
+    <string name="enum__swipe_action__switch_to_clipboard_context" comment="Enum value label">Алмасу буферінің менеджерін/тарих ашыңыз</string>
+    <string name="enum__swipe_action__shift" comment="Enum value label">Ауысым</string>
+    <string name="enum__swipe_action__redo" comment="Enum value label">Қайта жасау</string>
+    <string name="enum__swipe_action__undo" comment="Enum value label">Бас тарту</string>
+    <string name="enum__swipe_action__select_characters_precisely" comment="Enum value label">Таңбаларды дәл таңдаңыз</string>
+    <string name="enum__swipe_action__select_words_precisely" comment="Enum value label">Сөздерді дәл сәйкестендіріңіз</string>
+    <string name="enum__swipe_action__show_input_method_picker" comment="Enum value label">Енгізу әдісін таңдау құралын көрсету</string>
+    <string name="enum__swipe_action__switch_to_prev_keyboard" comment="Enum value label">Алдыңғы пернетақтаға ауысу</string>
+    <string name="enum__swipe_action__switch_to_prev_subtype" comment="Enum value label">Алдыңғы кіші түрге ауысу</string>
+    <string name="enum__swipe_action__switch_to_next_subtype" comment="Enum value label">Келесі кіші түрге ауысыңыз</string>
+    <string name="enum__swipe_action__toggle_smartbar_visibility" comment="Enum value label">Ақылды панельдің көрінуін ауыстырыңыз</string>
+
+    <string name="enum__theme_mode__always_day" comment="Enum value label">Әрқашан күн</string>
+    <string name="enum__theme_mode__always_night" comment="Enum value label">Әрқашан түн</string>
+    <string name="enum__theme_mode__follow_system" comment="Enum value label">Жүйені орындаңыз</string>
+    <string name="enum__theme_mode__follow_time" comment="Enum value label">Уақытты қадағалаңыз</string>
+
+    <string name="enum__utility_key_action__switch_to_emojis" comment="Enum value label">Эмодзиге ауысыңыз</string>
+    <string name="enum__utility_key_action__switch_language" comment="Enum value label">Тілді ауыстыру</string>
+    <string name="enum__utility_key_action__switch_keyboard_app" comment="Enum value label">Пернетақтаны ауыстыруға арналған қосымша</string>
+    <string name="enum__utility_key_action__dynamic_switch_language_emojis" comment="Enum value label">Динамикалық: эмодзиге ауысу / тілді ауыстыру</string>
+
+    <!-- Unit strings (written words) -->
+    <plurals name="unit__hours__written">
+        <item quantity="one">{v} сағ</item>
+        <item quantity="other">{v} сағат</item>
+    </plurals>
+    <plurals name="unit__minutes__written">
+        <item quantity="one">{v} минут</item>
+        <item quantity="other">{v} минут</item>
+    </plurals>
+    <plurals name="unit__seconds__written">
+        <item quantity="one">{v} екінші</item>
+        <item quantity="other">{v} секундтар</item>
+    </plurals>
+    <plurals name="unit__items__written">
+        <item quantity="one">{v} элемент</item>
+        <item quantity="other">{v} элементтер</item>
+    </plurals>
+
+</resources>
