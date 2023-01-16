@@ -183,7 +183,14 @@ class KazakhLanguageProvider(context: Context) : SpellingProvider, SuggestionPro
         val maxFreq = autocompleteItems.maxBy { it.frequency }.frequency
         return autocompleteItems.map {
             WordSuggestionCandidate(
-                text = it.word.trimEnd().split(" ").last(), // instead word1_word2 take only word2
+                text = if (content.currentWordText.isEmpty()) {
+                    it.word.trimEnd()
+                        .split(" ")
+                        .lastOrNull() // take last if
+                        .orEmpty()
+                } else {
+                    it.word
+                }, // instead word1_word2 take only word2
                 secondaryText = null,
                 confidence = it.frequency / maxFreq.toDouble(),
                 isEligibleForAutoCommit = false,//n == 0 && word.startsWith("auto"),
