@@ -334,6 +334,7 @@
 
     <!-- Typing strings -->
     <string name="settings__typing__title" comment="Title of Typing screen">Басып шығару</string>
+    <string name="settings__typing__info" comment="Info of Typing screen">Ұсыныстар мен емлені тексеру тек қазақ, ағылшын тілдерінде ғана қолжетімді. Дегенмен, "түзетулер" тобындағы барлық параметрлер дұрыс орындалады.</string>
     <string name="pref__suggestion__title" comment="Preference group title">Ұсыныстар</string>
     <string name="pref__suggestion__enabled__label" comment="Preference title">Ұсыныстарды көрсету</string>
     <string name="pref__suggestion__enabled__summary" comment="Preference summary">Енгізу кезінде ұсыныстар береді</string>

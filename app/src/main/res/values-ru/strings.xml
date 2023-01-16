@@ -257,6 +257,7 @@
     <string name="pref__smartbar__flip_toggles__summary" comment="Preference summary">Поменять местами переключатели строки действий</string>
     <!-- Typing strings -->
     <string name="settings__typing__title" comment="Title of Typing screen">Набор текста</string>
+    <string name="settings__typing__info" comment="Info of Typing screen">Предложения и проверка орфографии доступны только для казахского, английского языков. Однако все настройки в группе "Исправления" реализованы должным образом.</string>
     <string name="pref__suggestion__title" comment="Preference group title">Подсказки</string>
     <string name="pref__suggestion__enabled__label" comment="Preference title">Показывать предложения</string>
     <string name="pref__suggestion__enabled__summary" comment="Preference summary">Предлагать подсказки при наборе текста</string>

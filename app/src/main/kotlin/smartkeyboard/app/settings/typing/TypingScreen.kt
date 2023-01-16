@@ -29,7 +29,6 @@ import androidx.compose.ui.unit.dp
 import smartkeyboard.R
 import smartkeyboard.ime.nlp.SpellingLanguageMode
 import smartkeyboard.lib.android.AndroidVersion
-import smartkeyboard.lib.compose.FlorisErrorCard
 import smartkeyboard.lib.compose.FlorisHyperlinkText
 import smartkeyboard.lib.compose.FlorisScreen
 import smartkeyboard.lib.compose.stringRes
@@ -39,6 +38,7 @@ import dev.patrickgold.jetpref.datastore.ui.ExperimentalJetPrefDatastoreUi
 import dev.patrickgold.jetpref.datastore.ui.ListPreference
 import dev.patrickgold.jetpref.datastore.ui.PreferenceGroup
 import dev.patrickgold.jetpref.datastore.ui.SwitchPreference
+import smartkeyboard.lib.compose.FlorisErrorCard
 
 @OptIn(ExperimentalJetPrefDatastoreUi::class)
 @Composable
@@ -50,10 +50,7 @@ fun TypingScreen() = FlorisScreen {
         // This card is temporary and is therefore not using a string resource
         FlorisErrorCard(
             modifier = Modifier.padding(8.dp),
-            text = """
-                Suggestions (except system autofill) and spell checking are not available in this alpha release. All
-                preferences in the "Corrections" group are properly implemented though.
-            """.trimIndent().replace('\n', ' '),
+            text = stringRes(id = R.string.settings__typing__info),
         )
 
         PreferenceGroup(title = stringRes(R.string.pref__suggestion__title)) {
