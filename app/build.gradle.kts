@@ -27,6 +27,8 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.mannodermaus.android.junit5)
     alias(libs.plugins.mikepenz.aboutlibraries)
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -208,6 +210,10 @@ dependencies {
     implementation(libs.androidx.emoji2.views)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.profileinstaller)
+    implementation(project.dependencies.platform("com.google.firebase:firebase-bom:31.1.1"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation("com.google.firebase:firebase-crashlytics-ktx")
+    implementation("com.orhanobut:logger:2.2.0")
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.runtime)
     implementation(libs.cache4k)

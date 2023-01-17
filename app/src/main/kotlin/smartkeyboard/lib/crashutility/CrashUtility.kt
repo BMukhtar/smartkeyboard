@@ -29,6 +29,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Process
 import android.util.Log
+import com.google.firebase.crashlytics.ktx.crashlytics
+import com.google.firebase.ktx.Firebase
 import smartkeyboard.BuildConfig
 import smartkeyboard.FlorisImeService
 import smartkeyboard.R
@@ -385,6 +387,7 @@ abstract class CrashUtility private constructor() {
             flogInfo(LogTopic.CRASH_UTILITY) {
                 "Detected application crash, executing custom crash handler."
             }
+            Firebase.crashlytics.recordException(throwable)
             val timestamp = System.currentTimeMillis()
             val stacktrace = Log.getStackTraceString(throwable)
             val ustFile = ustDir.subFile("$timestamp.$UNHANDLED_STACKTRACE_FILE_EXT")

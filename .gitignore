@@ -13,6 +13,8 @@ bin/
 gen/
 out/
 
+google-services.json
+
 # Gradle files
 .gradle/
 build/

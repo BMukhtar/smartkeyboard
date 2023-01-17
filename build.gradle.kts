@@ -17,6 +17,18 @@
 // Suppress needed until https://youtrack.jetbrains.com/issue/KTIJ-19369 is fixed
 @file:Suppress("DSL_SCOPE_VIOLATION")
 
+buildscript {
+    repositories {
+        // Make sure that you have the following two repositories
+        google()  // Google's Maven repository
+        mavenCentral()  // Maven Central repository
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:7.2.2")
+        classpath("com.google.gms:google-services:4.3.14")
+        classpath("com.google.firebase:firebase-crashlytics-gradle:2.9.2")
+    }
+}
 plugins {
     alias(libs.plugins.agp.application) apply false
     alias(libs.plugins.agp.test) apply false

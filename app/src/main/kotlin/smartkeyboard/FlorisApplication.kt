@@ -92,10 +92,10 @@ class FlorisApplication : Application() {
             JetPref.configure(saveIntervalMs = 500)
             Flog.install(
                 context = this,
-                isFloggingEnabled = BuildConfig.DEBUG,
+                isFloggingEnabled = true,
                 flogTopics = LogTopic.ALL,
                 flogLevels = Flog.LEVEL_ALL,
-                flogOutputs = Flog.OUTPUT_CONSOLE,
+                flogOutputs = Flog.OUTPUT_CRASHLYTICS,
             )
             CrashUtility.install(this)
             FlorisEmojiCompat.init(this)

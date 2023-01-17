@@ -18,6 +18,8 @@ package smartkeyboard.lib.devtools
 
 import android.content.Context
 import android.util.Log
+import com.google.firebase.crashlytics.ktx.crashlytics
+import com.google.firebase.ktx.Firebase
 import smartkeyboard.appContext
 import smartkeyboard.lib.devtools.Flog.OUTPUT_CONSOLE
 import smartkeyboard.lib.devtools.Flog.createTag
@@ -192,7 +194,7 @@ object Flog {
     const val LEVEL_ALL: FlogLevel =                UInt.MAX_VALUE
 
     const val OUTPUT_CONSOLE: FlogOutput =          0x01u
-    const val OUTPUT_FILE: FlogOutput =             0x02u
+    const val OUTPUT_CRASHLYTICS: FlogOutput =      0x02u
 
     /** The relevant call stack element is always on the 4th position, thus 4-1=3. */
     private const val CALL_STACK_INDEX: Int =       3
@@ -201,7 +203,7 @@ object Flog {
     private const val MAX_LOG_LENGTH: Int =         4000
 
     private var applicationContext: WeakReference<Context> = WeakReference(null)
-    private var isFloggingEnabled: Boolean = false
+    private var isFloggingEnabled: Boolean = true
     private var flogTopics: FlogTopic = TOPIC_NONE
     private var flogLevels: FlogLevel = LEVEL_NONE
     private var flogOutputs: FlogOutput = OUTPUT_CONSOLE
@@ -220,7 +222,7 @@ object Flog {
      * @param flogLevels The enabled levels for this installation. Use [LEVEL_ALL] to enable
      *  all levels. If this value is [LEVEL_NONE], this essentially disables all logging.
      * @param flogOutputs The enabled outputs for this installation. Use either [OUTPUT_CONSOLE]
-     *  for logging to Logcat or [OUTPUT_FILE] to a logging file.
+     *  for logging to Logcat or [OUTPUT_CRASHLYTICS] to a logging file.
      */
     fun install(
         context: Context,
@@ -303,8 +305,8 @@ object Flog {
                     }
                 }
             }
-            flogOutputs isSet OUTPUT_FILE -> {
-                fileLog(level, msg)
+            flogOutputs isSet OUTPUT_CRASHLYTICS -> {
+                crashlyticsLog(level, msg)
             }
         }
     }
@@ -321,8 +323,9 @@ object Flog {
         }
     }
 
-    private fun fileLog(level: FlogLevel, msg: String) {
+    private fun crashlyticsLog(level: FlogLevel, msg: String) {
         val context = applicationContext.get() ?: return
+        Firebase.crashlytics.log("Log level: $level, msg: $msg")
         // TODO: introduce file logging here for runtime debug logging
     }
 }
