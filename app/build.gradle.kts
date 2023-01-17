@@ -53,8 +53,8 @@ android {
         applicationId = "smartkeyboard"
         minSdk = 24
         targetSdk = 31
-        versionCode = 93
-        versionName = "0.4.3"
+        versionCode = 94
+        versionName = "0.4.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 

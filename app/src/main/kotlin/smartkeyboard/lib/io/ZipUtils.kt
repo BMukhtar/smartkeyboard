@@ -143,13 +143,7 @@ object ZipUtils {
             val flexEntries = flexFile.entries()
             while (flexEntries.hasMoreElements()) {
                 val flexEntry = flexEntries.nextElement()
-                val flexEntryFile = FsFile(dstDir, flexEntry.name)
-                val f = FsFile(flexEntryFile.name)
-                val canonicalPath: String = f.canonicalPath
-                val canonicalID: String = dstDir.canonicalPath
-                if (!canonicalPath.startsWith(canonicalID)) {
-                    throw SecurityException("File is outside extraction target directory.")
-                }
+                val flexEntryFile = FsFile(validateZipEntry(zipEntryRelativePath = flexEntry.name, destDir = dstDir))
                 if (flexEntry.isDirectory) {
                     flexEntryFile.mkdir()
                 } else {
@@ -168,14 +162,15 @@ object ZipUtils {
     }
 
     @Throws(IOException::class)
-    private fun validateFilename(filename: String, destDir: FsFile): String? {
-        val f = FsFile(filename)
-        val canonicalPath: String = f.canonicalPath
-        val canonicalID: String = destDir.canonicalPath
-        return if (canonicalPath.startsWith(canonicalID)) {
-            canonicalPath
-        } else {
-            throw IllegalStateException("File is outside extraction target directory.")
+    private fun validateZipEntry(
+        zipEntryRelativePath: String,
+        destDir: File
+    ): String {
+        val zipEntryTarget = File(destDir, zipEntryRelativePath)
+        val zipCanonicalPath = zipEntryTarget.canonicalPath
+        if (zipCanonicalPath.startsWith(destDir.canonicalPath)) {
+            return zipCanonicalPath
         }
+        throw IllegalStateException("ZIP entry tried to write outside destination directory")
     }
 }
