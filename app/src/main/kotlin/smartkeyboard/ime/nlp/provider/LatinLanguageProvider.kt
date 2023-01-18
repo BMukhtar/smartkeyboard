@@ -37,6 +37,7 @@ import smartkeyboard.ime.nlp.symspell.SymSpellImpl
 import smartkeyboard.ime.nlp.symspell.Verbosity
 import smartkeyboard.lib.android.reader
 import smartkeyboard.lib.devtools.flogDebug
+import smartkeyboard.lib.devtools.flogInfo
 import trie.PruningRadixTrie
 import trie.Term
 
@@ -72,6 +73,7 @@ class LatinLanguageProvider(context: Context) : SpellingProvider, SuggestionProv
         // To copy an APK file/dir to the file system cache (appContext.cacheDir), the following methods are available:
         // appContext.assets.copy()
         // appContext.assets.copyRecursively()
+        flogInfo { "Starting preloading: $ProviderId" }
 
         val unigrams = mutableMapOf<String, Long>()
         appContext.assets.reader("symspell/words.txt")

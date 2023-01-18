@@ -95,7 +95,7 @@ class FlorisApplication : Application() {
                 isFloggingEnabled = true,
                 flogTopics = LogTopic.ALL,
                 flogLevels = Flog.LEVEL_ALL,
-                flogOutputs = Flog.OUTPUT_CRASHLYTICS,
+                flogOutputs = if (BuildConfig.DEBUG) Flog.OUTPUT_CONSOLE else Flog.OUTPUT_CRASHLYTICS,
             )
             CrashUtility.install(this)
             FlorisEmojiCompat.init(this)
