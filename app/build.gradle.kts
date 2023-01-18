@@ -55,8 +55,8 @@ android {
         applicationId = "smartkeyboard"
         minSdk = 24
         targetSdk = 31
-        versionCode = 94
-        versionName = "0.4.4"
+        versionCode = 95
+        versionName = "0.4.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -213,7 +213,6 @@ dependencies {
     implementation(project.dependencies.platform("com.google.firebase:firebase-bom:31.1.1"))
     implementation("com.google.firebase:firebase-analytics-ktx")
     implementation("com.google.firebase:firebase-crashlytics-ktx")
-    implementation("com.orhanobut:logger:2.2.0")
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.runtime)
     implementation(libs.cache4k)
