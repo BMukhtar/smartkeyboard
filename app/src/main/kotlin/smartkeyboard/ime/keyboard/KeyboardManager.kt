@@ -73,6 +73,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import smartkeyboard.lib.devtools.flogInfo
 import java.lang.ref.WeakReference
 
 private val DoubleSpacePeriodMatcher = """([^.!?‽\s]\s)""".toRegex()
@@ -643,6 +644,7 @@ class KeyboardManager(context: Context) : InputKeyEventReceiver {
     }
 
     override fun onInputKeyUp(data: KeyData) = activeState.batchEdit {
+        flogInfo { "onInputKeyUp $data" }
         when (data.code) {
             KeyCode.ARROW_DOWN,
             KeyCode.ARROW_LEFT,
@@ -764,6 +766,7 @@ class KeyboardManager(context: Context) : InputKeyEventReceiver {
     }
 
     override fun onInputKeyCancel(data: KeyData) {
+        flogInfo { "onInputKeyCancel $data" }
         when (data.code) {
             KeyCode.ARROW_DOWN,
             KeyCode.ARROW_LEFT,
@@ -780,6 +783,7 @@ class KeyboardManager(context: Context) : InputKeyEventReceiver {
     }
 
     override fun onInputKeyRepeat(data: KeyData) {
+        flogInfo { "onInputKeyRepeat $data" }
         FlorisImeService.inputFeedbackController()?.keyRepeatedAction(data)
         when (data.code) {
             KeyCode.ARROW_DOWN,
