@@ -16,36 +16,25 @@
 
 package smartkeyboard.app.settings.theme
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Button
-import androidx.compose.material.Card
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.unit.dp
-import smartkeyboard.R
-import smartkeyboard.app.LocalNavController
-import smartkeyboard.app.Routes
-import smartkeyboard.ime.theme.ThemeMode
-import smartkeyboard.lib.android.launchUrl
-import smartkeyboard.lib.compose.FlorisInfoCard
-import smartkeyboard.lib.compose.FlorisScreen
-import smartkeyboard.lib.compose.stringRes
 import dev.patrickgold.jetpref.datastore.model.observeAsState
 import dev.patrickgold.jetpref.datastore.ui.ListPreference
 import dev.patrickgold.jetpref.datastore.ui.Preference
 import dev.patrickgold.jetpref.datastore.ui.PreferenceGroup
 import dev.patrickgold.jetpref.datastore.ui.SwitchPreference
+import smartkeyboard.R
+import smartkeyboard.app.LocalNavController
+import smartkeyboard.app.Routes
+import smartkeyboard.ime.theme.ThemeMode
+import smartkeyboard.lib.compose.FlorisScreen
+import smartkeyboard.lib.compose.stringRes
 
 @Composable
 fun ThemeScreen() = FlorisScreen {
     title = stringRes(R.string.settings__theme__title)
     previewFieldVisible = true
 
-    val context = LocalContext.current
     val navController = LocalNavController.current
 
     content {
@@ -53,31 +42,12 @@ fun ThemeScreen() = FlorisScreen {
         val dayThemeId by prefs.theme.dayThemeId.observeAsState()
         val nightThemeId by prefs.theme.nightThemeId.observeAsState()
 
-        Card(modifier = Modifier.padding(8.dp)) {
-            Column(modifier = Modifier.padding(8.dp)) {
-                Text("If you want to give feedback on the new stylesheet editor and theme engine, please do so in below linked feedback thread:\n")
-                Button(onClick = {
-                    context.launchUrl("https://github.com/florisboard/florisboard/discussions/1531")
-                }) {
-                    Text("Open Feedback Thread")
-                }
-            }
-        }
-
         ListPreference(
             prefs.theme.mode,
             iconId = R.drawable.ic_brightness_auto,
             title = stringRes(R.string.pref__theme__mode__label),
             entries = ThemeMode.listEntries(),
         )
-        if (themeMode == ThemeMode.FOLLOW_TIME) {
-            FlorisInfoCard(
-                modifier = Modifier.padding(8.dp),
-                text = """
-                The theme mode "Follow time" is not available in this beta release.
-            """.trimIndent()
-            )
-        }
         Preference(
             iconId = R.drawable.ic_palette,
             title = stringRes(R.string.settings__theme_manager__title_manage),
