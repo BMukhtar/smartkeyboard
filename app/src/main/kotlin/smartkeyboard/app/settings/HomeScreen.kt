@@ -16,26 +16,13 @@
 
 package smartkeyboard.app.settings
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Card
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import dev.patrickgold.jetpref.datastore.ui.Preference
 import smartkeyboard.R
 import smartkeyboard.app.LocalNavController
 import smartkeyboard.app.Routes
@@ -44,9 +31,6 @@ import smartkeyboard.lib.compose.FlorisScreen
 import smartkeyboard.lib.compose.FlorisWarningCard
 import smartkeyboard.lib.compose.stringRes
 import smartkeyboard.lib.util.InputMethodUtils
-import dev.patrickgold.jetpref.datastore.model.observeAsState
-import dev.patrickgold.jetpref.datastore.ui.Preference
-import smartkeyboard.BuildConfig
 
 @Composable
 fun HomeScreen() = FlorisScreen {
@@ -58,8 +42,6 @@ fun HomeScreen() = FlorisScreen {
     val context = LocalContext.current
 
     content {
-        val isCollapsed by prefs.internal.homeIsBetaToolboxCollapsed.observeAsState()
-
         val isSmartKeyboardEnabled by InputMethodUtils.observeIsFlorisboardEnabled(foregroundOnly = true)
         val isSmartKeyboardSelected by InputMethodUtils.observeIsFlorisboardSelected(foregroundOnly = true)
         if (!isSmartKeyboardEnabled) {
