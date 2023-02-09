@@ -185,7 +185,7 @@ fun SubtypeSimpleAddScreen() = FlorisScreen {
 
     content {
         val suggestedPresets = remember(subtypePresets) {
-            val presets = subtypePresets.filter { it.locale.localeTag() in arrayOf("kk", "en-US", "ru", "tr") }
+            val presets = subtypePresets.filter { it.locale.languageTag() in arrayOf("kk", "en-US", "ru", "tr") }
             presets
         }
         if (suggestedPresets.isNotEmpty()) {
