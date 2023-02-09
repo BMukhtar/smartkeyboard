@@ -67,6 +67,7 @@ object Routes {
 
         const val Localization = "settings/localization"
         const val SelectLocale = "settings/localization/select-locale"
+        const val SubtypeSelect = "settings/localization/subtype/select"
         const val SubtypeAdd = "settings/localization/subtype/add"
         const val SubtypeEdit = "settings/localization/subtype/edit/{id}"
         fun SubtypeEdit(id: Long) = SubtypeEdit.curlyFormat("id" to id)
