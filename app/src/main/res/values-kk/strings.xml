@@ -100,6 +100,7 @@
     <string name="settings__localization__title" comment="Title of languages and Layout screen">Тілдер мен макеттер</string>
     <string name="settings__localization__display_language_names_in__label" comment="Label of Display language names in preference">Тіл атауларын көрсету</string>
     <string name="settings__localization__group_subtypes__label" comment="Label of subtypes group">Кіші түрлері</string>
+    <string name="settings__localization__subtype_advanced_add_title">Күрделі кіші түрді қосыңыз</string>
     <string name="settings__localization__subtype_add_title" comment="Title of subtype dialog when adding a new subtype">Кіші түрді қосыңыз</string>
     <string name="settings__localization__subtype_edit_title" comment="Title of subtype dialog when editing an existing subtype">Кіші түрді өңдеу</string>
     <string name="settings__localization__subtype_locale" comment="Label for locale dropdown in subtype dialog">Негізгі тіл</string>

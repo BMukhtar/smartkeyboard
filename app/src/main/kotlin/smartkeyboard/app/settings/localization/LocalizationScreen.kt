@@ -63,7 +63,7 @@ fun LocalizationScreen() = FlorisScreen {
             text = { Text(
                 text = stringRes(R.string.settings__localization__subtype_add_title),
             ) },
-            onClick = { navController.navigate(Routes.Settings.SubtypeAdd) },
+            onClick = { navController.navigate(Routes.Settings.SubtypeSimpleAdd) },
         )
     }
 

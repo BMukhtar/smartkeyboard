@@ -47,6 +47,7 @@ import smartkeyboard.app.settings.keyboard.KeyboardScreen
 import smartkeyboard.app.settings.localization.LocalizationScreen
 import smartkeyboard.app.settings.localization.SelectLocaleScreen
 import smartkeyboard.app.settings.localization.SubtypeEditorScreen
+import smartkeyboard.app.settings.localization.SubtypeSimpleAddScreen
 import smartkeyboard.app.settings.media.MediaScreen
 import smartkeyboard.app.settings.smartbar.SmartbarScreen
 import smartkeyboard.app.settings.theme.ThemeManagerScreen
@@ -67,7 +68,7 @@ object Routes {
 
         const val Localization = "settings/localization"
         const val SelectLocale = "settings/localization/select-locale"
-        const val SubtypeSelect = "settings/localization/subtype/select"
+        const val SubtypeSimpleAdd = "settings/localization/subtype/add-simple"
         const val SubtypeAdd = "settings/localization/subtype/add"
         const val SubtypeEdit = "settings/localization/subtype/edit/{id}"
         fun SubtypeEdit(id: Long) = SubtypeEdit.curlyFormat("id" to id)
@@ -153,6 +154,7 @@ object Routes {
                 val id = navBackStack.arguments?.getString("id")?.toLongOrNull()
                 SubtypeEditorScreen(id)
             }
+            composable(Settings.SubtypeSimpleAdd) { SubtypeSimpleAddScreen() }
 
             composable(Settings.Theme) { ThemeScreen() }
             composable(Settings.ThemeManager) { navBackStack ->
