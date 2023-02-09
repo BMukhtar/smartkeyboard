@@ -16,6 +16,8 @@
 
 package smartkeyboard.ime.core
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 import smartkeyboard.ime.keyboard.LayoutType
 import smartkeyboard.ime.keyboard.LayoutTypeId
 import smartkeyboard.ime.keyboard.extCoreComposer
@@ -23,12 +25,10 @@ import smartkeyboard.ime.keyboard.extCoreCurrencySet
 import smartkeyboard.ime.keyboard.extCoreLayout
 import smartkeyboard.ime.keyboard.extCorePopupMapping
 import smartkeyboard.ime.keyboard.extCorePunctuationRule
-import smartkeyboard.ime.nlp.provider.LatinLanguageProvider
+import smartkeyboard.ime.nlp.provider.KazakhLanguageProvider
+import smartkeyboard.ime.nlp.provider.NotImplementedLanguageProvider
 import smartkeyboard.lib.FlorisLocale
 import smartkeyboard.lib.ext.ExtensionComponentName
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
-import smartkeyboard.ime.nlp.provider.KazakhLanguageProvider
 
 /**
  * Data class which represents an user-specified set of language and layout. String representations
@@ -211,8 +211,8 @@ data class SubtypeLayoutMap(
 
 @Serializable
 data class SubtypeNlpProviderMap(
-    val spelling: String = LatinLanguageProvider.ProviderId,
-    val suggestion: String = LatinLanguageProvider.ProviderId,
+    val spelling: String = NotImplementedLanguageProvider.providerId,
+    val suggestion: String = NotImplementedLanguageProvider.providerId,
 ) {
     inline fun forEach(action: (String, String) -> Unit) {
         action("spelling", spelling)

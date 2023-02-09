@@ -32,7 +32,7 @@ import smartkeyboard.editorInstance
 import smartkeyboard.ime.clipboard.provider.ItemType
 import smartkeyboard.ime.core.Subtype
 import smartkeyboard.ime.editor.EditorContent
-import smartkeyboard.ime.nlp.provider.LatinLanguageProvider
+import smartkeyboard.ime.nlp.provider.EnglishLanguageProvider
 import smartkeyboard.keyboardManager
 import smartkeyboard.lib.devtools.flogError
 import smartkeyboard.lib.kotlin.collectLatestIn
@@ -65,7 +65,7 @@ class NlpManager(context: Context) {
     private val clipboardSuggestionProvider = ClipboardSuggestionProvider()
     private val providers = guardedByLock {
         mapOf(
-            LatinLanguageProvider.ProviderId to ProviderInstanceWrapper(LatinLanguageProvider(context)),
+            EnglishLanguageProvider.ProviderId to ProviderInstanceWrapper(EnglishLanguageProvider(context)),
             KazakhLanguageProvider.ProviderId to ProviderInstanceWrapper(KazakhLanguageProvider(context)),
         )
     }

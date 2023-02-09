@@ -18,7 +18,7 @@ package smartkeyboard.ime.nlp.provider
 
 import android.content.Context
 
-class LatinLanguageProvider(
+class EnglishLanguageProvider(
     context: Context,
 ) : DefaultProvider(
     context = context,
@@ -29,6 +29,6 @@ class LatinLanguageProvider(
     companion object {
         // Default user ID used for all subtypes, unless otherwise specified.
         // See `ime/core/Subtype.kt` Line 210 and 211 for the default usage
-        const val ProviderId = "org.florisboard.nlp.providers.latin"
+        const val ProviderId = "org.florisboard.nlp.providers.english"
     }
 }

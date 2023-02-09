@@ -114,7 +114,8 @@ open class DefaultProvider(
         val bigrams = mutableMapOf<Bigram, Long>()
         appContext.assets.reader("symspell/$bigramsFileName")
             .forEachLine { line: String ->
-                val (word1, word2, countAsString) = line.split(" ")
+                val (phrase, countAsString) = line.split(",")
+                val (word1, word2) = phrase.split(" ")
                 bigrams[Bigram(word1, word2)] = countAsString.toLong()
             }
 
