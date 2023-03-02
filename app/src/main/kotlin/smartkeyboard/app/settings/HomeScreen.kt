@@ -65,54 +65,9 @@ fun HomeScreen() = FlorisScreen {
             onClick = { navController.navigate(Routes.Settings.Localization) },
         )
         Preference(
-            iconId = R.drawable.ic_palette,
-            title = stringRes(R.string.settings__theme__title),
-            onClick = { navController.navigate(Routes.Settings.Theme) },
-        )
-        Preference(
-            iconId = R.drawable.ic_keyboard,
-            title = stringRes(R.string.settings__keyboard__title),
-            onClick = { navController.navigate(Routes.Settings.Keyboard) },
-        )
-        Preference(
-            iconId = R.drawable.ic_smartbar,
-            title = stringRes(R.string.settings__smartbar__title),
-            onClick = { navController.navigate(Routes.Settings.Smartbar) },
-        )
-        Preference(
-            iconId = R.drawable.ic_spellcheck,
-            title = stringRes(R.string.settings__typing__title),
-            onClick = { navController.navigate(Routes.Settings.Typing) },
-        )
-        Preference(
-            iconId = R.drawable.ic_library_books,
-            title = stringRes(R.string.settings__dictionary__title),
-            onClick = { navController.navigate(Routes.Settings.Dictionary) },
-        )
-        Preference(
-            iconId = R.drawable.ic_gesture,
-            title = stringRes(R.string.settings__gestures__title),
-            onClick = { navController.navigate(Routes.Settings.Gestures) },
-        )
-        Preference(
-            iconId = R.drawable.ic_assignment,
-            title = stringRes(R.string.settings__clipboard__title),
-            onClick = { navController.navigate(Routes.Settings.Clipboard) },
-        )
-        Preference(
-            iconId = R.drawable.ic_sentiment_satisfied,
-            title = stringRes(R.string.settings__media__title),
-            onClick = { navController.navigate(Routes.Settings.Media) },
-        )
-        Preference(
-            iconId = R.drawable.ic_adb,
-            title = stringRes(R.string.devtools__title),
-            onClick = { navController.navigate(Routes.Devtools.Home) },
-        )
-        Preference(
             iconId = R.drawable.ic_build,
-            title = stringRes(R.string.settings__advanced__title),
-            onClick = { navController.navigate(Routes.Settings.Advanced) },
+            title = stringRes(R.string.settings__title),
+            onClick = { navController.navigate(Routes.Settings.MoreSettings) },
         )
         Preference(
             iconId = R.drawable.ic_info,

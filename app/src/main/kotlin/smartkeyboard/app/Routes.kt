@@ -31,6 +31,7 @@ import smartkeyboard.app.ext.ExtensionImportScreen
 import smartkeyboard.app.ext.ExtensionImportScreenType
 import smartkeyboard.app.ext.ExtensionViewScreen
 import smartkeyboard.app.settings.HomeScreen
+import smartkeyboard.app.settings.SettingsScreen
 import smartkeyboard.app.settings.about.AboutScreen
 import smartkeyboard.app.settings.about.ProjectLicenseScreen
 import smartkeyboard.app.settings.about.ThirdPartyLicensesScreen
@@ -98,6 +99,7 @@ object Routes {
         const val Backup = "settings/advanced/backup"
         const val Restore = "settings/advanced/restore"
 
+        const val MoreSettings = "settings/more"
         const val About = "settings/about"
         const val ProjectLicense = "settings/about/project-license"
         const val ThirdPartyLicenses = "settings/about/third-party-licenses"
@@ -188,6 +190,7 @@ object Routes {
             composable(Settings.Advanced) { AdvancedScreen() }
             composable(Settings.Backup) { BackupScreen() }
             composable(Settings.Restore) { RestoreScreen() }
+            composable(Settings.MoreSettings) { SettingsScreen() }
 
             composable(Settings.About) { AboutScreen() }
             composable(Settings.ProjectLicense) { ProjectLicenseScreen() }
